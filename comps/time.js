@@ -10,7 +10,7 @@ template_time.innerHTML = `
 
 <style>
     .time_cont {
-        background-color: #dad;
+        background-color: #FEFCE5;
         text-align: center;
         width: fit-content;
         height: fit-content;
