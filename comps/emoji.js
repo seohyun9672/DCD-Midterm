@@ -5,8 +5,8 @@ var template_emoji = document.createElement("template"); //<template> </template
 template_emoji.innerHTML = `
     <img src ="imgs/EmojiEmbarrassed.svg" alt="Embarrassed Emoji">
     <style>
-        width: 100%;
-        height: 100%;
+        width: 34px
+        height: 34px
     </style>
 `;
 
