@@ -4,10 +4,14 @@ var template_greenman = document.createElement("template"); //<template> </templ
 //To-do - CREATE THE UI HERE!
 template_greenman.innerHTML = `
 <div>
-    <img src="imgs/greenman.jpg" alt="greenman">
+    <img class="greenman" src="imgs/greenman.jpg" alt="greenman">
 </div>
 
 <style>
+    .greenman {
+        width: 39px;
+        height: 225px;
+    }
 </style>
 `;
 
