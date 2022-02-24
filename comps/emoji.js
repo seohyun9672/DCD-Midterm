@@ -3,7 +3,7 @@ var template_emoji = document.createElement("template"); //<template> </template
 
 //To-do - CREATE THE UI HERE!
 template_emoji.innerHTML = `
-    <img src ="imgs/EmojiEmbarrassed.svg" alt="Embarrassed Emoji">
+    <img src ="imgs/Emojis/EmojiEmbarrassed.svg" alt="Embarrassed Emoji">
     <style>
         width: 34px
         height: 34px
