@@ -3,13 +3,15 @@ var template_footprintcycle = document.createElement("template"); //<template> <
 
 //To-do - CREATE THE UI HERE!
 template_footprintcycle.innerHTML = `
-<img src="imgs/Footprintcycle/FootprintCycle1.svg" alt="footprintcycle">
-<style>
-.footprintcycle{
-    width: 100%
-    height: 100%
-}
-</style>
+     <img class="footprintcycle" src="imgs/FootprintCycle/FootprintCycle1.svg" alt="Footprint cycle">
+     <style>
+        .footprintcycle {
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            right: 5px;
+        }
+    </style>
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
