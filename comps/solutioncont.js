@@ -4,7 +4,7 @@ var template_solutioncont = document.createElement("template"); //<template> </t
 //To-do - CREATE THE UI HERE!
 template_solutioncont.innerHTML = `
 <div class="solutioncont">
-    <img src="imgs/Solutioncont_Bicycle.svg" alt="Bicycle">
+    <img src="imgs/SolutionCont/Solutioncont_Bicycle.svg" alt="Bicycle">
     <div class="textbox">
         <the-exit></the-exit>
         <div class="header_text">Feeling Worried?</div>
