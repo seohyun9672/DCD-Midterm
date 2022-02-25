@@ -1,0 +1,8 @@
+the-infocard {
+    display:none;
+}
+the-textcont {
+    position:absolute;
+    bottom:0;
+    width:100vw;
+}
