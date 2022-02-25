@@ -3,6 +3,9 @@ var template_textcont = document.createElement("template"); //<template> </templ
 
 //To-do - CREATE THE UI HERE!
 template_textcont.innerHTML = `
+    <script src="comps/time.js"></script>
+    <script src="comps/greenman.js"></script>
+    <script src="comps/chevron.js"></script>
     <div class="textcont">
         <the-chevron></the-chevron>
         <the-greenman></the-greenman>
