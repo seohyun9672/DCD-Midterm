@@ -1,0 +1,14 @@
+html {
+    background:linear-gradient(lightblue,white);
+    height:100%;
+    margin:0;
+}
+/* landing page */
+.earth {
+    position:absolute;
+    bottom:0;
+    width:100vw;
+}
+the-subheader {
+    text-align:center;
+}
