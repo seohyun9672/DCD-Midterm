@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html {
     background:linear-gradient(lightblue,white);
     height:100%;
@@ -14,4 +15,41 @@ the-subheader {
 }
 the-footprintbtn {
     width:30%;
+=======
+/* CTA */
+/* /////need to adjust width and height ///// */
+.section_cta_first{
+    background-color: #FEFFF6;
+    width: 100%;
+    height: 100%;
+}
+.section_clickable{
+    display:flex;
+    width: 100%;
+}
+.section_emoji{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.btn_emoji{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section_cta_second{
+    background-color: #C6E1E5;
+    width: 100%;
+    height: 100%;
+}
+.section_cta_desc{
+    display: flex;
+    flex-direction: column;
+}
+.section_ctabtn{
+    display: flex;
+    justify-content: space-between;
+    
+>>>>>>> origin
 }
