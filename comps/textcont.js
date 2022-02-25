@@ -3,6 +3,7 @@ var template_textcont = document.createElement("template"); //<template> </templ
 
 //To-do - CREATE THE UI HERE!
 template_textcont.innerHTML = `
+    <script> 
     <div class="textcont">
         <the-chevron></the-chevron>
         <the-greenman></the-greenman>
