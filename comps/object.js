@@ -4,7 +4,7 @@ var template_object = document.createElement("template"); //<template> </templat
 //To-do - CREATE THE UI HERE!
 template_object.innerHTML = `
 <div class="object" onclick="" hover="">
-    <img src="imgs/waterbottle.jpg" alt="waterbottle">
+    <img src="imgs/waterbottle.svg" alt="waterbottle">
 </div>
 
 `;
