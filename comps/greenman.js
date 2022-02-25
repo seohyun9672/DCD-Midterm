@@ -4,7 +4,7 @@ var template_greenman = document.createElement("template"); //<template> </templ
 //To-do - CREATE THE UI HERE!
 template_greenman.innerHTML = `
 <div>
-    <img class="greenman" src="imgs/greenman.jpg" alt="greenman">
+    <img class="greenman" src="imgs/greenman/Greenman1.svg" alt=greenman>
 </div>
 
 <style>
