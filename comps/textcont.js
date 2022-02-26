@@ -4,7 +4,8 @@ var template_textcont = document.createElement("template"); //<template> </templ
 //To-do - CREATE THE UI HERE!
 template_textcont.innerHTML = `
     <div class="textcont">
-        <the-chevron></the-chevron>
+        <the-chevron
+        direction="left"></the-chevron>
         <the-greenman></the-greenman>
         <div class ="textbox">
             <the-time></the-time>
@@ -17,21 +18,29 @@ template_textcont.innerHTML = `
     <style>
         .textcont{
             width: 100%;
-            height: 100%;
-            background-color: #FEFCE5;
+            height: auto;
+            background-color: #C8D5AE;
             display: flex;
+            justify-content:center;
+            align-items:center;
+            padding:10px;
         }
         .textbox{
-            margin: 10px;
-            width: 100%;
-            height: 100%;
+            margin: 1em;
+            width:80vw;
             background-color: white;
-            font-size: 24px;
+            font-size: 1.5em;
+            padding:1em;
         }
         .emtext{
             font-weight: bolder;
             color: red;
             font-style: normal;
+        }
+        the-time{
+            position:absolute;
+            top:0.75em;
+            left:5em;
         }
     </style>
 `;
@@ -50,6 +59,10 @@ class TheTextcont extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_textcont.content.cloneNode(true)); //use the template to make a clone
+    
+        if(this.getAttribute("story_text")) {
+            this.shadowRoot.querySelector(".story_text").innerText = this.getAttribute("story_text");
+        }
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!

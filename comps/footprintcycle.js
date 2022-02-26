@@ -8,8 +8,6 @@ template_footprintcycle.innerHTML = `
         .footprintcycle {
             width: 120px;
             height: 120px;
-            position: absolute;
-            right: 5px;
         }
     </style>
 `;

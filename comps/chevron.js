@@ -6,6 +6,12 @@ template_chevron.innerHTML = `
 <div class="chev-cont">
     <img src="imgs/chevron.svg">
 </div>
+<style>
+img {
+width:2em;
+margin:1em;
+}
+</style>
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)

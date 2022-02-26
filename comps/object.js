@@ -4,7 +4,7 @@ var template_object = document.createElement("template"); //<template> </templat
 //To-do - CREATE THE UI HERE!
 template_object.innerHTML = `
 <div class="object" onclick="" hover="">
-    <img src="imgs/waterbottle.svg" alt="waterbottle">
+    <img src="imgs/objects/waterbottle.svg" alt="waterbottle">
 </div>
 
 `;
@@ -16,7 +16,6 @@ class TheObject extends HTMLElement {
     constructor(){
         super(); //pass on the HTMLElement super powers!
         this.attachShadow({mode:"open"}) //Attach it to the shadowRoot
-
         //To-do - CREATE THE STATES FOR THE UI HERE!
     }
 
@@ -24,6 +23,7 @@ class TheObject extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_object.content.cloneNode(true)); //use the template to make a clone
         
+    
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!

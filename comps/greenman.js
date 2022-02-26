@@ -9,8 +9,8 @@ template_greenman.innerHTML = `
 
 <style>
     .greenman {
-        width: 39px;
-        height: 225px;
+        width: auto;
+        max-height:10%;
     }
 </style>
 `;

@@ -11,8 +11,8 @@ template_storyimg.innerHTML = `
         display: block;
         padding: 0;
         margin: 0 auto;
-        max-height: 100%;
-        max-width: 100%;
+        width: 100vw;
+        height:auto;
         
     }
     
@@ -34,10 +34,15 @@ class TheStoryImg extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_storyimg.content.cloneNode(true)); //use the template to make a clone
-        
+        this.updateBackgroundImg();
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+    updateBackgroundImg() {
+        if(this.getAttribute("src")) {
+            this.shadowRoot.querySelector(".background").src = this.getAttribute("src");
+        }
+    }
 }
 
 //MUST HAVE - define the tag for the custom elements
