@@ -3,17 +3,16 @@ var template_storyimg = document.createElement("template"); //<template> </templ
 
 //To-do - CREATE THE UI HERE!
 template_storyimg.innerHTML = `
-<img class="background" src="imgs/storyimg/story1.svg" alt="bedroom">
+<img class="background" src="storyimg/story1.svg" alt="bedroom">
 
 
 <style>
      .background {
-        display: block;
         padding: 0;
         margin: 0 auto;
-        max-height: 100%;
-        max-width: 100%;
-        
+        height: 100%;
+        width: 100%;
+        z-index: -1;
     }
     
     
@@ -34,10 +33,16 @@ class TheStoryImg extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_storyimg.content.cloneNode(true)); //use the template to make a clone
+        if(this.getAttribute("name")){
+            this.shadowRoot.querySelector(".background").src = `/storyimg/${this.getAttribute("name")}.svg`
+        };    
         
-    }
+    
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+    // changeBG(img="storyimg/story2.svg"){
+    //     this.shadowRoot.querySelector(".background").src = img;
+    }
 }
 
 //MUST HAVE - define the tag for the custom elements
