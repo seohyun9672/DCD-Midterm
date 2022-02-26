@@ -16,7 +16,6 @@ class TheObject extends HTMLElement {
     constructor(){
         super(); //pass on the HTMLElement super powers!
         this.attachShadow({mode:"open"}) //Attach it to the shadowRoot
-
         //To-do - CREATE THE STATES FOR THE UI HERE!
     }
 
@@ -28,7 +27,6 @@ class TheObject extends HTMLElement {
         // }
     } 
         
-    
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     changeOb(type = "story1"){

@@ -4,6 +4,7 @@ var template_storyimg = document.createElement("template"); //<template> </templ
 //To-do - CREATE THE UI HERE!
 template_storyimg.innerHTML = `
 <style>
+
      #bg_container {
         position: fixed;
         left: 0;
@@ -14,7 +15,7 @@ template_storyimg.innerHTML = `
     }
     .background {
         width: 100%;
-        height 100%;
+        height: 100%;
         object-fit:contain;
         
     }
@@ -39,16 +40,11 @@ class TheStoryImg extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_storyimg.content.cloneNode(true)); //use the template to make a clone
+
         this.shadowRoot.querySelector(".background").src = `/storyimg/${this.getAttribute("name")}.svg`;
             if(this.getAttribute("name")){
                 this.shadowRoot.querySelector("#item").changeOb(this.getAttribute("name"));}
-
-
             
-    
-        
-            
-        
     
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
