@@ -14,9 +14,8 @@ template_storyimg.innerHTML = `
         z-index: -1;
     }
     .background {
-        width: 100%;
-        height: 100%;
-        object-fit:contain;
+        height:auto;
+        width:100vw;
         
     }
     
@@ -41,7 +40,7 @@ class TheStoryImg extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_storyimg.content.cloneNode(true)); //use the template to make a clone
 
-        this.shadowRoot.querySelector(".background").src = `/storyimg/${this.getAttribute("name")}.svg`;
+        this.shadowRoot.querySelector(".background").src = `imgs/storyimg/${this.getAttribute("name")}.svg`;
             if(this.getAttribute("name")){
                 this.shadowRoot.querySelector("#item").changeOb(this.getAttribute("name"));}
             
