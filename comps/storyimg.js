@@ -1,16 +1,27 @@
 //MUST HAVE - CREATE A TEMPLATE TAG
-var template_object = document.createElement("template"); //<template> </template> RULE
+var template_storyimg = document.createElement("template"); //<template> </template> RULE
 
 //To-do - CREATE THE UI HERE!
-template_object.innerHTML = `
-<div class="object" onclick="" hover="">
-    <img src="imgs/waterbottle.svg" alt="waterbottle">
-</div>
+template_storyimg.innerHTML = `
+<img class="background" src="imgs/storyimg/story1.svg" alt="bedroom">
 
+
+<style>
+     .background {
+        display: block;
+        padding: 0;
+        margin: 0 auto;
+        max-height: 100%;
+        max-width: 100%;
+        
+    }
+    
+    
+</style>
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
-class TheObject extends HTMLElement {
+class TheStoryImg extends HTMLElement {
 
     //MUST HAVE - CREATE A CONSTRUCTOR TO DO INITAL ASSOCIATIONS
     constructor(){
@@ -22,7 +33,7 @@ class TheObject extends HTMLElement {
 
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
-        this.shadowRoot.appendChild(template_object.content.cloneNode(true)); //use the template to make a clone
+        this.shadowRoot.appendChild(template_storyimg.content.cloneNode(true)); //use the template to make a clone
         
     }
 
@@ -30,4 +41,4 @@ class TheObject extends HTMLElement {
 }
 
 //MUST HAVE - define the tag for the custom elements
-customElements.define("the-object", TheObject)
+customElements.define("the-storyimg", TheStoryImg)
