@@ -20,6 +20,8 @@ template_textcont.innerHTML = `
             height: 100%;
             background-color: #FEFCE5;
             display: flex;
+           
+            
         }
         .textbox{
             margin: 10px;

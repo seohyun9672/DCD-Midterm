@@ -3,20 +3,26 @@ var template_storyimg = document.createElement("template"); //<template> </templ
 
 //To-do - CREATE THE UI HERE!
 template_storyimg.innerHTML = `
-<img class="background" src="storyimg/story1.svg" alt="bedroom">
-
-
 <style>
-     .background {
-        padding: 0;
-        margin: 0 auto;
-        height: 100%;
-        width: 100%;
+     #bg_container {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
         z-index: -1;
     }
-    
+    .background {
+        width: 100%;
+        height 100%;
+        object-fit:contain;
+        
+    }
     
 </style>
+<div id="bg_container">
+    <img class="background" src="storyimg/story1.svg" alt="bedroom">
+</div>
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
@@ -33,17 +39,23 @@ class TheStoryImg extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_storyimg.content.cloneNode(true)); //use the template to make a clone
-        if(this.getAttribute("name")){
-            this.shadowRoot.querySelector(".background").src = `/storyimg/${this.getAttribute("name")}.svg`
-        };    
+        this.shadowRoot.querySelector(".background").src = `/storyimg/${this.getAttribute("name")}.svg`;
+            if(this.getAttribute("name")){
+                this.shadowRoot.querySelector("#item").changeOb(this.getAttribute("name"));}
+
+
+            
+    
+        
+            
         
     
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     // changeBG(img="storyimg/story2.svg"){
     //     this.shadowRoot.querySelector(".background").src = img;
-    }
+    
+            }
 }
-
 //MUST HAVE - define the tag for the custom elements
 customElements.define("the-storyimg", TheStoryImg)
