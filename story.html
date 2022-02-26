@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Look in Mr. Green's Routine</title>
+    <title>Story</title>
     <link rel="stylesheet" href="path/to/font-awesome/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="stylesheet.css">
     <style>
@@ -14,44 +14,33 @@
         html {
             font-family: lato, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
-
     </style>
-    <script src="comps/subheader.js"></script>
     <script src="comps/footprintcycle.js"></script>
     <script src="comps/textcont.js"></script>
-    <script src="comps/emoji.js"></script>
-    <script src="comps/solutioncont.js"></script>
-    <script src="comps/exit.js"></script>
     <script src="comps/textbtn.js"></script>
     <script src="comps/checkbtn.js"></script>
     <script src="comps/infocard.js"></script>
-    <script src="comps/header.js"></script>
     <script src="comps/feetbtn.js"></script>
     <script src="comps/chevron.js"></script>
     <script src="comps/footprintbtn.js"></script>
     <script src="comps/time.js"></script>
     <script src="comps/object.js"></script>
-    <script src="comps/feelingbtn.js"></script>
     <script src="comps/greenman.js"></script>
 </head>
 <body>
-    <the-textbtn
-    btn_text="Back"
-    color="#fff"
-    ></the-textbtn>
-    <the-footprintcycle></the-footprintcycle>
-    
-    <the-textcont></the-textcont>
-    <the-object></the-object>
-    <the-infocard
-    num_text="15"
-    main_text=""
-    desc_text="excessive electronic devices"
-    capt_text=""
-    src="imgs/puzzle.svg"
-    em_text=""
-    em_color="#EB933B"
-    ></the-infocard>
+    <section class="section_story">
+        <div class="storycont">
+            <the-textbtn
+              btn_text="Back"
+               color="#fff"
+                         ></the-textbtn>
+            <the-footprintcycle></the-footprintcycle>
+            <the-storyimg></the-storyimg>
+            <the-object></the-object>
+            <the-object></the-object>
+        </div>
+        <the-textcont></the-textcont>
+    </section>
 
 </body>
 </html>

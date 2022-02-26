@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>What's Your Environmental Impact?</title>
     <link rel="stylesheet" href="path/to/font-awesome/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="stylesheet.css">
     <style>
@@ -16,22 +16,9 @@
         }
 
     </style>
-    <script src="comps/subheader.js"></script>
-    <script src="comps/footprintcycle.js"></script>
-    <script src="comps/textcont.js"></script>
-    <script src="comps/emoji.js"></script>
-    <script src="comps/solutioncont.js"></script>
-    <script src="comps/exit.js"></script>
-    <script src="comps/textbtn.js"></script>
-    <script src="comps/checkbtn.js"></script>
-    <script src="comps/infocard.js"></script>
     <script src="comps/header.js"></script>
-    <script src="comps/feetbtn.js"></script>
-    <script src="comps/chevron.js"></script>
+    <script src="comps/subheader.js"></script>
     <script src="comps/footprintbtn.js"></script>
-    <script src="comps/time.js"></script>
-    <script src="comps/object.js"></script>
-    <script src="comps/feelingbtn.js"></script>
     <script src="comps/greenman.js"></script>
 </head>
 <body>
@@ -41,11 +28,16 @@
     em_text=" carbon footprint."
     no_desc2="none"
     ></the-header>
-    <the-emoji></the-emoji>
-    <the-subheader></the-subheader>
-    <the-textcont></the-textcont>
-    <the-footprintcycle></the-footprintcycle>
-    <the-exit></the-exit>
+    <the-subheader
+    subheader_text="Click the footprint to start &#8594;"></the-subheader>
+    <div>
+        <img class="earth" src="imgs/earth.svg" alt="earth">
+    </div>
+    <the-footprintbtn></the-footprintbtn>
+
+</body>
+</html>
+    <!-- <the-exit></the-exit>
     <the-solutioncont></the-solutioncont>
     <the-textbtn
     btn_text="Got it!"
@@ -68,8 +60,6 @@
     <the-chevron
     direction="left"
     ></the-chevron>
-
-    <the-footprintbtn></the-footprintbtn>
     <the-time
     time_text="6:00AM"
     ></the-time>
@@ -78,6 +68,5 @@
     btn_text="Embarrassed"
     ></the-feelingbtn>
     <the-greenman></the-greenman>
-
 </body>
 </html>

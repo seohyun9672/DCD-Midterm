@@ -5,7 +5,7 @@ var template_footprintbtn = document.createElement("template"); //<template> </t
 template_footprintbtn.innerHTML = `
 <div class="footprint_btn">
     <a href="nextpage.com">
-        <img src="bluefootprint.jpg" alt="footprint">
+        <img src="imgs/bluefootprint.svg" alt="footprint">
     </a>
 </div>
 
@@ -15,7 +15,7 @@ template_footprintbtn.innerHTML = `
         border: white solid 10px;
         background-color:transparent;
     }
-    .footprint_btn > img {
+    .footprint_btn img {
         display: block;
         width: 64px;
         height: 64px;
