@@ -3,7 +3,7 @@ var template_storyimg = document.createElement("template"); //<template> </templ
 
 //To-do - CREATE THE UI HERE!
 template_storyimg.innerHTML = `
-<img class="background" src="imgs/bedroom.jpeg" alt="bedroom">
+<img class="background" src="imgs/storyimg/story1.svg" alt="bedroom">
 
 
 <style>
