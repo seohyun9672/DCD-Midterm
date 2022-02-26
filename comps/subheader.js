@@ -27,6 +27,10 @@ class TheSubheader extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_subheader.content.cloneNode(true)); //use the template to make a clone
+    
+        if(this.getAttribute("subheader_text")) {
+            this.shadowRoot.querySelector(".sub-header_text").innerText = this.getAttribute("subheader_text");
+        }
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
