@@ -10,7 +10,7 @@ template_storyimg.innerHTML = `
     
 }
 #bg{
-    height: 600px;
+    height: 540px;
 }
 
 </style>
