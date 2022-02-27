@@ -32,7 +32,6 @@ class TheGreenman extends HTMLElement {
         if(this.getAttribute("direction")){
             this.shadowRoot.querySelector(".greenman").style.transform= "scaleX(-1)";
         }
-           
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
