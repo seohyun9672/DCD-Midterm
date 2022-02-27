@@ -11,6 +11,7 @@ template_greenman.innerHTML = `
     .greenman {
         width: auto;
         max-height:10%;
+        padding: 20px;
     }
 </style>
 `;

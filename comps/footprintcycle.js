@@ -8,7 +8,9 @@ template_footprintcycle.innerHTML = `
         .footprintcycle {
             width: 120px;
             height: 120px;
-
+            position: absolute;
+            right:0px;
+            padding: 20px;
         }
     </style>
 `;
@@ -27,6 +29,9 @@ class TheFootprintCycle extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_footprintcycle.content.cloneNode(true)); //use the template to make a clone
+        if(type==="")
+        
+        this.shadowRoot.querySelector(".footprintcycle").src=`./imgs/FootprintCycle/${this.getAttribute("img_color")}.svg`;
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!

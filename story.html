@@ -30,25 +30,66 @@
 </head>
 <body>
     <section class="section_story">
-        <div class="storycont">
+        <div class="back">
             <the-textbtn
             btn_text="< Back"
             color="white"
             ></the-textbtn>
-            <the-footprintcycle></the-footprintcycle>
-            <the-storyimg
-            name="story1"></the-storyimg>
-            <the-object
-            id="item"></the-object>
-            <the-textcont
-            time_text="6:ooAM"
-            story_text="fill text here" ></the-textcont>
         </div>
-       
+        <the-footprintcycle
+        img_color ="footprintcycle1"
+        ></the-footprintcycle>
+        <div class= "story">
+            <the-storyimg
+            story_num="story1"></the-storyimg>
+            <div class="scriptbox">
+                <the-chevron
+                direction="scaleX(-1)"
+                ></the-chevron>
+                <the-greenman></the-greenman>
+                <div class="textbox">
+                    <the-time></the-time>
+                    <the-textcont></the-textcont>
+                </div>
+                <the-chevron></the-chevron>
+            </div>
+        </div>
     </section>
-
+    <!-- .textcont{
+        width: 100%;
+        height: auto;
+        background-color: #C8D5AE;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        padding:10px;
+    }
+    .textbox{
+        margin: 1em;
+        width:80vw;
+        background-color: white;
+        font-size: 1.5em;
+        padding:1em;
+    }
+    .emtext{
+        font-weight: bolder;
+        color: red;
+        font-style: normal;
+    }
+    the-time{
+        position:absolute;
+        top:0.75em;
+        left:5em;
+    } -->
     
-    
+<!--     
+    <div class="storycont">
+        <the-object
+        id="item"></the-object>
+        <the-textcont
+        time_text="6:ooAM"
+        story_text="fill text here" ></the-textcont>
+    </div> -->
     
     <!-- <the-textbtn
     btn_text="Got it!"
