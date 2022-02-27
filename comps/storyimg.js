@@ -8,9 +8,10 @@ template_storyimg.innerHTML = `
     width: 100%;
     height: 100%;   
 }
+
 </style>
 <div id="bg_container">
-    <img src="imgs/bedroom.jpeg" alt="bedroom">
+    <img src="imgs/storyimg/storyy1.jpeg" alt="bedroom">
 </div>
 `;
 
@@ -30,7 +31,7 @@ class TheStoryImg extends HTMLElement {
         this.shadowRoot.appendChild(template_storyimg.content.cloneNode(true)); //use the template to make a clone
 
         this.shadowRoot.querySelector("#bg_container > img").src = `imgs/storyimg/${this.getAttribute("story_num")}.jpeg`;
-            if(this.getAttribute("story_num=")){
+            if(this.getAttribute("story_num")){
                 this.shadowRoot.querySelector("#item").changeOb(this.getAttribute("story_num="));}
             
     
