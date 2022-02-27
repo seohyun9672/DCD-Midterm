@@ -7,10 +7,11 @@ template_chevron.innerHTML = `
     <img src="imgs/chevron.svg">
 </div>
 <style>
-img {
-width:2em;
-margin:1em;
-}
+    .chev-cont{
+        width:2em;
+        margin:1em;
+        padding: 2.5em;
+    }
 </style>
 `;
 
@@ -30,7 +31,7 @@ class TheChevron extends HTMLElement {
         this.shadowRoot.appendChild(template_chevron.content.cloneNode(true)); //use the template to make a clone
     
         if(this.getAttribute("direction")) {
-            this.shadowRoot.querySelector("img").style.transform = "scaleX(-1)";
+            this.shadowRoot.querySelector(".chev-cont").style.transform = "scaleX(-1)";
         }
     }
 
