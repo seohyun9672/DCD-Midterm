@@ -29,9 +29,9 @@ class TheStoryImg extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_storyimg.content.cloneNode(true)); //use the template to make a clone
 
-        this.shadowRoot.querySelector("#bg_container > img").src = `imgs/storyimg/${this.getAttribute("name")}.svg`;
-            if(this.getAttribute("name")){
-                this.shadowRoot.querySelector("#item").changeOb(this.getAttribute("name"));}
+        this.shadowRoot.querySelector("#bg_container > img").src = `imgs/storyimg/${this.getAttribute("story_num")}.jpeg`;
+            if(this.getAttribute("story_num=")){
+                this.shadowRoot.querySelector("#item").changeOb(this.getAttribute("story_num="));}
             
     
 
