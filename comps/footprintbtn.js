@@ -14,16 +14,17 @@ template_footprintbtn.innerHTML = `
         border-radius: 50%;
         border: white solid 12pt;
         background-color:transparent;
-        width:8em;
-        height:8em;
-        margin: auto;
-        display:flex;
+        width: 300px;
+        height: 300px;
+        margin: 1em;
+        display: flex;
         align-items:center;
         justify-content:center;
+        
     }
     .footprint_btn img {
-        display: block;
-        width: 3em;
+        width: 89px;
+        height: 177px;
         
     }
 </style>
