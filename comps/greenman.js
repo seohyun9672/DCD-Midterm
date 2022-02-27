@@ -30,7 +30,7 @@ class TheGreenman extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_greenman.content.cloneNode(true)); //use the template to make a clone
-        
+        this.shadowRoot.querySelector(".greenman").src=`./imgs/greenman/${this.getAttribute("greenman_num")}.svg`;
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
