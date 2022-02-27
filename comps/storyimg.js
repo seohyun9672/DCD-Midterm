@@ -4,13 +4,15 @@ var template_storyimg = document.createElement("template"); //<template> </templ
 //To-do - CREATE THE UI HERE!
 template_storyimg.innerHTML = `
 <style>
-#bg_container > img{
+#bg > img{
     width: 100%;
-    height: 100%;   
+    height: 100%;
+    position: fixed;
+    top:0;
 }
 
 </style>
-<div id="bg_container">
+<div id="bg">
     <img src="imgs/storyimg/storyy1.jpeg" alt="bedroom">
 </div>
 `;
@@ -30,7 +32,7 @@ class TheStoryImg extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_storyimg.content.cloneNode(true)); //use the template to make a clone
 
-        this.shadowRoot.querySelector("#bg_container > img").src = `imgs/storyimg/${this.getAttribute("story_num")}.jpeg`;
+        this.shadowRoot.querySelector("#bg> img").src = `imgs/storyimg/${this.getAttribute("story_num")}.jpeg`;
             if(this.getAttribute("story_num")){
                 this.shadowRoot.querySelector("#item").changeOb(this.getAttribute("story_num="));}
             
