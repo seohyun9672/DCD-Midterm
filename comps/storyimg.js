@@ -4,24 +4,13 @@ var template_storyimg = document.createElement("template"); //<template> </templ
 //To-do - CREATE THE UI HERE!
 template_storyimg.innerHTML = `
 <style>
-
-     #bg_container {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: -1;
-    }
-    .background {
-        height:auto;
-        width:100vw;
-        
-    }
-    
+#bg_container > img{
+    width: 100%;
+    height: 100%;   
+}
 </style>
 <div id="bg_container">
-    <img class="background" src="storyimg/story1.svg" alt="bedroom">
+    <img src="imgs/bedroom.jpeg" alt="bedroom">
 </div>
 `;
 
@@ -30,7 +19,7 @@ class TheStoryImg extends HTMLElement {
 
     //MUST HAVE - CREATE A CONSTRUCTOR TO DO INITAL ASSOCIATIONS
     constructor(){
-        super(); //pass on the HTMLElement super powers!
+        super(); //pass on the HTMLElement super powers!s
         this.attachShadow({mode:"open"}) //Attach it to the shadowRoot
 
         //To-do - CREATE THE STATES FOR THE UI HERE!
@@ -40,7 +29,7 @@ class TheStoryImg extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_storyimg.content.cloneNode(true)); //use the template to make a clone
 
-        this.shadowRoot.querySelector(".background").src = `imgs/storyimg/${this.getAttribute("name")}.svg`;
+        this.shadowRoot.querySelector("#bg_container > img").src = `imgs/storyimg/${this.getAttribute("name")}.svg`;
             if(this.getAttribute("name")){
                 this.shadowRoot.querySelector("#item").changeOb(this.getAttribute("name"));}
             
