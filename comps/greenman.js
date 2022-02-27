@@ -1,20 +1,21 @@
 //MUST HAVE - CREATE A TEMPLATE TAG
-var template_subheader = document.createElement("template"); //<template> </template> RULE
+var template_greenman = document.createElement("template"); //<template> </template> RULE
 
 //To-do - CREATE THE UI HERE!
-template_subheader.innerHTML = `
-<div class= "sub-header_text">text</div>
-<style>
-.sub-header_text{  
-    fontSize: 18px;
-    color: #08509C;
-    font-weight: bolder;
-</style>
+template_greenman.innerHTML = `
+<div>
+    <img class="greenman" src="imgs/greenman/Greenman1.svg" alt=greenman>
+</div>
 
+<style>
+    .greenman {
+        padding-right: 2.2em;
+    }
+</style>
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
-class TheSubheader extends HTMLElement {
+class TheGreenman extends HTMLElement {
 
     //MUST HAVE - CREATE A CONSTRUCTOR TO DO INITAL ASSOCIATIONS
     constructor(){
@@ -26,15 +27,12 @@ class TheSubheader extends HTMLElement {
 
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
-        this.shadowRoot.appendChild(template_subheader.content.cloneNode(true)); //use the template to make a clone
-    
-        if(this.getAttribute("subheader_text")) {
-            this.shadowRoot.querySelector(".sub-header_text").innerText = this.getAttribute("subheader_text");
-        }
+        this.shadowRoot.appendChild(template_greenman.content.cloneNode(true)); //use the template to make a clone
+        this.shadowRoot.querySelector(".greenman").src=`./imgs/greenman/${this.getAttribute("greenman_num")}.svg`;
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 }
 
 //MUST HAVE - define the tag for the custom elements
-customElements.define("the-subheader", TheSubheader)
+customElements.define("the-greenman", TheGreenman)

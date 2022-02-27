@@ -4,34 +4,24 @@ var template_textcont = document.createElement("template"); //<template> </templ
 //To-do - CREATE THE UI HERE!
 template_textcont.innerHTML = `
     <div class="textcont">
-        <the-chevron></the-chevron>
-        <the-greenman></the-greenman>
-        <div class ="textbox">
-            <the-time></the-time>
-            <div class="story_text">
-                text <em class="emtext"> text</em>
-            </div>
-        </div>
-        <the-chevron></the-chevron>
+        <p> story_text 
+            <em> em_text<em> 
+        </p>
     </div>
     <style>
-        .textcont{
-            width: 100%;
-            height: 100%;
-            background-color: #FEFCE5;
-            display: flex;
-        }
-        .textbox{
-            margin: 10px;
-            width: 100%;
-            height: 100%;
+        .textcont {
             background-color: white;
-            font-size: 24px;
+            width: 100%;
+            height:140px;
         }
-        .emtext{
+        .textcont > p {
+            padding: 1em;
+            font-size: 24px;
+            line-height: 1.3em;
+        }
+        p > em{
+            color: black;
             font-weight: bolder;
-            color: red;
-            font-style: normal;
         }
     </style>
 `;
@@ -50,9 +40,21 @@ class TheTextcont extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_textcont.content.cloneNode(true)); //use the template to make a clone
+        // this.ob_name="phone";
+
+        if(this.getAttribute("story_text")) {
+            this.shadowRoot.querySelector(".textcont > p").innerText = this.getAttribute("story_text"); 
+             
+        }
+        if(this.getAttribute("em_text")){
+            this.shadowRoot.querySelector("p > em").style.color="red";
+            this.shadowRoot.querySelector("p > em").innerText = this.getAttribute("em_text"); 
+        }     
+      
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+  
 }
 
 //MUST HAVE - define the tag for the custom elements

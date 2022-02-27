@@ -1,34 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="landing" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>What's Your Environmental Impact?</title>
     <link rel="stylesheet" href="path/to/font-awesome/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="stylesheet.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&display=swap');
 
         html {
             font-family: lato, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
 
     </style>
+    <script src="comps/header.js"></script>
     <script src="comps/subheader.js"></script>
-    <script src="comps/footprintcycle.js"></script>
-    <script src="comps/textcont.js"></script>
-    <script src="comps/emoji.js"></script>
-    <script src="comps/solutioncont.js"></script>
-    <script src="comps/exit.js"></script>
+    <script src="comps/footprintbtn.js"></script>
+    <script src="comps/greenman.js"></script>
+    <script src="comps/storyimg.js"></script>
 </head>
 <body>
-    <the-emoji></the-emoji>
-    <the-subheader></the-subheader>
-    <the-textcont></the-textcont>
-    <the-footprintcycle></the-footprintcycle>
-    <the-exit></the-exit>
-    <the-solutioncont></the-solutioncont>
-</body>
+    <div class="landing-cont">
+    <the-header
+    head_text="What's Your Environmental Impact?"
+    desc_text="See how your everyday actions contribute to your"
+    em_text=" carbon footprint."
+    no_desc2="none"
+    ></the-header>
+    <the-subheader
+    subheader_text="Click the footprint to start &#8594;"></the-subheader>
+    <the-footprintbtn></the-footprintbtn>
+    </div>
+    <div>
+        <img class="earth" src="imgs/earth.svg" alt="earth">
+    </div>
+    
+   
 
+</body>
+</html>
+    <!-- <the-exit></the-exit>
+    <the-solutioncont></the-solutioncont>
+    <the-textbtn
+    btn_text="Got it!"
+    color="#6B994D"
+    ></the-textbtn>
+    <the-checkbtn></the-checkbtn>
+    <the-infocard
+    num_text="15"
+    main_text=""
+    desc_text="excessive electronic devices"
+    capt_text=""
+    src="imgs/puzzle.svg"
+    em_text=""
+    em_color="#EB933B"
+    ></the-infocard>
+    <the-feetbtn
+    text_color="#08509C"
+    btn_text="Re-watch the story &#8227;"
+    ></the-feetbtn>
+    <the-chevron
+    direction="left"
+    ></the-chevron>
+    <the-time
+    time_text="6:00AM"
+    ></the-time>
+    <the-object></the-object>
+    <the-feelingbtn
+    btn_text="Embarrassed"
+    ></the-feelingbtn>
+    <the-greenman></the-greenman>
+    <the-storyimg></the-storyimg>
+</body>
 </html>
