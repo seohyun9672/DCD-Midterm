@@ -12,6 +12,9 @@ the-textcont {
     height:100%;
     margin:0;
 }
+.landing-cont {
+    margin-top:10%;
+}
 .earth {
     position:absolute;
     bottom:0;
