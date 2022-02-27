@@ -4,12 +4,13 @@ var template_textcont = document.createElement("template"); //<template> </templ
 //To-do - CREATE THE UI HERE!
 template_textcont.innerHTML = `
     <div class="textcont">
-  text
+        text
     </div>
     <style>
-    .textcont{
+  .textcont {
         background-color: white;
-        width: 1060px;
+        width: 100%;
+        height:140px;
     }
     </style>
 `;
