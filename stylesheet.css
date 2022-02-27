@@ -17,10 +17,24 @@ the-textcont {
     bottom:0;
     width:100vw;
 }
-/* the-subheader {
+the-subheader {
     text-align:center;
 }
 the-footprintbtn {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:2em;
+}
+/* story page */
+body {
+    margin:0;
+}
+.story_cont {
+    display:flex;
+    flex-direction:column;
+}
+the-object {
     width:30%;
 } */
 
