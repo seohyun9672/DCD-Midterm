@@ -13,43 +13,22 @@ the-textcont {
     margin:0;
 }
 .landing-cont {
-    margin-top:10%;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .earth {
     position:absolute;
     bottom:0;
     width:100vw;
 }
-the-subheader {
-    text-align:center;
+.landing_clickable{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-the-footprintbtn {
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-    margin-top:2em;
-}
-/* story page */
-body {
-    margin:0;
-}
-.story_cont {
-    display:flex;
-    flex-direction:column;
-}
-the-object {
-    width:30%;
-} */
-
-/* the-object {
-    position:absolute;
-    top:0;
-}
-the-footprintcycle {
-    position:absolute;
-    right:2em;
-    top:2em;
-} */
 
 /* STORY */
 
@@ -76,7 +55,6 @@ body {
     position:fixed;
     bottom: 0;
     height: 180px;
-
 }
 .textbox{
     width: 100%;

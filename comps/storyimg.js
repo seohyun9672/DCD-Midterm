@@ -4,13 +4,14 @@ var template_storyimg = document.createElement("template"); //<template> </templ
 //To-do - CREATE THE UI HERE!
 template_storyimg.innerHTML = `
 <style>
-    #bg > img{
-        width: 100%;
-        height: 100%;
-    }
-    #bg{
-        height: 540px;
-    }
+  #bg > img{
+      width: 100%;
+      height: 100%;
+
+  }
+  #bg{
+      height: 540px;
+  }
 </style>
 <div id="bg">
     <img src="imgs/storyimg/story1.jpeg" alt="bedroom">
