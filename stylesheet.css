@@ -47,20 +47,26 @@ body {
 .story{
     display: flex;
     flex-direction: column;
-    height:720px;
 }
 .scriptbox{
-    background-color: green;
+    background-color: #C8D5AE;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    width: 100%;
+    position:fixed;
+    bottom: 0;
     height: 180px;
+
 }
+.textbox{
+    width: 100%;
+}
+
 .back{
     position: absolute;
     left: 10px;
 }
-
 /* CTA */
 /* /////need to adjust width and height ///// */
 .section_cta_first{
