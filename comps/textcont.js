@@ -4,44 +4,13 @@ var template_textcont = document.createElement("template"); //<template> </templ
 //To-do - CREATE THE UI HERE!
 template_textcont.innerHTML = `
     <div class="textcont">
-        <the-chevron
-        direction="left"></the-chevron>
-        <the-greenman></the-greenman>
-        <div class ="textbox">
-            <the-time></the-time>
-            <div class="story_text">
-                text <em class="emtext"> text</em>
-            </div>
-        </div>
-        <the-chevron></the-chevron>
+  text
     </div>
     <style>
-        .textcont{
-            width: 100%;
-            height: auto;
-            background-color: #C8D5AE;
-            display: flex;
-            justify-content:center;
-            align-items:center;
-            padding:10px;
-        }
-        .textbox{
-            margin: 1em;
-            width:80vw;
-            background-color: white;
-            font-size: 1.5em;
-            padding:1em;
-        }
-        .emtext{
-            font-weight: bolder;
-            color: red;
-            font-style: normal;
-        }
-        the-time{
-            position:absolute;
-            top:0.75em;
-            left:5em;
-        }
+    .textcont{
+        background-color: white;
+        width: 1060px;
+    }
     </style>
 `;
 
