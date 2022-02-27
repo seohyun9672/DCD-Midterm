@@ -23,14 +23,7 @@ the-textcont {
 the-footprintbtn {
     width:30%;
 } */
-/* story page */
-body {
-    margin:0;
-}
-.story_cont {
-    display:flex;
-    flex-direction:column;
-}
+
 /* the-object {
     position:absolute;
     top:0;
@@ -42,20 +35,26 @@ the-footprintcycle {
 } */
 
 /* STORY */
+
+body {
+    margin:0;
+}
+.section_story{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.story{
+    display: flex;
+    flex-direction: column;
+    height:720px;
+}
 .scriptbox{
     background-color: green;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 180px;
-}
-.section_story{
-    display: flex;
-    flex-direction: column;
-}
-.story{
-    display: flex;
-    flex-direction: column;
 }
 .back{
     position: absolute;
