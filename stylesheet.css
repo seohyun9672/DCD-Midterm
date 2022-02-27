@@ -1,11 +1,11 @@
-the-infocard {
+/* the-infocard {
     display:none;
 }
 the-textcont {
     position:absolute;
     bottom:0;
     width:100vw;
-}
+} */
 /* landing page */
 .landing {
     background:linear-gradient(lightblue,white);
@@ -17,12 +17,12 @@ the-textcont {
     bottom:0;
     width:100vw;
 }
-the-subheader {
+/* the-subheader {
     text-align:center;
 }
 the-footprintbtn {
     width:30%;
-}
+} */
 /* story page */
 body {
     margin:0;
@@ -31,7 +31,7 @@ body {
     display:flex;
     flex-direction:column;
 }
-the-object {
+/* the-object {
     position:absolute;
     top:0;
 }
@@ -39,6 +39,32 @@ the-footprintcycle {
     position:absolute;
     right:2em;
     top:2em;
+} */
+
+/* STORY */
+.scriptbox{
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+}
+.section_story{
+    display: flex;
+    flex-direction: column;
+}
+.story{
+    display: flex;
+    flex-direction: column;
+}
+.back{
+    position: absolute;
+    left: 10px;
+}
+.footprintcycle{
+    position: absolute;
+    right:0px;
+    padding: 20px;
 }
 
 /* CTA */
