@@ -4,7 +4,7 @@ var template_footprintbtn = document.createElement("template"); //<template> </t
 //To-do - CREATE THE UI HERE!
 template_footprintbtn.innerHTML = `
 <div class="footprint_btn">
-    <a href="nextpage.com">
+    <a href="./story.html">
         <img src="imgs/bluefootprint.svg" alt="footprint">
     </a>
 </div>
