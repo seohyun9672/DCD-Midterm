@@ -64,6 +64,8 @@ body {
 .story{
     display: flex;
     flex-direction: column;
+    top:0;
+    height: 100%;
 }
 .scriptbox{
     background-color: #C8D5AE;

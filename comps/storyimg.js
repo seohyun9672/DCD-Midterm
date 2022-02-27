@@ -7,8 +7,10 @@ template_storyimg.innerHTML = `
 #bg > img{
     width: 100%;
     height: 100%;
-    position: fixed;
-    top:0;
+    
+}
+#bg{
+    height: 600px;
 }
 
 </style>
