@@ -21,7 +21,10 @@ the-subheader {
     text-align:center;
 }
 the-footprintbtn {
-    width:30%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:2em;
 }
 /* story page */
 body {
