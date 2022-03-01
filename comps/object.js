@@ -11,8 +11,8 @@ template_object.innerHTML = `
 <style>
     .object {
      position: absolute;
-     top: 430px;   
-     left: 400px
+     top: 440px;   
+     left: 740px
     }
 `;
 
@@ -34,12 +34,15 @@ class TheObject extends HTMLElement {
         // }
         this.objNum = 1;
         this.shadowRoot.querySelector(".obj-cont").onclick = () => {
-            this.trigger();
-            this.popUp();
+            // this.trigger();
+            // this.popUp();
+            document.querySelector("the-infocard").showInfocard();
         }
         
     } 
-        
+    //  showNextObject(){
+    //   this.shadowRoot.querySelector(".object > img").src = `/imgs/objects/phone.svg;`
+    //   }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     // changeOb(type = "story1"){
@@ -299,9 +302,9 @@ class TheObject extends HTMLElement {
     trigger() {
         document.querySelector("the-textcont").increaseTextCont();
     }
-    popUp(){
-        document.querySelector("the-infocard").showInfocard();
-    }
+    // popUp(){
+    //     document.querySelector("the-infocard").showInfocard();
+    // }
 
 }
 
