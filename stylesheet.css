@@ -62,10 +62,12 @@ body {
 
 /* CTA */
 /* /////need to adjust width and height ///// */
+
 .section_cta_first{
     background-color: #FEFFF6;
     width: 100%;
     height: 100%;
+    padding: 3em;
 }
 .section_clickable{
     display:flex;
@@ -73,20 +75,21 @@ body {
 }
 .section_emoji{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
+    margin: 2em;
 }
 .btn_emoji{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 .section_cta_second{
     background-color: #C6E1E5;
     width: 100%;
     height: 100%;
+    padding: 3em;
 }
 .section_cta_desc{
     display: flex;
