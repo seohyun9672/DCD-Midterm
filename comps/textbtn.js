@@ -38,7 +38,7 @@ class TheTextBtn extends HTMLElement {
             this.shadowRoot.querySelector(".textbtn_cont").style.color = this.getAttribute("color");
         }
         this.btnText = "back";
-        this.shadowRoot.querySelector(".textbtn_cont").onclick = () => this.txtBtnFunc();
+        this.shadowRoot.querySelector(".textbtn_cont").onclick = () => this.txtBtnFunc(this.getAttribute("btn_text"));
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
