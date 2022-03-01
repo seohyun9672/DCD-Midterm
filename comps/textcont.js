@@ -3,29 +3,14 @@ var template_textcont = document.createElement("template"); //<template> </templ
 
 //To-do - CREATE THE UI HERE!
 template_textcont.innerHTML = `
-    <script src="comps/time.js"></script>
-    <script src="comps/greenman.js"></script>
-    <script src="comps/chevron.js"></script>
     <div class="textcont">
-        <p> story_text 
-            <em> em_text<em> 
-        </p>
+  text
     </div>
     <style>
-        .textcont {
-            background-color: white;
-            width: 100%;
-            height:140px;
-        }
-        .textcont > p {
-            padding: 1em;
-            font-size: 24px;
-            line-height: 1.3em;
-        }
-        p > em{
-            color: black;
-            font-weight: bolder;
-        }
+    .textcont{
+        background-color: white;
+        width: 1060px;
+    }
     </style>
 `;
 
@@ -43,21 +28,13 @@ class TheTextcont extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_textcont.content.cloneNode(true)); //use the template to make a clone
-        // this.ob_name="phone";
-
+    
         if(this.getAttribute("story_text")) {
-            this.shadowRoot.querySelector(".textcont > p").innerText = this.getAttribute("story_text"); 
-             
+            this.shadowRoot.querySelector(".story_text").innerText = this.getAttribute("story_text");
         }
-        if(this.getAttribute("em_text")){
-            this.shadowRoot.querySelector("p > em").style.color="red";
-            this.shadowRoot.querySelector("p > em").innerText = this.getAttribute("em_text"); 
-        }     
-      
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
-  
 }
 
 //MUST HAVE - define the tag for the custom elements

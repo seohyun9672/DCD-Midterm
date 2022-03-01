@@ -16,8 +16,7 @@ template_header.innerHTML = `
         text-align:center;
     }
     h1 {
-        font-size:40pt;
-        margin-bottom:0;
+        font-size:64pt;
     }
     em {
         color: #08509C;
@@ -29,7 +28,7 @@ template_header.innerHTML = `
         display:flex;
         align-items:center;
         justify-content:center;
-        font-size:20pt;
+        font-size:24pt;
     }
 </style>
 `;
