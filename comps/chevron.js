@@ -38,6 +38,7 @@ class TheChevron extends HTMLElement {
             document.querySelector(".storybg").changeStory();
             document.querySelector(".cycleimg").changeFootprintCycle();
             this.changePage();
+            document.querySelector(".greenmanimg").changeGreenman();
         }
 
         // this.shadowRoot.querySelector(".chev-cont").onclick = () => this.changePage()
