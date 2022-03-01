@@ -12,7 +12,11 @@ template_infocard.innerHTML = `
         <em> emphasis </em>
         <p class="capt-text">capt text</p>
         <p class="desc-text">desc text</p>
-        <the-textbtn><the-textbtn>
+        <the-textbtn
+        btn_text ="Got it!"
+        color="green"
+        class ="gotit"
+        ><the-textbtn>
     </div>
 </div>
 <style>
