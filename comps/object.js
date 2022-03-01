@@ -33,22 +33,28 @@ class TheObject extends HTMLElement {
         //     document.querySelector(".object > .first").src = () => changeOb(this.getAttribute("name"));   
         // }
         this.objNum = 1;
-        this.shadowRoot.querySelector(".obj-cont").onclick = () => this.trigger();
+        this.shadowRoot.querySelector(".obj-cont").onclick = () => {
+            this.trigger();
+            this.popUp();
+        }
+        
     } 
         
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     // changeOb(type = "story1"){
     //     if(type === "story1"){
-    //     this.shadowRoot.querySelector(".object > .first").src = `/imgs/objects/phone.svg;`
-    //     // this.shadowRoot.querySelector(".object > .second").src = `/imgs/objects/car.svg;`
-    //     }
+    // //     this.shadowRoot.querySelector(".object > .first").src = `/imgs/objects/phone.svg;`
+    // //     // this.shadowRoot.querySelector(".object > .second").src = `/imgs/objects/car.svg;`
+    // //     }
         
-    //     if(type === "story4"){
-    //     this.shadowRoot.querySelector(".object > .first").src = `/imgs/objects/tablet.svg;`
-    //     }
+    // //     if(type === "story4"){
+    // //     this.shadowRoot.querySelector(".object > .first").src = `/imgs/objects/tablet.svg;`
+    // //     }
 
-    // }
+    // // }
+
+
     updateObj() {
         if(this.objNum === 1) {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = 
@@ -131,6 +137,10 @@ class TheObject extends HTMLElement {
     trigger() {
         document.querySelector("the-textcont").increaseTextCont();
     }
+    popUp(){
+        document.querySelector("the-infocard").showInfocard();
+    }
+
 }
 
 //MUST HAVE - define the tag for the custom elements

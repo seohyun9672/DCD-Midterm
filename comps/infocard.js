@@ -15,10 +15,15 @@ template_infocard.innerHTML = `
 </div>
 <style>
     .infocard-cont {
+        background-color:#DAD;
         border: none;
         border-radius:5pt;
         box-shadow: 0em 0em 1em 0.2em #d3d3d3;
-        padding:2em;
+        padding:2em;    
+        display: none;
+        z-index: 2;
+        position: absolute;
+       
     }
     .num-text, .desc-text, em {
         font-family:"ibm plex sans", "Ubuntu", sans-serif;
@@ -71,6 +76,9 @@ class TheInfoCard extends HTMLElement {
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+    showInfocard(){
+        this.shadowRoot.querySelector(".infocard-cont").style.display = "block";
+    }
 }
 
 //MUST HAVE - define the tag for the custom elements
