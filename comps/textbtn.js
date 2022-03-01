@@ -37,18 +37,21 @@ class TheTextBtn extends HTMLElement {
         if(this.getAttribute("color")) {
             this.shadowRoot.querySelector(".textbtn_cont").style.color = this.getAttribute("color");
         }
-        this.btnText = "back";
         this.shadowRoot.querySelector(".textbtn_cont").onclick = () => this.txtBtnFunc(this.getAttribute("btn_text"));
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
-    txtBtnFunc(button="back") {
+    txtBtnFunc(button="< Back") {
         this.btntext = button;
-        if(button==="back") {
-        window.location.href = "/index.html";
+        if(button==="< Back") {
+            window.location.href = "/index.html";
     }
-        if(button==="gotit") {
-        document.querySelector("/").functionthatcausesthepagetochange();
+        if(button==="Got it!") {
+            document.querySelector("/").functionthatcausesthepagetochange();
+        }
+
+        if(button==="Next >") {
+            document.querySelector("/").functionthatcausesoverlaytochange();    
         }
 
 }
