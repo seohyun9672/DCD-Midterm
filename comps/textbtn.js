@@ -47,6 +47,10 @@ class TheTextBtn extends HTMLElement {
         if(button==="back") {
         window.location.href = "/index.html";
     }
+        if(button==="gotit") {
+        document.querySelector("/").functionthatcausesthepagetochange();
+        }
+
 }
 
 }
