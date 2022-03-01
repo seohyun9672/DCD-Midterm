@@ -35,17 +35,18 @@ class TheTextBtn extends HTMLElement {
             this.shadowRoot.querySelector("p").style.color = this.getAttribute("color");
         }
         this.btntext = "back";
-        this.shadowRoot.querySelector(".textbtn_cont").onclick = () => this.goBack();
+        this.shadowRoot.querySelector(".textbtn_cont").onclick = () => this.txtBtnFunc();
 
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
-    goBack(name="back") {
+    txtBtnFunc(name="back") {
         this.btntext = name;
         if(name==="back") {
         window.location.href = "/index.html";
     }
     }
+    // change name of function and add more ifs for each name
 }
 
 //MUST HAVE - define the tag for the custom elements
