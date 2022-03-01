@@ -4,17 +4,14 @@ var template_textbtn = document.createElement("template"); //<template> </templa
 //To-do - CREATE THE UI HERE!
 template_textbtn.innerHTML = `
 <div class="textbtn_cont">
-    <a class="btn-text" href="/">btn text</a>
+    btn_text
 </div>
 <style>
     .textbtn_cont{
         font-weight:bolder;
-        text-decoration:none; // this didnt fix the underline yet
-    }
-    .btn-text{
         padding:1em;
         position:absolute;
-        cursor: pointer
+        cursor: pointer;
     }
 </style>
 `;
@@ -35,18 +32,26 @@ class TheTextBtn extends HTMLElement {
         this.shadowRoot.appendChild(template_textbtn.content.cloneNode(true)); //use the template to make a clone
         
         if(this.getAttribute("btn_text")) {
-            this.shadowRoot.querySelector("a").innerText = this.getAttribute("btn_text");
+            this.shadowRoot.querySelector(".textbtn_cont").innerText = this.getAttribute("btn_text");
         }
         if(this.getAttribute("color")) {
-            this.shadowRoot.querySelector("a").style.color = this.getAttribute("color");
+            this.shadowRoot.querySelector(".textbtn_cont").style.color = this.getAttribute("color");
         }
-        if(this.getAttribute("href")) {
-            this.shadowRoot.querySelector("a").href = this.getAttribute("href");
-
-        }
+        this.btnText = "back";
+        this.shadowRoot.querySelector(".textbtn_cont").onclick = () => this.txtBtnFunc();
+    }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+    txtBtnFunc(button="back") {
+        this.btntext = button;
+        if(button==="back") {
+        window.location.href = "/index.html";
     }
+        if(button==="gotit") {
+        document.querySelector("/").functionthatcausesthepagetochange();
+        }
+
+}
 
 }
 
