@@ -54,7 +54,25 @@ class TheObject extends HTMLElement {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = 
         `<div class="object">
         <img class="first" src="imgs/objects/phone.svg" alt="phone">
-        </div>`; 
+        </div>
+        <style>
+        .first {
+            animation: 3s fadeIn;
+            animation-fill-mode: forwards;
+            
+            visibility: hidden;
+          }
+          
+          @keyframes fadeIn {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        </style>`; 
         }
 
         if(this.objNum === 2) {
@@ -64,13 +82,49 @@ class TheObject extends HTMLElement {
         </div>
         <div class="object">
         <img class="second" src="imgs/objects/car.svg" alt="car">
-        </div>`;  
+        </div>
+        <style>
+        .second {
+            animation: 3s fadeIn;
+            animation-fill-mode: forwards;
+            
+            visibility: hidden;
+          }
+          
+          @keyframes fadeIn {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        </style>`;  
         }
         
         if(this.objNum === 3) {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = `<div class="object">
         <img class="first" src="imgs/objects/waterbottle.svg" alt="waterbottle">
-        </div>`;
+        </div>
+        <style>
+        .first {
+            animation: 3s fadeIn;
+            animation-fill-mode: forwards;
+            
+            visibility: hidden;
+          }
+          
+          @keyframes fadeIn {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        </style>`;
         }
         
         if(this.objNum === 4) {
@@ -79,7 +133,25 @@ class TheObject extends HTMLElement {
         </div>
         <div class="object">
         <img class="second" src="imgs/objects/fan.svg" alt="fan">
-        </div>`;  
+        </div>
+        <style>
+        .second {
+            animation: 3s fadeIn;
+            animation-fill-mode: forwards;
+            
+            visibility: hidden;
+          }
+          
+          @keyframes fadeIn {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        </style>`;  
         }
         if(this.objNum === 5) {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = `<div class="object">
@@ -90,12 +162,48 @@ class TheObject extends HTMLElement {
         </div>
         <div class="object">
         <img class="third" src="imgs/objects/screen.svg" alt="screen">
-        </div>`;   
+        </div>
+        <style>
+        .third {
+            animation: 3s fadeIn;
+            animation-fill-mode: forwards;
+            
+            visibility: hidden;
+          }
+          
+          @keyframes fadeIn {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        </style>`;   
         }
         if(this.objNum === 6) {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = `<div class="object">
         <img class="first" src="imgs/objects/laundrydetergent.svg" alt="detergent">
-        </div>`;  
+        </div>
+        <style>
+        .first {
+            animation: 3s fadeIn;
+            animation-fill-mode: forwards;
+            
+            visibility: hidden;
+          }
+          
+          @keyframes fadeIn {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        </style>`;  
         }
         if(this.objNum === 7) {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = `<div class="object">
@@ -103,12 +211,48 @@ class TheObject extends HTMLElement {
         </div>
         <div class="object">
         <img class="second" src="imgs/objects/laundrybasket.svg" alt="basket">
-        </div>`;  
+        </div>
+        <style>
+        .second {
+            animation: 3s fadeIn;
+            animation-fill-mode: forwards;
+            
+            visibility: hidden;
+          }
+          
+          @keyframes fadeIn {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        </style>`;  
         }
         if(this.objNum === 8) {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = `<div class="object">
         <img class="first" src="imgs/objects/tablet.svg" alt="tablet">
-        </div>`;  
+        </div>
+        <style>
+        .first {
+            animation: 3s fadeIn;
+            animation-fill-mode: forwards;
+            
+            visibility: hidden;
+          }
+          
+          @keyframes fadeIn {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        </style>`;  
         }
         if(this.objNum === 9) {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = `<div class="object">
@@ -116,7 +260,25 @@ class TheObject extends HTMLElement {
         </div>
         <div class="object">
         <img class="second" src="imgs/objects/switch.svg" alt="switch">
-        </div>`;  
+        </div>
+        <style>
+        .second {
+            animation: 3s fadeIn;
+            animation-fill-mode: forwards;
+            
+            visibility: hidden;
+          }
+          
+          @keyframes fadeIn {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        </style>`;  
         }
     }
     remObj() {
