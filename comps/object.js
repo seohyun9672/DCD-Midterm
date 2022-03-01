@@ -34,13 +34,7 @@ class TheObject extends HTMLElement {
         //     document.querySelector(".object > .first").src = () => changeOb(this.getAttribute("name"));   
         // }
         this.objNum = 1;
-        this.shadowRoot.querySelector("html").innerHTML = 
-        `<div class="object">
-        <img class="first" src="imgs/objects/phone.svg" alt="phone">
-        </div>
-        <div class="object">
-        <img class="second" src="imgs/objects/car.svg" alt="car">
-        </div>`; 
+        this.shadowRoot.querySelector(".obj-cont").onclick = () => this.trigger();
     } 
         
 
@@ -119,7 +113,7 @@ class TheObject extends HTMLElement {
         }
         if(this.objNum === 9) {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = `<div class="object">
-        <img class="first" src="imgs/objects/laundrydetergent.svg" alt="detergent">
+        <img class="first" src="imgs/objects/tablet.svg" alt="tablet">
         </div>
         <div class="object">
         <img class="second" src="imgs/objects/switch.svg" alt="switch">
@@ -134,6 +128,9 @@ class TheObject extends HTMLElement {
     addObj() {
         this.objNum = this.objNum + 1;
         this.updateObj();
+    }
+    trigger() {
+        document.querySelector("the-textcont").increaseTextCont();
     }
 }
 

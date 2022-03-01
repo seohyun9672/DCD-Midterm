@@ -51,15 +51,13 @@ class TheTextcont extends HTMLElement {
             this.shadowRoot.querySelector("p > em").style.color="red";
             this.shadowRoot.querySelector("p > em").innerText = this.getAttribute("em_text"); 
         } 
-
         this.textOrder = 1;
-        this.shadowRoot.querySelector(".textcont").onclick = () => this.increaseTextOrder();
         
       
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
-    updateTextOrder(){
+    updateTextCont(){
 
         if(this.textOrder === 0) {
            window.location.href="/";
@@ -111,17 +109,17 @@ class TheTextcont extends HTMLElement {
             window.location.href="/cta.html";
         }
     }
-    decreaseTextOrder() {
+    decreaseTextCont() {
         this.textOrder = this.textOrder - 1;
         document.querySelector("the-time").decreaseTime();
-        this.updateTextOrder();
+        this.updateTextCont();
         document.querySelector("the-object").remObj();
     }
     
-    increaseTextOrder() {
+    increaseTextCont() {
         this.textOrder = this.textOrder + 1;
         document.querySelector("the-time").increaseTime();
-        this.updateTextOrder();
+        this.updateTextCont();
         document.querySelector("the-object").addObj();
     }
 }
