@@ -46,7 +46,7 @@ class TheChevron extends HTMLElement {
         document.querySelector("#textcont").decreaseTextOrder();
         }
         else {
-        document.querySelector("#textcont").increaseTextOrder();   
+        document.querySelector("#textcont").increaseTextOrder();  
         }
     }
 }

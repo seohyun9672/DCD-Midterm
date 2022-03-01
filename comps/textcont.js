@@ -63,9 +63,14 @@ class TheTextcont extends HTMLElement {
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     updateTextOrder(){
-        if(this.textOrder === 1) {
+
+        if(this.textOrder === 0) {
+           window.location.href="/";
+        }if(this.textOrder === 1) {
             this.shadowRoot.querySelector("p").innerText = `Mr. Green wakes up in the morning with an alarm from his brand new phone. Click on his phone to turn the alarm off.`
+
         }
+
         if(this.textOrder === 2) {
             this.shadowRoot.querySelector("p").innerText = 
             `Great! Now Mr. Green is ready to go to work.
@@ -93,32 +98,32 @@ class TheTextcont extends HTMLElement {
         }
         if(this.textOrder === 7) {
             this.shadowRoot.querySelector("p").innerText = 
-        `Mr. Green usually does his laundry after work.
-        Click on the laundry detergent to help Mr. Green start his laundry.`
-        }
-        if(this.textOrder === 8) {
-            this.shadowRoot.querySelector("p").innerText = 
         `Mr. Green finishes his laundry.
         Click on the laundry basket to help him throw his clothes into the dryer. `
         }
-        if(this.textOrder === 9) {
+        if(this.textOrder === 8) {
             this.shadowRoot.querySelector("p").innerText = 
         `While folding his laundry, Mr. Green remembers the movie that his collegue recommended. 
         Click on the tablet to watch Netflix.`
         }
-        if(this.textOrder === 10) {
+        if(this.textOrder === 9) {
             this.shadowRoot.querySelector("p").innerText = 
         `Mr. Green fell asleep on the couch while watching TV.
         It seems that he forgot to turn off the light. Click on the switch to turn off the light for him.`
         }
+        if(this.textOrder === 10) {
+            window.location.href="/cta.html";
+        }
     }
     decreaseTextOrder() {
         this.textOrder = this.textOrder - 1;
+        document.querySelector("the-time").decreaseTime();
         this.updateTextOrder();
     }
     
     increaseTextOrder() {
         this.textOrder = this.textOrder + 1;
+        document.querySelector("the-time").increaseTime();
         this.updateTextOrder();
     }
 }
