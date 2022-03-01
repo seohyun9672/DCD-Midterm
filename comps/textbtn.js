@@ -4,11 +4,15 @@ var template_textbtn = document.createElement("template"); //<template> </templa
 //To-do - CREATE THE UI HERE!
 template_textbtn.innerHTML = `
 <div class="textbtn_cont">
-    <p class="btn-text">btn text</p>
+    <a class="btn-text" href="/">btn text</p>
 </div>
 <style>
     .btn_text {
         font-weight:bolder;
+        text-decoration:none; // this didnt fix the underline yet
+    }
+    .textbtn_cont {
+        padding:1em;
     }
 </style>
 `;
@@ -29,10 +33,13 @@ class TheTextBtn extends HTMLElement {
         this.shadowRoot.appendChild(template_textbtn.content.cloneNode(true)); //use the template to make a clone
         
         if(this.getAttribute("btn_text")) {
-            this.shadowRoot.querySelector("p").innerText = this.getAttribute("btn_text");
+            this.shadowRoot.querySelector("a").innerText = this.getAttribute("btn_text");
         }
         if(this.getAttribute("color")) {
-            this.shadowRoot.querySelector("p").style.color = this.getAttribute("color");
+            this.shadowRoot.querySelector("a").style.color = this.getAttribute("color");
+        }
+        if(this.getAttribute("href")) {
+            this.shadowRoot.querySelector("a").href = this.getAttribute("href");
         }
     }
 
