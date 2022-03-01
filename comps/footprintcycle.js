@@ -29,21 +29,39 @@ class TheFootprintCycle extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_footprintcycle.content.cloneNode(true)); //use the template to make a clone
-        this.shadowRoot.querySelector(".footprintcycle").src=`./imgs/FootprintCycle/${this.getAttribute("img_color")}.svg`;
     }
 
+    changeFootprintCycle(type="footprint_num"){
+        this.shadowRoot.querySelector(".footprintcycle").src = `imgs/FootprintCycle/${this.getAttribute("footprint_num")}.svg`;
+
+        if(type==="footprintcycle1"){
+            this.shadowRoot.querySelector(".footprintcycle").src=`imgs/FootprintCycle/${this.getAttribute("footprint_num")}.svg`;
+        }
+        if(type==="footprintcycle2"){
+            this.shadowRoot.querySelector(".footprintcycle").src=`imgs/FootprintCycle/${this.getAttribute("footprint_num")}.svg`;
+        }
+        if(type==="footprintcycle3"){
+            this.shadowRoot.querySelector(".footprintcycle").src=`imgs/FootprintCycle/${this.getAttribute("footprint_num")}.svg`;
+        }
+        if(type==="footprintcycle4"){
+            this.shadowRoot.querySelector(".footprintcycle").src=`imgs/FootprintCycle/${this.getAttribute("footprint_num")}.svg`;
+        }
+        if(type==="footprintcycle5"){
+            this.shadowRoot.querySelector(".footprintcycle").src=`imgs/FootprintCycle/${this.getAttribute("footprint_num")}.svg`;
+        }
+        if(type==="footprintcycle6"){
+            this.shadowRoot.querySelector(".footprintcycle").src=`imgs/FootprintCycle/${this.getAttribute("footprint_num")}.svg`;
+        }
+        
+
+    }
+    
     //To-do - CREATE THE FUNCTIONALITIES HERE!
-    
-
-    // changeFootprintCycle(img="./imgs/FootprintCycle/footprintcycle1.svg"){
-    //     this.shadowRoot.querySelector(".footprintcycle").src= img;
-    //     // if(type==="story1"){
-    //     //     this.shadowRoot.querySelector(".footprintcycle").src=`./imgs/FootprintCycle/footprintcycle1.svg`
-        // }
-
-    
-    // changeFootprintCycle(){
-    //     document.getAttribute("story_num").changeBG(`./imgs/${this.getAttribute("num_footprintcycle")}.svg`);
+    // changeFootprintCycle(type="footprint_num"){
+    //     if(type==="footprintcycle3"){
+    //         this.shadowRoot.querySelector(".footprintcycle").src=`./imgs/FootprintCycle/${this.getAttribute("footprint_num")}.svg`;
+    //     }
+        
     // }
 }
 
