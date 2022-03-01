@@ -11,6 +11,7 @@ template_chevron.innerHTML = `
         width:2em;
         margin:1em;
         padding: 2.5em;
+        cursor: pointer;
     }
 </style>
 `;
@@ -33,10 +34,19 @@ class TheChevron extends HTMLElement {
         if(this.getAttribute("direction")) {
             this.shadowRoot.querySelector(".chev-cont").style.transform = "scaleX(-1)";
         }
+        this.chevron = "nextStory";
+        this.shadowRoot.querySelector(".chev-cont").onclick = () => this.nextPage()
     }
 
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+
+    nextPage(direction="right"){
+        this.chevron = "nextStory";
+        if(direction==="right"){
+            document.location.href = "./story.html"
+        }
+    }
 }
 
 //MUST HAVE - define the tag for the custom elements
