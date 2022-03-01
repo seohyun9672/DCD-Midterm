@@ -3,10 +3,12 @@ var template_emoji = document.createElement("template"); //<template> </template
 
 //To-do - CREATE THE UI HERE!
 template_emoji.innerHTML = `
-    <img src ="imgs/Emojis/EmojiEmbarrassed.svg" alt="Embarrassed Emoji">
+    <img class = "emoji" src ="imgs/Emojis/EmojiEmbarrassed.svg" alt="Embarrassed Emoji">
     <style>
-        width: 34px
-        height: 34px
+        .emoji{
+            width: 100%;
+            height: 100%;
+        }
     </style>
 `;
 
@@ -24,7 +26,15 @@ class TheEmoji extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_emoji.content.cloneNode(true)); //use the template to make a clone
+        this.shadowRoot.querySelector(".emoji").src = `./imgs/emojis/${this.getAttribute("feeling")}.svg`
+    
     }
+    // changeEmoji(){
+    //     if(type==="Embarrassed"){
+    //         this.shadowRoot.querySelector(".emoji > img").src=`./imgs/emojis/${this.getAttribute("feeling")}.svg`;
+    //     }
+
+    // }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 }
