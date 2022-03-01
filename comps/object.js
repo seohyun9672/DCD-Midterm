@@ -9,12 +9,11 @@ template_object.innerHTML = `
 </div>
 </div>
 <style>
-    div {
-        display:flex;
-        justify-content:center;
-        z-index:100;
+    .object {
+     position: absolute;
+     top: 430px;   
+     left: 400px
     }
-
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
@@ -136,3 +135,5 @@ class TheObject extends HTMLElement {
 
 //MUST HAVE - define the tag for the custom elements
 customElements.define("the-object", TheObject)
+
+
