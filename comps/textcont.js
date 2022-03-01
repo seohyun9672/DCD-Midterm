@@ -68,7 +68,6 @@ class TheTextcont extends HTMLElement {
            window.location.href="/";
         }if(this.textOrder === 1) {
             this.shadowRoot.querySelector("p").innerText = `Mr. Green wakes up in the morning with an alarm from his brand new phone. Click on his phone to turn the alarm off.`
-
         }
 
         if(this.textOrder === 2) {
@@ -119,12 +118,14 @@ class TheTextcont extends HTMLElement {
         this.textOrder = this.textOrder - 1;
         document.querySelector("the-time").decreaseTime();
         this.updateTextOrder();
+        document.querySelector("the-object").remObj();
     }
     
     increaseTextOrder() {
         this.textOrder = this.textOrder + 1;
         document.querySelector("the-time").increaseTime();
         this.updateTextOrder();
+        document.querySelector("the-object").addObj();
     }
 }
 
