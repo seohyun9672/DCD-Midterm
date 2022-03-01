@@ -43,10 +43,10 @@ class TheChevron extends HTMLElement {
 
     changePage(){
         if(this.getAttribute("direction")){
-        document.querySelector("#textcont").decreaseTextOrder();
+        document.querySelector("#textcont").decreaseTextCont();
         }
         else {
-        document.querySelector("#textcont").increaseTextOrder();  
+        document.querySelector("#textcont").increaseTextCont();  
         }
     }
 }
