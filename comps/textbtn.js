@@ -11,8 +11,10 @@ template_textbtn.innerHTML = `
         font-weight:bolder;
         text-decoration:none; // this didnt fix the underline yet
     }
-    .textbtn_cont {
+    .btn-text{
         padding:1em;
+        position:absolute;
+        cursor: pointer
     }
 </style>
 `;
