@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="story">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,28 +30,41 @@
 </head>
 <body>
     <section class="section_story">
-        <div class="back">
-            <the-textbtn
-            btn_text="< Back"
-            color="white"
-            ></the-textbtn>
-        </div>
+        <the-textbtn
+        btn_text="< Back"
+        color="white"
+        ></the-textbtn>
         <the-footprintcycle
         img_color ="footprintcycle1"
         ></the-footprintcycle>
         <div class= "story">
             <the-storyimg
-            story_num="story1"></the-storyimg>
+            story_num="story1"
+            ></the-storyimg>
             <div class="scriptbox">
-                <the-chevron></the-chevron>
-                <the-greenman></the-greenman>
-                <the-time></the-time>
-                <the-textcont></the-textcont>
+                <the-chevron
+                direction="scaleX(-1)"
+                ></the-chevron>
+                <the-greenman
+                greenman_num ="greenman1"
+                ></the-greenman>
+                <div class="textbox">
+                    <the-time
+                    time_text = "6:00AM"
+                    ></the-time>
+                    <the-textcont
+                    story_text ="Mr. Green wakes up in the morning with an alarm from his brand new phone.
+                    Click on his phone to turn the alarm off."
+                    em_text =""
+                    ></the-textcont>
+                </div>
                 <the-chevron></the-chevron>
             </div>
         </div>
     </section>
     <!-- .textcont{
+                     story_text ="Mr. Green wakes up in the morning with an alarm from his brand new phone.
+                    Click on his phone to turn the alarm off."
         width: 100%;
         height: auto;
         background-color: #C8D5AE;
@@ -79,15 +92,9 @@
     } -->
     
 <!--     
-    <div class="storycont">
-        <the-object
-        id="item"></the-object>
-        <the-textcont
-        time_text="6:ooAM"
-        story_text="fill text here" ></the-textcont>
-    </div> -->
+   
     
-    <!-- <the-textbtn
+   <the-textbtn
     btn_text="Got it!"
     color="#6B994D"
     ></the-textbtn>

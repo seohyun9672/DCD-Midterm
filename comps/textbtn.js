@@ -4,10 +4,10 @@ var template_textbtn = document.createElement("template"); //<template> </templa
 //To-do - CREATE THE UI HERE!
 template_textbtn.innerHTML = `
 <div class="textbtn_cont">
-    <a class="btn-text" href="/">btn text</p>
+    <a class="btn-text" href="/">btn text</a>
 </div>
 <style>
-    .btn_text {
+    .textbtn_cont{
         font-weight:bolder;
         text-decoration:none; // this didnt fix the underline yet
     }
@@ -40,10 +40,12 @@ class TheTextBtn extends HTMLElement {
         }
         if(this.getAttribute("href")) {
             this.shadowRoot.querySelector("a").href = this.getAttribute("href");
-        }
-    }
+
+
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+    }
+    // change name of function and add more ifs for each name
 }
 
 //MUST HAVE - define the tag for the custom elements

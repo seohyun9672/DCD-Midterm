@@ -16,12 +16,14 @@ template_time.innerHTML = `
         height: fit-content;
         padding: 5px 15px;
         border-radius: 10px; 
-
+        position: absolute;
+        top: 10px;
     }
     .time_cont > .time_text {
         color: black;
         font-size: 24px;
     }
+    
 </style>
 `;
 

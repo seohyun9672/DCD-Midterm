@@ -23,18 +23,29 @@
     <script src="comps/storyimg.js"></script>
 </head>
 <body>
-    <the-header
-    head_text="What's Your Environmental Impact?"
-    desc_text="See how your everyday actions contribute to your"
-    em_text=" carbon footprint."
-    no_desc2="none"
-    ></the-header>
-    <the-subheader
-    subheader_text="Click the footprint to start &#8594;"></the-subheader>
+    <div class="landing-cont">
+        <the-header
+        head_text="What's Your Environmental Impact?"
+        desc_text="See how your everyday actions contribute to your"
+        em_text=" carbon footprint."
+        no_desc2="none"
+        ></the-header>
+        <the-subheader
+        subheader_text="Click the footprint to start &#8594;"></the-subheader>
+        <div class = landing_clickable>
+            <the-greenman greenman_num="greenman1"></the-greenman>
+            <the-footprintbtn></the-footprintbtn>
+            <the-greenman greenman_num="greenman6" direction="scaleX(-1)"></the-greenman>
+        </div>
+    </div>
     <div>
         <img class="earth" src="imgs/earth.svg" alt="earth">
     </div>
-    <the-footprintbtn></the-footprintbtn>
+    
+        
+    
+    
+   
 
 </body>
 </html>

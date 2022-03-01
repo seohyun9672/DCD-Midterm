@@ -4,7 +4,7 @@ var template_footprintbtn = document.createElement("template"); //<template> </t
 //To-do - CREATE THE UI HERE!
 template_footprintbtn.innerHTML = `
 <div class="footprint_btn">
-    <a href=./story.html>
+    <a href="/story.html">
         <img src="imgs/bluefootprint.svg" alt="footprint">
     </a>
 </div>
@@ -12,14 +12,19 @@ template_footprintbtn.innerHTML = `
 <style>
     .footprint_btn {
         border-radius: 50%;
-        border: white solid 10px;
+        border: white solid 20px;
         background-color:transparent;
+        width: 200px;
+        height: 200px;
+        margin-top:2em;
+        display: flex;
+        align-items:center;
+        justify-content:center;
+        box-shadow: 0 4px 20px -1px #E2E2E2;
     }
     .footprint_btn img {
-        display: block;
-        width: 64px;
-        height: 64px;
-        box-shadow: 3px 3px 1px #ccc;
+        height: 90%;
+        width: 90%;
     }
 </style>
 `;
