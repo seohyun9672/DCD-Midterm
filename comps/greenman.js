@@ -9,7 +9,8 @@ template_greenman.innerHTML = `
 
 <style>
     .greenman {
-        padding-right: 2.2em;
+        width: auto;
+        max-height:10%;
     }
 </style>
 `;
@@ -28,10 +29,7 @@ class TheGreenman extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_greenman.content.cloneNode(true)); //use the template to make a clone
-        this.shadowRoot.querySelector(".greenman").src=`./imgs/greenman/${this.getAttribute("greenman_num")}.svg`;
-        if(this.getAttribute("direction")){
-            this.shadowRoot.querySelector(".greenman").style.transform= "scaleX(-1)";
-        }
+        
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
