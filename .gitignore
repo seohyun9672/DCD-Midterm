@@ -5,3 +5,6 @@ node_modules
 dist
 .cache
 .history
+.DS_Store
+imgs/.DS_Store
+.DS_Store

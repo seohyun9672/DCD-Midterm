@@ -4,11 +4,14 @@ var template_textbtn = document.createElement("template"); //<template> </templa
 //To-do - CREATE THE UI HERE!
 template_textbtn.innerHTML = `
 <div class="textbtn_cont">
-    <p class="btn-text">btn text</p>
+    btn_text
 </div>
 <style>
-    .btn_text {
+    .textbtn_cont{
         font-weight:bolder;
+        padding: 1em;
+        position: absolute;
+        cursor: pointer;
     }
 </style>
 `;
@@ -29,14 +32,24 @@ class TheTextBtn extends HTMLElement {
         this.shadowRoot.appendChild(template_textbtn.content.cloneNode(true)); //use the template to make a clone
         
         if(this.getAttribute("btn_text")) {
-            this.shadowRoot.querySelector("p").innerText = this.getAttribute("btn_text");
+            this.shadowRoot.querySelector(".textbtn_cont").innerText = this.getAttribute("btn_text");
         }
         if(this.getAttribute("color")) {
-            this.shadowRoot.querySelector("p").style.color = this.getAttribute("color");
+            this.shadowRoot.querySelector(".textbtn_cont").style.color = this.getAttribute("color");
         }
+        this.btntext = "back";
+        this.shadowRoot.querySelector(".textbtn_cont").onclick = () => this.txtBtnFunc();
+
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+    txtBtnFunc(name="back") {
+        this.btntext = name;
+        if(name==="back") {
+        window.location.href = "/index.html";
+    }
+    }
+    // change name of function and add more ifs for each name
 }
 
 //MUST HAVE - define the tag for the custom elements
