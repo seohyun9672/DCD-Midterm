@@ -41,11 +41,11 @@ class TheTextBtn extends HTMLElement {
         if(this.getAttribute("href")) {
             this.shadowRoot.querySelector("a").href = this.getAttribute("href");
 
-
+        }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     }
-    // change name of function and add more ifs for each name
+
 }
 
 //MUST HAVE - define the tag for the custom elements
