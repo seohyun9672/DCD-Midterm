@@ -19,6 +19,8 @@ template_infocard.innerHTML = `
         border-radius:5pt;
         box-shadow: 0em 0em 1em 0.2em #d3d3d3;
         padding:2em;
+        background-color: white;
+        display: none;
     }
     .num-text, .desc-text, em {
         font-family:"ibm plex sans", "Ubuntu", sans-serif;
@@ -69,7 +71,9 @@ class TheInfoCard extends HTMLElement {
         }
         
     }
-
+    showInfocard(){
+        this.shadowRoot.querySelector(".infocard-cont").style.display="block"
+    }
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 }
 
