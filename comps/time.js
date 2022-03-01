@@ -5,7 +5,7 @@ var template_time = document.createElement("template"); //<template> </template>
 template_time.innerHTML = `
 
 <div class="time_cont">
-    <span class="time_text"> time_text </span>
+    <span class="time_text"> 6:00AM </span>
 </div>
 
 <style>
@@ -41,12 +41,45 @@ class TheTime extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_time.content.cloneNode(true)); //use the template to make a clone
-        if(this.getAttribute("time_text")) {
-            this.shadowRoot.querySelector("span").innerText = this.getAttribute("time_text");
-        }
+        
+        this.timeOrder = 1;
+        
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+    updateTime() {
+        
+        if(this.timeOrder === 1 || this.timeOrder === 2) {
+        this.shadowRoot.querySelector(".time_text").innerText = "8:00AM"; 
+        }
+
+        if(this.timeOrder === 3 || this.timeOrder === 4 || this.timeOrder === 5) {
+        this.shadowRoot.querySelector(".time_text").innerText = "9:00AM"; 
+        }
+        
+        if(this.timeOrder === 6) {
+        this.shadowRoot.querySelector(".time_text").innerText = "6:00PM"; 
+        }
+        
+        if(this.timeOrder === 7) {
+        this.shadowRoot.querySelector(".time_text").innerText = "7:00PM"; 
+        }
+        if(this.timeOrder === 8) {
+        this.shadowRoot.querySelector(".time_text").innerText = "8:00PM"; 
+        }
+        if(this.timeOrder === 9) {
+        this.shadowRoot.querySelector(".time_text").innerText = "11:00PM"; 
+        }
+    }
+    decreaseTime() {
+        this.timeOrder = this.timeOrder - 1;
+        this.updateTime();
+    }
+    
+    increaseTime() {
+        this.timeOrder = this.timeOrder + 1;
+        this.updateTime();
+    }
 }
 
 //MUST HAVE - define the tag for the custom elements
