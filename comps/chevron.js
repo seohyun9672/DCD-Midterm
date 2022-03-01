@@ -34,8 +34,13 @@ class TheChevron extends HTMLElement {
         if(this.getAttribute("direction")) {
             this.shadowRoot.querySelector(".chev-cont").style.transform = "scaleX(-1)";
         }
-    
-        this.shadowRoot.querySelector(".chev-cont").onclick = () => this.changePage()
+        this.shadowRoot.querySelector(".chev-cont > img").onclick = () => {
+            document.querySelector(".storybg").changeStory();
+            document.querySelector(".cycleimg").changeFootprintCycle();
+            this.changePage();
+        }
+
+        // this.shadowRoot.querySelector(".chev-cont").onclick = () => this.changePage()
     }
 
 
@@ -49,7 +54,14 @@ class TheChevron extends HTMLElement {
         document.querySelector("#textcont").increaseTextOrder();  
         }
     }
+        
+
+    //To-do - CREATE THE FUNCTIONALITIES HERE!
+
 }
+        
+
+
 
 //MUST HAVE - define the tag for the custom elements
 customElements.define("the-chevron", TheChevron)
