@@ -3,6 +3,7 @@ var template_infocard = document.createElement("template"); //<template> </templ
 
 //To-do - CREATE THE UI HERE!
 template_infocard.innerHTML = `
+<script src="comps/textcont.js"></script>
 <div class="infocard-cont">
     <div>
         <img src="/" alt="">
@@ -11,6 +12,7 @@ template_infocard.innerHTML = `
         <em> emphasis </em>
         <p class="capt-text">capt text</p>
         <p class="desc-text">desc text</p>
+        <the-textbtn><the-textbtn>
     </div>
 </div>
 <style>
