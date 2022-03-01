@@ -12,19 +12,19 @@ template_footprintbtn.innerHTML = `
 <style>
     .footprint_btn {
         border-radius: 50%;
-        border: white solid 12pt;
+        border: white solid 20px;
         background-color:transparent;
-        width:8em;
-        height:8em;
-        margin: auto;
-        display:flex;
+        width: 200px;
+        height: 200px;
+        margin-top:2em;
+        display: flex;
         align-items:center;
         justify-content:center;
+        box-shadow: 0 4px 20px -1px #E2E2E2;
     }
     .footprint_btn img {
-        display: block;
-        width: 3em;
-        
+        height: 90%;
+        width: 90%;
     }
 </style>
 `;
