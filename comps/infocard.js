@@ -6,7 +6,7 @@ template_infocard.innerHTML = `
 <script src="comps/textcont.js"></script>
 <div class="infocard-cont">
     <div>
-        <img src="/" alt="">
+        <img class="info-img" src="/" alt="">
         <p class="num-text">num text</p>
         <p class="main-text">main text</p>
         <em> emphasis </em>
@@ -23,8 +23,7 @@ template_infocard.innerHTML = `
         box-shadow: 0em 0em 1em 0.2em #d3d3d3;
         padding:2em;    
         display: none;
-        z-index: 2;
-        position: absolute;
+        position: relative;
        
     }
     .num-text, .desc-text, em {

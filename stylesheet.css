@@ -46,6 +46,9 @@ body {
     top:0;
     height: 100%;
 }
+.objoverlay{
+    position: absolute;
+}
 .scriptbox{
     background-color: #C8D5AE;
     display: flex;
