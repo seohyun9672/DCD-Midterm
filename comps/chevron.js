@@ -34,17 +34,19 @@ class TheChevron extends HTMLElement {
         if(this.getAttribute("direction")) {
             this.shadowRoot.querySelector(".chev-cont").style.transform = "scaleX(-1)";
         }
-        this.chevron = "nextStory";
-        this.shadowRoot.querySelector(".chev-cont").onclick = () => this.nextPage()
+    
+        this.shadowRoot.querySelector(".chev-cont").onclick = () => this.changePage()
     }
 
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 
-    nextPage(direction="right"){
-        this.chevron = "nextStory";
-        if(direction==="right"){
-            document.location.href = "./story.html"
+    changePage(){
+        if(this.getAttribute("direction")){
+        document.querySelector("#textcont").decreaseTextOrder();
+        }
+        else {
+        document.querySelector("#textcont").increaseTextOrder();   
         }
     }
 }
