@@ -11,8 +11,8 @@ template_object.innerHTML = `
 <style>
     .object {
      position: absolute;
-     top: 430px;   
-     left: 400px
+     top: 440px;   
+     left: 740px
     }
 `;
 
@@ -33,22 +33,31 @@ class TheObject extends HTMLElement {
         //     document.querySelector(".object > .first").src = () => changeOb(this.getAttribute("name"));   
         // }
         this.objNum = 1;
-        this.shadowRoot.querySelector(".obj-cont").onclick = () => this.trigger();
-    } 
+        this.shadowRoot.querySelector(".obj-cont").onclick = () => {
+            // this.trigger();
+            // this.popUp();
+            document.querySelector("the-infocard").showInfocard();
+        }
         
+    } 
+    //  showNextObject(){
+    //   this.shadowRoot.querySelector(".object > img").src = `/imgs/objects/phone.svg;`
+    //   }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     // changeOb(type = "story1"){
     //     if(type === "story1"){
-    //     this.shadowRoot.querySelector(".object > .first").src = `/imgs/objects/phone.svg;`
-    //     // this.shadowRoot.querySelector(".object > .second").src = `/imgs/objects/car.svg;`
-    //     }
+    // //     this.shadowRoot.querySelector(".object > .first").src = `/imgs/objects/phone.svg;`
+    // //     // this.shadowRoot.querySelector(".object > .second").src = `/imgs/objects/car.svg;`
+    // //     }
         
-    //     if(type === "story4"){
-    //     this.shadowRoot.querySelector(".object > .first").src = `/imgs/objects/tablet.svg;`
-    //     }
+    // //     if(type === "story4"){
+    // //     this.shadowRoot.querySelector(".object > .first").src = `/imgs/objects/tablet.svg;`
+    // //     }
 
-    // }
+    // // }
+
+
     updateObj() {
         if(this.objNum === 1) {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = 
@@ -293,6 +302,10 @@ class TheObject extends HTMLElement {
     trigger() {
         document.querySelector("the-textcont").increaseTextCont();
     }
+    // popUp(){
+    //     document.querySelector("the-infocard").showInfocard();
+    // }
+
 }
 
 //MUST HAVE - define the tag for the custom elements

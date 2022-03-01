@@ -3,22 +3,32 @@ var template_infocard = document.createElement("template"); //<template> </templ
 
 //To-do - CREATE THE UI HERE!
 template_infocard.innerHTML = `
+<script src="comps/textcont.js"></script>
 <div class="infocard-cont">
     <div>
-        <img src="/" alt="">
+        <img class="info-img" src="/" alt="">
         <p class="num-text">num text</p>
         <p class="main-text">main text</p>
         <em> emphasis </em>
         <p class="capt-text">capt text</p>
         <p class="desc-text">desc text</p>
+        <the-textbtn
+        btn_text ="Got it!"
+        color="green"
+        class ="gotit"
+        ><the-textbtn>
     </div>
 </div>
 <style>
     .infocard-cont {
+        background-color:#DAD;
         border: none;
         border-radius:5pt;
         box-shadow: 0em 0em 1em 0.2em #d3d3d3;
-        padding:2em;
+        padding:2em;    
+        display: none;
+        position: relative;
+       
     }
     .num-text, .desc-text, em {
         font-family:"ibm plex sans", "Ubuntu", sans-serif;
@@ -71,6 +81,9 @@ class TheInfoCard extends HTMLElement {
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+    showInfocard(){
+        this.shadowRoot.querySelector(".infocard-cont").style.display = "block";
+    }
 }
 
 //MUST HAVE - define the tag for the custom elements
