@@ -24,6 +24,7 @@ template_header.innerHTML = `
         font-style:normal;
         font-weight:bold;
         text-indent:0.25em;
+        display: inline;
     }
     .desc {
         display:flex;
