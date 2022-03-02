@@ -11,8 +11,8 @@ template_object.innerHTML = `
 <style>
     .object {
      position: absolute;
-     top: 440px;   
-     left: 740px
+     top: 500px;   
+     left: 750px
     }
 `;
 
@@ -40,22 +40,7 @@ class TheObject extends HTMLElement {
         }
         
     } 
-    //  showNextObject(){
-    //   this.shadowRoot.querySelector(".object > img").src = `/imgs/objects/phone.svg;`
-    //   }
-
-    //To-do - CREATE THE FUNCTIONALITIES HERE!
-    // changeOb(type = "story1"){
-    //     if(type === "story1"){
-    // //     this.shadowRoot.querySelector(".object > .first").src = `/imgs/objects/phone.svg;`
-    // //     // this.shadowRoot.querySelector(".object > .second").src = `/imgs/objects/car.svg;`
-    // //     }
-        
-    // //     if(type === "story4"){
-    // //     this.shadowRoot.querySelector(".object > .first").src = `/imgs/objects/tablet.svg;`
-    // //     }
-
-    // // }
+ 
 
 
     updateObj() {
@@ -302,9 +287,6 @@ class TheObject extends HTMLElement {
     trigger() {
         document.querySelector("the-textcont").increaseTextCont();
     }
-    // popUp(){
-    //     document.querySelector("the-infocard").showInfocard();
-    // }
 
 }
 
