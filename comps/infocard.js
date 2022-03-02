@@ -77,13 +77,17 @@ class TheInfoCard extends HTMLElement {
         if(this.getAttribute("src")) {
             this.shadowRoot.querySelector("img").src = this.getAttribute("src");
         }
-        
+        if(this.getAttribute("btn_text")) {
+            this.shadowRoot.querySelector("the-textbtn").innerText = this.getAttribute("btn_text");
+        }
+        // this.shadowRoot.querySelector("the-textbtn").onclick =()=>
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     showInfocard(){
         this.shadowRoot.querySelector(".infocard-cont").style.display = "block";
     }
+    showNext
 }
 
 //MUST HAVE - define the tag for the custom elements
