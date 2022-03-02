@@ -6,31 +6,46 @@ template_infocard.innerHTML = `
 <script src="comps/textcont.js"></script>
 <div class="infocard-cont">
     <div>
-        <img class="info-img" src="/" alt="">
-        <p class="num-text">num text</p>
-        <p class="main-text">main text</p>
-        <em> emphasis </em>
-        <p class="capt-text">capt text</p>
-        <p class="desc-text">desc text</p>
+        
+        <p class="main-text">Number of</p>
+        <em> SMARTPHONE WASTED </em>
+        <p class="main-text">every year</p>
+        <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
+        
         <the-textbtn
         btn_text ="Got it!"
         color="green"
         class ="gotit"
         ><the-textbtn>
+        <p class="desc-text"></p>
+        
     </div>
 </div>
 <style>
     .infocard-cont {
-        background-color:#DAD;
+        background-color:#FFF;
         border: none;
         border-radius:5pt;
+        width: 230px;
+        height: 320px;
         box-shadow: 0em 0em 1em 0.2em #d3d3d3;
-        padding:2em;    
+        padding:1em;    
         display: none;
         position: relative;
        
+       
     }
-    .num-text, .desc-text, em {
+    .infocard-cont > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        width: 230px;
+        height: 320px;
+        
+        // line-height: 0.4em;
+    }
+    .main-text, em {
         font-family:"ibm plex sans", "Ubuntu", sans-serif;
         text-transform:uppercase;
         font-weight:bold;
@@ -55,39 +70,38 @@ class TheInfoCard extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_infocard.content.cloneNode(true)); //use the template to make a clone
-    
-        if(this.getAttribute("num_text")) {
+        if(this.getAttribute("num_text")){
             this.shadowRoot.querySelector(".num-text").innerText = this.getAttribute("num_text");
         }
-        if(this.getAttribute("main_text")) {
+        if(this.getAttribute("main_text")){
             this.shadowRoot.querySelector(".main-text").innerText = this.getAttribute("main_text");
-        }
-        if(this.getAttribute("desc_text")) {
+        }    
+        if(this.getAttribute("desc_text")){
             this.shadowRoot.querySelector(".desc-text").innerText = this.getAttribute("desc_text");
-        }
-        if(this.getAttribute("capt_text")) {
+        }   
+        if(this.getAttribute("capt_text")){
             this.shadowRoot.querySelector(".capt-text").innerText = this.getAttribute("capt_text");
         }
-        if(this.getAttribute("em_text")) {
-            this.shadowRoot.querySelector("em").innerText = this.getAttribute("em_text");
+        if(this.getAttribute("em_text")){
+        this.shadowRoot.querySelector("em").innerText = this.getAttribute("em_text");
         }
-        if(this.getAttribute("em_color")) {
-            this.shadowRoot.querySelector("em").style.color = this.getAttribute("em_color");
+        if(this.getAttribute("em_color")){
+        this.shadowRoot.querySelector("em").style.color = this.getAttribute("em_color");
         }
-        if(this.getAttribute("src")) {
-            this.shadowRoot.querySelector("img").src = this.getAttribute("src");
+        if(this.getAttribute("src")){
+        this.shadowRoot.querySelector("src.info-img").src = `imgs/infoimg/card_${phone}.svg`;
         }
-        if(this.getAttribute("btn_text")) {
-            this.shadowRoot.querySelector("the-textbtn").innerText = this.getAttribute("btn_text");
+        if(this.getAttribute("btn_text")){
+        this.shadowRoot.querySelector("the-textbtn").innerText = this.getAttribute("btn_text");
         }
-        // this.shadowRoot.querySelector("the-textbtn").onclick =()=>
+        this.shadowRoot.querySelector(".gotit").onclick = () => document.querySelector(".textbtn_cont").trigger();
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     showInfocard(){
         this.shadowRoot.querySelector(".infocard-cont").style.display = "block";
     }
-    showNext
+    
 }
 
 //MUST HAVE - define the tag for the custom elements

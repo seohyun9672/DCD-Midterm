@@ -284,9 +284,9 @@ class TheObject extends HTMLElement {
         this.objNum = this.objNum + 1;
         this.updateObj();
     }
-    trigger() {
-        document.querySelector("the-textcont").increaseTextCont();
-    }
+    // trigger() {
+    //     document.querySelector("the-textcont").increaseTextCont();
+    // }
 
 }
 
