@@ -6,9 +6,7 @@ template_header.innerHTML = `
 <div class="head_cont">
     <h1>heading text</h1>
     <div class="desc">
-    <p class="descpt1">description text</p>
-    <em>emphasized text</em>
-    <p class="desc2">description text2</p>
+    <p class="desc_text">description text</p>
     </div>
 </div>
 <style>
@@ -54,13 +52,10 @@ class TheHeader extends HTMLElement {
             this.shadowRoot.querySelector("h1").innerText = this.getAttribute("head_text");
         }
         if(this.getAttribute("desc_text")) {
-            this.shadowRoot.querySelector("p").innerText = this.getAttribute("desc_text");
+            this.shadowRoot.querySelector("p").innerHTML = this.getAttribute("desc_text");
         }
         if(this.getAttribute("em_text")) {
             this.shadowRoot.querySelector("em").innerText = this.getAttribute("em_text");
-        }
-        if(this.getAttribute("no_desc2")) {
-            this.shadowRoot.querySelector(".desc2").style.display = "none";
         }
     }
 
