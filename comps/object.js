@@ -4,16 +4,14 @@ var template_object = document.createElement("template"); //<template> </templat
 //To-do - CREATE THE UI HERE!
 template_object.innerHTML = `
 <div class="obj-cont">
-<div class="object">
     <img class="first" src="imgs/objects/phone.svg" alt="phone">
 </div>
-</div>
 <style>
-    .object {
-     position: absolute;
-     top: 500px;   
-     left: 750px
-    }
+  .obj-cont {
+    position: absolute;
+    top: 300px;   
+    left: 750px
+  }
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
@@ -34,26 +32,20 @@ class TheObject extends HTMLElement {
         // }
         this.objNum = 1;
         this.shadowRoot.querySelector(".obj-cont").onclick = () => {
-            // this.trigger();
-            // this.popUp();
-            document.querySelector("the-infocard").showInfocard();
+          document.querySelector("the-infocard").showInfocard();
         }
-        
     } 
  
-
-
     updateObj() {
         if(this.objNum === 1) {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = 
         `<div class="object">
-        <img class="first" src="imgs/objects/phone.svg" alt="phone">
+          <img class="first" src="imgs/objects/phone.svg" alt="phone">
         </div>
         <style>
         .first {
             animation: 3s fadeIn;
             animation-fill-mode: forwards;
-            
             visibility: hidden;
           }
           
@@ -72,19 +64,18 @@ class TheObject extends HTMLElement {
         if(this.objNum === 2) {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = 
         `<div class="object">
-        <img class="first" src="imgs/objects/phone.svg" alt="phone">
+          <img class="first" src="imgs/objects/phone.svg" alt="phone">
         </div>
         <div class="object">
-        <img class="second" src="imgs/objects/car.svg" alt="car">
+          <img class="second" src="imgs/objects/car.svg" alt="car">
         </div>
         <style>
         .second {
             animation: 3s fadeIn;
             animation-fill-mode: forwards;
-            
             visibility: hidden;
           }
-          
+        
           @keyframes fadeIn {
             0% {
               opacity: 0;
@@ -98,14 +89,14 @@ class TheObject extends HTMLElement {
         }
         
         if(this.objNum === 3) {
-        this.shadowRoot.querySelector(".obj-cont").innerHTML = `<div class="object">
-        <img class="first" src="imgs/objects/waterbottle.svg" alt="waterbottle">
+        this.shadowRoot.querySelector(".obj-cont").innerHTML = `
+        <div class="object">
+          <img class="first" src="imgs/objects/waterbottle.svg" alt="waterbottle">
         </div>
         <style>
         .first {
             animation: 3s fadeIn;
             animation-fill-mode: forwards;
-            
             visibility: hidden;
           }
           
@@ -122,17 +113,17 @@ class TheObject extends HTMLElement {
         }
         
         if(this.objNum === 4) {
-        this.shadowRoot.querySelector(".obj-cont").innerHTML = `<div class="object">
-        <img class="first" src="imgs/objects/waterbottle.svg" alt="waterbottle">
+        this.shadowRoot.querySelector(".obj-cont").innerHTML = `
+        <div class="object">
+          <img class="first" src="imgs/objects/waterbottle.svg" alt="waterbottle">
         </div>
         <div class="object">
-        <img class="second" src="imgs/objects/fan.svg" alt="fan">
+          <img class="second" src="imgs/objects/fan.svg" alt="fan">
         </div>
         <style>
         .second {
             animation: 3s fadeIn;
             animation-fill-mode: forwards;
-            
             visibility: hidden;
           }
           
@@ -148,20 +139,20 @@ class TheObject extends HTMLElement {
         </style>`;  
         }
         if(this.objNum === 5) {
-        this.shadowRoot.querySelector(".obj-cont").innerHTML = `<div class="object">
-        <img class="first" src="imgs/objects/waterbottle.svg" alt="waterbottle">
+        this.shadowRoot.querySelector(".obj-cont").innerHTML = `
+        <div class="object">
+          <img class="first" src="imgs/objects/waterbottle.svg" alt="waterbottle">
         </div>
         <div class="object">
-        <img class="second" src="imgs/objects/fan.svg" alt="fan">
+          <img class="second" src="imgs/objects/fan.svg" alt="fan">
         </div>
         <div class="object">
-        <img class="third" src="imgs/objects/screen.svg" alt="screen">
+          <img class="third" src="imgs/objects/screen.svg" alt="screen">
         </div>
         <style>
         .third {
             animation: 3s fadeIn;
             animation-fill-mode: forwards;
-            
             visibility: hidden;
           }
           
@@ -177,14 +168,14 @@ class TheObject extends HTMLElement {
         </style>`;   
         }
         if(this.objNum === 6) {
-        this.shadowRoot.querySelector(".obj-cont").innerHTML = `<div class="object">
-        <img class="first" src="imgs/objects/laundrydetergent.svg" alt="detergent">
+        this.shadowRoot.querySelector(".obj-cont").innerHTML = `
+        <div class="object">
+          <img class="first" src="imgs/objects/laundrydetergent.svg" alt="detergent">
         </div>
         <style>
         .first {
             animation: 3s fadeIn;
             animation-fill-mode: forwards;
-            
             visibility: hidden;
           }
           
@@ -200,17 +191,17 @@ class TheObject extends HTMLElement {
         </style>`;  
         }
         if(this.objNum === 7) {
-        this.shadowRoot.querySelector(".obj-cont").innerHTML = `<div class="object">
-        <img class="first" src="imgs/objects/laundrydetergent.svg" alt="detergent">
+        this.shadowRoot.querySelector(".obj-cont").innerHTML = `
+        <div class="object">
+          <img class="first" src="imgs/objects/laundrydetergent.svg" alt="detergent">
         </div>
         <div class="object">
-        <img class="second" src="imgs/objects/laundrybasket.svg" alt="basket">
+          <img class="second" src="imgs/objects/laundrybasket.svg" alt="basket">
         </div>
         <style>
         .second {
             animation: 3s fadeIn;
             animation-fill-mode: forwards;
-            
             visibility: hidden;
           }
           
@@ -226,8 +217,9 @@ class TheObject extends HTMLElement {
         </style>`;  
         }
         if(this.objNum === 8) {
-        this.shadowRoot.querySelector(".obj-cont").innerHTML = `<div class="object">
-        <img class="first" src="imgs/objects/tablet.svg" alt="tablet">
+        this.shadowRoot.querySelector(".obj-cont").innerHTML = `
+        <div class="object">
+          <img class="first" src="imgs/objects/tablet.svg" alt="tablet">
         </div>
         <style>
         .first {
@@ -249,11 +241,12 @@ class TheObject extends HTMLElement {
         </style>`;  
         }
         if(this.objNum === 9) {
-        this.shadowRoot.querySelector(".obj-cont").innerHTML = `<div class="object">
-        <img class="first" src="imgs/objects/tablet.svg" alt="tablet">
+        this.shadowRoot.querySelector(".obj-cont").innerHTML = `
+        <div class="object">
+         <img class="first" src="imgs/objects/tablet.svg" alt="tablet">
         </div>
         <div class="object">
-        <img class="second" src="imgs/objects/switch.svg" alt="switch">
+          <img class="second" src="imgs/objects/switch.svg" alt="switch">
         </div>
         <style>
         .second {
