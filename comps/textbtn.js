@@ -47,7 +47,7 @@ class TheTextBtn extends HTMLElement {
             window.location.href = "/index.html";
     }
         if(button==="Got it!") {
-            document.querySelector("/").functionthatcausesthepagetochange();
+            document.querySelector("the-object").trigger();
         }
 
         if(button==="Next >") {
