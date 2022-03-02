@@ -9,8 +9,6 @@ template_textbtn.innerHTML = `
 <style>
     .textbtn_cont{
         font-weight:bolder;
-        padding:1em;
-        position:absolute;
         cursor: pointer;
     }
 </style>
@@ -52,7 +50,8 @@ class TheTextBtn extends HTMLElement {
         }
 
         if(button==="Next >") {
-            document.querySelector("/").functionthatcausesoverlaytochange();    
+            document.querySelector("/").functionthatcausesoverlaytochange();
+            //if click on the next button, show the infocard_num
         }
 
 }
