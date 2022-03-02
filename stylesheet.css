@@ -35,6 +35,11 @@ the-textcont {
 body {
     margin:0;
 }
+.btn_back{
+    position: absolute;
+    padding:1em;
+}
+
 .section_story{
     display: flex;
     flex-direction: column;
@@ -45,6 +50,7 @@ body {
     flex-direction: column;
     top:0;
     height: 100%;
+    
 }
 .objoverlay{
     position: absolute;
