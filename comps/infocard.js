@@ -87,7 +87,9 @@ class TheInfoCard extends HTMLElement {
     showInfocard(){
         this.shadowRoot.querySelector(".infocard-cont").style.display = "block";
     }
-    showNext
+    removeInfocard(){
+        this.shadowRoot.querySelector(".infocard-cont").style.display = "none";
+    }
 }
 
 //MUST HAVE - define the tag for the custom elements
