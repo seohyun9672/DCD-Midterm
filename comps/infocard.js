@@ -101,6 +101,9 @@ class TheInfoCard extends HTMLElement {
     showInfocard(){
         this.shadowRoot.querySelector(".infocard-cont").style.display = "block";
     }
+    removeInfoCard(){
+        this.shadowRoot.querySelector(".infocard-cont").style.display = "none";
+    }
     
 }
 

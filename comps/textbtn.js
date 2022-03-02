@@ -47,7 +47,8 @@ class TheTextBtn extends HTMLElement {
             window.location.href = "/index.html";
     }
         if(button==="Got it!") {
-            document.querySelector("the-object").trigger();
+            document.querySelector("the-object").nextTextCont();
+            document.querySelector("the-infocard").removeInfoCard();
         }
 
         if(button==="Next >") {
