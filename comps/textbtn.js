@@ -45,8 +45,11 @@ class TheTextBtn extends HTMLElement {
             window.location.href = "/index.html";
     }
         if(button==="Got it!") {
-            document.querySelector("the-object").nextTextCont();
+            document.querySelector("the-object").addObj();
             document.querySelector("the-infocard").removeInfoCard();
+            document.querySelector(".storybg").changeStory();
+            document.querySelector(".cycleimg").changeFootprintCycle();
+            document.querySelector(".greenmanimg").changeGreenman();
         }
 
         if(button==="Next >") {
