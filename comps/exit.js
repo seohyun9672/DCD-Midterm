@@ -10,7 +10,7 @@ template_exit.innerHTML = `
             position: absolute;
             right: 5px;
             top: 5px;
-            color: #3A6742
+            color: #3A6742;
         }
         </style>
 
@@ -30,9 +30,13 @@ class TheExit extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_exit.content.cloneNode(true)); //use the template to make a clone
-    }
+        this.shadowRoot.querySelector(".fa-times").onclick = () => this.HandleSolutionCont();
+        }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+    HandleSolutionCont() {
+        document.querySelector("the-solutioncont").closeSolutionCont();
+    }
 }
 
 //MUST HAVE - define the tag for the custom elements

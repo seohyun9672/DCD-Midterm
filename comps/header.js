@@ -57,6 +57,9 @@ class TheHeader extends HTMLElement {
         if(this.getAttribute("em_text")) {
             this.shadowRoot.querySelector("em").innerText = this.getAttribute("em_text");
         }
+        if(this.getAttribute("em_color")) {
+            this.shadowRoot.querySelector("em").style.color = this.getAttribute("em_color");
+        }
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!

@@ -39,9 +39,19 @@ class TheFeetBtn extends HTMLElement {
         if(this.getAttribute("btn_text")) {
             this.shadowRoot.querySelector(".btn-text").innerText = this.getAttribute("btn_text");
         }
+        this.shadowRoot.querySelector(".feetbtn-cont").onclick = () => this.HandleFeetBtn(this.getAttribute("name"));
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+    HandleFeetBtn(action="back") {
+        this.btn_action = action;
+        if(action === "back") {
+            window.location.href = "/";
+        }
+        if(action === "rewatch") {
+            window.location.href = "/story.html";
+        }
+    }
 }
 
 //MUST HAVE - define the tag for the custom elements
