@@ -34,7 +34,11 @@ class TheObject extends HTMLElement {
         this.shadowRoot.querySelector(".obj-cont").onclick = () => {
           document.querySelector("the-infocard").showInfocard();
         }
-    } 
+    }
+
+    handleObject(){
+    document.querySelector("the-infocard").updateInfoCard(this.getAttribute("objName"))
+    }
  
     updateObj() {
         if(this.objName === "phone") {
