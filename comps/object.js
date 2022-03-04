@@ -37,7 +37,7 @@ class TheObject extends HTMLElement {
     } 
  
     updateObj() {
-        if(this.objNum === 1) {
+        if(this.objName === "phone") {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = 
         `<div class="object">
           <img class="first" src="imgs/objects/phone.svg" alt="phone">
@@ -61,7 +61,7 @@ class TheObject extends HTMLElement {
         </style>`; 
         }
 
-        if(this.objNum === 2) {
+        if(this.objName === "car") {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = 
         `<div class="object">
           <img class="first" src="imgs/objects/phone.svg" alt="phone">
@@ -88,7 +88,7 @@ class TheObject extends HTMLElement {
         </style>`;  
         }
         
-        if(this.objNum === 3) {
+        if(this.objName === "waterbottle") {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = `
         <div class="object">
           <img class="first" src="imgs/objects/waterbottle.svg" alt="waterbottle">
@@ -112,7 +112,7 @@ class TheObject extends HTMLElement {
         </style>`;
         }
         
-        if(this.objNum === 4) {
+        if(this.objName === "fan") {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = `
         <div class="object">
           <img class="first" src="imgs/objects/waterbottle.svg" alt="waterbottle">
@@ -138,7 +138,7 @@ class TheObject extends HTMLElement {
           }
         </style>`;  
         }
-        if(this.objNum === 5) {
+        if(this.objName === "screen") {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = `
         <div class="object">
           <img class="first" src="imgs/objects/waterbottle.svg" alt="waterbottle">
@@ -167,7 +167,7 @@ class TheObject extends HTMLElement {
           }
         </style>`;   
         }
-        if(this.objNum === 6) {
+        if(this.objName === "laundrydetergent") {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = `
         <div class="object">
           <img class="first" src="imgs/objects/laundrydetergent.svg" alt="detergent">
@@ -190,7 +190,7 @@ class TheObject extends HTMLElement {
           }
         </style>`;  
         }
-        if(this.objNum === 7) {
+        if(this.objName === "laundrybasket") {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = `
         <div class="object">
           <img class="first" src="imgs/objects/laundrydetergent.svg" alt="detergent">
@@ -216,7 +216,7 @@ class TheObject extends HTMLElement {
           }
         </style>`;  
         }
-        if(this.objNum === 8) {
+        if(this.objName === "tablet") {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = `
         <div class="object">
           <img class="first" src="imgs/objects/tablet.svg" alt="tablet">
@@ -240,7 +240,7 @@ class TheObject extends HTMLElement {
           }
         </style>`;  
         }
-        if(this.objNum === 9) {
+        if(this.objName === "switch") {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = `
         <div class="object">
          <img class="first" src="imgs/objects/tablet.svg" alt="tablet">
