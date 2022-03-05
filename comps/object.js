@@ -30,9 +30,10 @@ class TheObject extends HTMLElement {
         // if (this.getAttribute("name")){
         //     document.querySelector(".object > .first").src = () => changeOb(this.getAttribute("name"));   
         // }
-        this.objNum = 1;
+        this.objName = "phone";
         this.shadowRoot.querySelector(".obj-cont").onclick = () => {
           document.querySelector("the-infocard").showInfocard();
+          // document.querySelector("the-infocard").updateInfoCard();
         }
     }
 
