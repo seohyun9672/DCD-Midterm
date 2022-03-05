@@ -4,7 +4,8 @@ var template_infocard = document.createElement("template"); //<template> </templ
 //To-do - CREATE THE UI HERE!
 template_infocard.innerHTML = `
 <div class="infocard-cont">
-    <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
+    <p class ="head_text"> Number of <br> SMARTPHONE WASTED <br> every year
+    <p class ="sub_text><p>
     <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
     <the-textbtn
     btn_text ="Got it!"
@@ -25,13 +26,17 @@ template_infocard.innerHTML = `
         position: relative;
         text-align: center;
     }
-    p {
+    .head_text {
         font-family:"ibm plex sans", "Ubuntu", sans-serif;
         text-transform:uppercase;
         font-weight:bold;
         letter-spacing:2.26pt;
         line-height: 2em;
         margin-top:.5em;
+        text-transform: uppercase;
+    }
+    .sub_text{
+        display: none;
     }
     .info-img {
         margin-bottom: 1em;
@@ -73,13 +78,77 @@ class TheInfoCard extends HTMLElement {
     changeInfoText(type="phone"){
         if(type==="phone"){
             this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
-            greenman
+            number of smartphones wasted every year
+            `
+            this.shadowRoot.querySelector(".head_text").cssText=`
+            
             `
         }
-
+        if(type==="phone2"){
+            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
+            a single Iphone 12 pro max
+            `
+        }
+        if(type==="car"){
+            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
+            greenhouse gas emissions from transportation
+            `
+        }   
+        if(type==="waterbottle"){
+            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
+            greenhouse gas emissions from transportation
+            `
+        }
+        if(type==="fan"){
+            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
+            increase in annual carbon footprint per year
+            `
+        }
+        if(type==="screen"){
+            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
+            greenhouse gas emissions from transportation
+            `
+        }
+        if(type==="laundrybasket"){
+            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
+            Laundry Footprints
+            `
+        }
+        if(type==="laundrydetergent"){
+            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
+            Greenwashing
+            `
+        }
+          if(type==="laundrybasket"){
+            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
+            Laundry Footprints
+            `
+        }
+        if(type==="laundrydetergent"){
+            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
+            Greenwashing
+            `
+        }
+        if(type==="laundrydetergent2"){
+            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
+            Greenwashing
+            `
+        }
+          if(type==="tablet"){
+            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
+            Excessive electronic devices
+            `
+        }
+        if(type==="switch"){
+            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
+            Americans spend $350 billion/yr on electricity. 75% of it goes to waste 
+            `
+        }
+        }
+    
         // this.shadowRoot.querySelector(".infocard-cont > p").innerText = this.getAttribute("info_text");
 
-   }
+   
 
     
     changeInfoImage(){
@@ -93,13 +162,13 @@ class TheInfoCard extends HTMLElement {
             this.changeInfoText();
             // this.shadowRoot.querySelector(".infocard-cont").innerHTML=`
             // `
-
+        }
         if(type==="phone"){
             this.changeInfoImage();
             this.changeInfoText(); 
         }
 
-        }
+    } 
     }
         // this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
         // <div class="infocard-cont">
@@ -111,7 +180,7 @@ class TheInfoCard extends HTMLElement {
         //     color= "green"
         //     ><the-textbtn>
         // </div>`
-    }
+    
     // updateInfoCard(objName="phone"){ 
 
     //      if(type === "phone2")
