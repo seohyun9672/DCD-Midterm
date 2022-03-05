@@ -59,9 +59,8 @@ class TheInfoCard extends HTMLElement {
             this.getAttribute("card_img"),
             this.getAttribute("info_text")
         );
-        // this.objName="phone"
+        this.objName=type;
         
-     
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
@@ -71,18 +70,37 @@ class TheInfoCard extends HTMLElement {
     removeInfoCard(){
         this.shadowRoot.querySelector(".infocard-cont").style.display = "none";
     }
+    changeInfoText(type="phone"){
+        if(type==="phone"){
+            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
+            greenman
+            `
+        }
 
-    //change img and texts
-    changeInfoText(){
-        this.shadowRoot.querySelector(".infocard-cont > p").innerText = this.getAttribute("info_text");
-    }
+        // this.shadowRoot.querySelector(".infocard-cont > p").innerText = this.getAttribute("info_text");
+
+   }
+
+    
     changeInfoImage(){
         this.shadowRoot.querySelector(".infocard-cont > img").src= `imgs/infoimg/${this.getAttribute("card_img")}.svg`;
     }
-    updateInfoCard(){
-    
-        this.changeInfoImage();
-        this.changeInfoText();
+
+    updateInfoCard(type="phone"){
+
+        if(type==="phone2"){
+            this.changeInfoImage();
+            this.changeInfoText();
+            // this.shadowRoot.querySelector(".infocard-cont").innerHTML=`
+            // `
+
+        if(type==="phone"){
+            this.changeInfoImage();
+            this.changeInfoText(); 
+        }
+
+        }
+    }
         // this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
         // <div class="infocard-cont">
         //     <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
@@ -95,20 +113,6 @@ class TheInfoCard extends HTMLElement {
         // </div>`
     }
     // updateInfoCard(objName="phone"){ 
-    //     this.objName = type;
-    //     if(type === "phone")
-    //     this.shadowRoot.changeInfoImage();
-    //     this.shadowRoot.changeInfoText();
-    //     this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
-    //     <div class="infocard-cont">
-    //         <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
-    //         <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
-    //         <the-textbtn
-    //         btn_text ="Got it!"
-    //         class ="gotit"
-    //         color= "green"
-    //         ><the-textbtn>
-    //     </div>`
 
     //      if(type === "phone2")
     //     this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
@@ -212,8 +216,8 @@ class TheInfoCard extends HTMLElement {
     //         ><the-textbtn>
     //     </div>`
     // }
-    
-}
+
+
 
 //MUST HAVE - define the tag for the custom elements
 customElements.define("the-infocard", TheInfoCard)
