@@ -53,31 +53,15 @@ class TheInfoCard extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_infocard.content.cloneNode(true)); //use the template to make a clone
-    
-
-        // change innerHtml for each infocard 
+        // document.querySelector("#infocard").changeInfoText(this.getAttribute("info_text"));
+        // document.querySelector("#infocard").changeInfoImage(this.getAttribute("card_img"));
+        document.querySelector("#infocard").updateInfoCard(
+            this.getAttribute("info_text"),
+            this.getAttribute("card_img")
+        );
+        // this.objName="phone"
         
-        // if(this.getAttribute("src")){
-        //     this.shadowRoot.querySelector("src.info-img").src = `imgs/infoimg/card_${phone}.svg`;
-        // }
-        // if(this.getAttribute("num_text")){
-        //     this.shadowRoot.querySelector(".num-text").innerText = this.getAttribute("num_text");
-        // }
-        // if(this.getAttribute("main_text")){
-        //     this.shadowRoot.querySelector(".main-text").innerText = this.getAttribute("main_text");
-        // }    
-        // if(this.getAttribute("desc_text")){
-        //     this.shadowRoot.querySelector(".desc-text").innerText = this.getAttribute("desc_text");
-        // }   
-        // if(this.getAttribute("capt_text")){
-        //     this.shadowRoot.querySelector(".capt-text").innerText = this.getAttribute("capt_text");
-        // }
-        // if(this.getAttribute("em_text")){
-        // this.shadowRoot.querySelector("em").innerText = this.getAttribute("em_text");
-        // }
-        // if(this.getAttribute("em_color")){
-        // this.shadowRoot.querySelector("em").style.color = this.getAttribute("em_color");
-        // }
+     
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
@@ -87,109 +71,147 @@ class TheInfoCard extends HTMLElement {
     removeInfoCard(){
         this.shadowRoot.querySelector(".infocard-cont").style.display = "none";
     }
-    updateInfoCard(objName="phone")
-    { this.infocard_name = type;
-        if(type === "phone")
-        this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
-        <div class="infocard-cont">
-            <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
-            <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
-            <the-textbtn
-            btn_text ="Got it!"
-            class ="gotit"
-            color= "green"
-            ><the-textbtn>
-        </div>`
 
-        if(type === "car")
-        this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
-        <div class="infocard-cont">
-            <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
-            <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
-            <the-textbtn
-            btn_text ="Got it!"
-            class ="gotit"
-            color= "green"
-            ><the-textbtn>
-        </div>`
-        if(type === "fan")
-        this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
-        <div class="infocard-cont">
-            <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
-            <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
-            <the-textbtn
-            btn_text ="Got it!"
-            class ="gotit"
-            color= "green"
-            ><the-textbtn>
-        </div>`
-        if(type === "laundrybasket")
-        this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
-        <div class="infocard-cont">
-            <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
-            <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
-            <the-textbtn
-            btn_text ="Got it!"
-            class ="gotit"
-            color= "green"
-            ><the-textbtn>
-        </div>`
-        if(type === "laundrydetergent")
-        this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
-        <div class="infocard-cont">
-            <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
-            <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
-            <the-textbtn
-            btn_text ="Got it!"
-            class ="gotit"
-            color= "green"
-            ><the-textbtn>
-        </div>`
-        if(type === "screen")
-        this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
-        <div class="infocard-cont">
-            <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
-            <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
-            <the-textbtn
-            btn_text ="Got it!"
-            class ="gotit"
-            color= "green"
-            ><the-textbtn>
-        </div>`
-        if(type === "switch")
-        this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
-        <div class="infocard-cont">
-            <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
-            <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
-            <the-textbtn
-            btn_text ="Got it!"
-            class ="gotit"
-            color= "green"
-            ><the-textbtn>
-        </div>`
-        if(type === "tablet")
-        this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
-        <div class="infocard-cont">
-            <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
-            <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
-            <the-textbtn
-            btn_text ="Got it!"
-            class ="gotit"
-            color= "green"
-            ><the-textbtn>
-        </div>`
-        if(type === "waterbottle")
-        this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
-        <div class="infocard-cont">
-            <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
-            <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
-            <the-textbtn
-            btn_text ="Got it!"
-            class ="gotit"
-            color= "green"
-            ><the-textbtn>
-        </div>`
+    //change img and texts
+    changeInfoText(){
+        this.shadowRoot.querySelector(".infocard-cont > p").innerText = this.getAttribute("info_text");
     }
+    changeInfoImage(){
+        this.shadowRoot.querySelector(".infocard-cont > img").src= `imgs/infoimg/${this.getAttribute("card_img")}.svg`;
+    }
+    updateInfoCard(){
+    
+        this.shadowRoot.changeInfoImage();
+        this.shadowRoot.changeInfoText();
+        // this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
+        // <div class="infocard-cont">
+        //     <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
+        //     <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
+        //     <the-textbtn
+        //     btn_text ="Got it!"
+        //     class ="gotit"
+        //     color= "green"
+        //     ><the-textbtn>
+        // </div>`
+    }
+    // updateInfoCard(objName="phone"){ 
+    //     this.objName = type;
+    //     if(type === "phone")
+    //     this.shadowRoot.changeInfoImage();
+    //     this.shadowRoot.changeInfoText();
+    //     this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
+    //     <div class="infocard-cont">
+    //         <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
+    //         <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
+    //         <the-textbtn
+    //         btn_text ="Got it!"
+    //         class ="gotit"
+    //         color= "green"
+    //         ><the-textbtn>
+    //     </div>`
+
+    //      if(type === "phone2")
+    //     this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
+    //     <div class="infocard-cont">
+    //         <p> A SINGLE <br> IPHONE 12 PRO MAX </p>
+    //         <img class="info-img" src="imgs/infoimg/card_phone2.svg" alt="The bar graph showing how CO2 emission is generated">
+    //         <the-textbtn
+    //         btn_text ="Got it!"
+    //         class ="gotit"
+    //         color= "green"
+    //         ><the-textbtn>
+    //     </div>`
+
+
+    //     if(type === "car")
+    //     this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
+    //     <div class="infocard-cont">
+    //         <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
+    //         <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
+    //         <the-textbtn
+    //         btn_text ="Got it!"
+    //         class ="gotit"
+    //         color= "green"
+    //         ><the-textbtn>
+    //     </div>`
+    //     if(type === "fan")
+    //     this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
+    //     <div class="infocard-cont">
+    //         <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
+    //         <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
+    //         <the-textbtn
+    //         btn_text ="Got it!"
+    //         class ="gotit"
+    //         color= "green"
+    //         ><the-textbtn>
+    //     </div>`
+    //     if(type === "laundrybasket")
+    //     this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
+    //     <div class="infocard-cont">
+    //         <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
+    //         <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
+    //         <the-textbtn
+    //         btn_text ="Got it!"
+    //         class ="gotit"
+    //         color= "green"
+    //         ><the-textbtn>
+    //     </div>`
+    //     if(type === "laundrydetergent")
+    //     this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
+    //     <div class="infocard-cont">
+    //         <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
+    //         <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
+    //         <the-textbtn
+    //         btn_text ="Got it!"
+    //         class ="gotit"
+    //         color= "green"
+    //         ><the-textbtn>
+    //     </div>`
+    //     if(type === "screen")
+    //     this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
+    //     <div class="infocard-cont">
+    //         <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
+    //         <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
+    //         <the-textbtn
+    //         btn_text ="Got it!"
+    //         class ="gotit"
+    //         color= "green"
+    //         ><the-textbtn>
+    //     </div>`
+    //     if(type === "switch")
+    //     this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
+    //     <div class="infocard-cont">
+    //         <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
+    //         <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
+    //         <the-textbtn
+    //         btn_text ="Got it!"
+    //         class ="gotit"
+    //         color= "green"
+    //         ><the-textbtn>
+    //     </div>`
+    //     if(type === "tablet")
+    //     this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
+    //     <div class="infocard-cont">
+    //         <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
+    //         <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
+    //         <the-textbtn
+    //         btn_text ="Got it!"
+    //         class ="gotit"
+    //         color= "green"
+    //         ><the-textbtn>
+    //     </div>`
+    //     if(type === "waterbottle")
+    //     this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
+    //     <div class="infocard-cont">
+    //         <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
+    //         <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
+    //         <the-textbtn
+    //         btn_text ="Got it!"
+    //         class ="gotit"
+    //         color= "green"
+    //         ><the-textbtn>
+    //     </div>`
+    // }
     
 }
 
