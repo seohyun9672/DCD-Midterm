@@ -27,9 +27,6 @@ class TheObject extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_object.content.cloneNode(true)); //use the template to make a clone
-        // if (this.getAttribute("name")){
-        //     document.querySelector(".object > .first").src = () => changeOb(this.getAttribute("name"));   
-        // }
         this.objName = "phone";
         this.shadowRoot.querySelector(".obj-cont").onclick = () => {
           document.querySelector("the-infocard").showInfocard();
