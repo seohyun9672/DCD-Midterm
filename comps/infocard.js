@@ -56,8 +56,8 @@ class TheInfoCard extends HTMLElement {
         // document.querySelector("#infocard").changeInfoText(this.getAttribute("info_text"));
         // document.querySelector("#infocard").changeInfoImage(this.getAttribute("card_img"));
         document.querySelector("#infocard").updateInfoCard(
-            this.getAttribute("info_text"),
-            this.getAttribute("card_img")
+            this.getAttribute("card_img"),
+            this.getAttribute("info_text")
         );
         // this.objName="phone"
         
@@ -81,8 +81,8 @@ class TheInfoCard extends HTMLElement {
     }
     updateInfoCard(){
     
-        this.shadowRoot.changeInfoImage();
-        this.shadowRoot.changeInfoText();
+        this.changeInfoImage();
+        this.changeInfoText();
         // this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
         // <div class="infocard-cont">
         //     <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
