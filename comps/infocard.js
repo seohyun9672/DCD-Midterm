@@ -10,7 +10,7 @@ template_infocard.innerHTML = `
     <p class ="desc_text">desc_text</p>
     <the-textbtn
     class="text_btn"
-    btn_text="Got it!"
+    btn_text="Next >"
     ></the-textbtn>
 </div>
 <style>
@@ -65,12 +65,13 @@ class TheInfoCard extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_infocard.content.cloneNode(true)); //use the template to make a clone
+        this.shadowRoot.querySelector(".infocard-cont").changeInfoText(this.getAttribute("name"));
+        this.shadowRoot.querySelector(".infocard-cont").changeInfoImage(this.getAttribute("name"));
         // document.querySelector("#infocard").changeInfoText(this.getAttribute("info_text"));
-        document.querySelector("#infocard").showInfoCard(
-            // this.getAttribute("card_img"),
-            // this.getAttribute("info_text")
-        );
-        
+        // document.querySelector("#infocard").showInfoCard(
+        //     // this.getAttribute("card_img"),
+        //     // this.getAttribute("info_text")
+        // );
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
@@ -83,9 +84,9 @@ class TheInfoCard extends HTMLElement {
     removeInfoCard(){
         document.querySelector("#infocard").style.display = "none";
     }
-    changeInfoText(type="phone"){
-        this.objName=type;
-        if(type==="phone"){
+    changeInfoText(name="phone"){
+        this.objName=name;
+        if(name==="phone"){
             this.shadowRoot.querySelector(".head_text").innerHTML=`
             number of <span class ="em_text1"> smartphones wasted </span> every year 
             `
@@ -94,7 +95,7 @@ class TheInfoCard extends HTMLElement {
             `
             // this.shadowRoot.querySelector(".text_btn").innerText=`Next >`
         }
-        if(type==="phone2"){
+        if(name==="phone2"){
             this.shadowRoot.querySelector(".head_text").innerHTML=`
             a single Iphone <br> 12 pro max
             `
@@ -113,7 +114,7 @@ class TheInfoCard extends HTMLElement {
             font-weight: bolder
             `
         }
-        else if(type==="car"){
+        if(name==="car"){
             this.shadowRoot.querySelector(".head_text").innerHTML=`
             <span class ="em_text1"> greenhouse gas </span> emissions from transportation 
             `
@@ -121,7 +122,7 @@ class TheInfoCard extends HTMLElement {
             color: #08509C;
             `
         }   
-        else if(type==="waterbottle"){
+        else if(name==="waterbottle"){
             this.shadowRoot.querySelector(".head_text").innerHTML=`
             increase in annual <span class ="em_text1"> carbon footprint <br> per year </span> 
             `
@@ -140,7 +141,7 @@ class TheInfoCard extends HTMLElement {
             margin-top:0;
             `
         }
-        else if(type==="fan"){
+        else if(name==="fan"){
             this.shadowRoot.querySelector(".infocard-cont").innerHTML=`
             <p class ="head_text">head_text</p>
             <div class = "img_cont">
@@ -182,7 +183,7 @@ class TheInfoCard extends HTMLElement {
             width: 90%;
             `
         }
-       else if(type==="screen"){
+       else if(name==="screen"){
             this.shadowRoot.querySelector(".head_text").style.cssText=`
             display: none;
             `
@@ -198,7 +199,7 @@ class TheInfoCard extends HTMLElement {
             font-weight: bolder;
             `
         }
-        if(type==="laundrydetergent"){
+        if(name==="laundrydetergent"){
             this.shadowRoot.querySelector(".head_text").innerHTML=`
             Laundry Footprints
             `
@@ -212,7 +213,7 @@ class TheInfoCard extends HTMLElement {
             display: block;
             `
         }
-        else if(type==="laundrydetergent2"){
+        else if(name==="laundrydetergent2"){
             this.shadowRoot.querySelector(".head_text").innerHTML=`
             Greenwashing
             `
@@ -256,7 +257,7 @@ class TheInfoCard extends HTMLElement {
             display: block;
             ` 
         }
-        else if(type==="laundrybasket"){
+        else if(name==="laundrybasket"){
             this.shadowRoot.querySelector(".head_text").innerHTML=`
             generated co2 <b> per load
             `
@@ -274,12 +275,12 @@ class TheInfoCard extends HTMLElement {
             font-weight: bold;
             `
         }
-        else if(type==="tablet"){
+        else if(name==="tablet"){
             this.shadowRoot.querySelector(".head_text").innerHTML=`
             Excessive electronic devices
             `
         }
-        else if(type==="switch"){
+        else if(name==="switch"){
             this.shadowRoot.querySelector(".head_text").style.cssText=`
             display: none;
             `
@@ -301,10 +302,10 @@ class TheInfoCard extends HTMLElement {
             color: #BD484A;
             `
         }
-        }
+    }
 
     changeInfoImage(){
-      this.shadowRoot.querySelector(".info-img").src= `./imgs/infoimg/${this.getAttribute("card_img")}.svg`;
+      this.shadowRoot.querySelector("img").src= `imgs/infoimg/${this.getAttribute("name")}.svg`;
     }
 
     // updateInfoCard(){
