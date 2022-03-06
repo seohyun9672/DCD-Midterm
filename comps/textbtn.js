@@ -29,16 +29,29 @@ class TheTextBtn extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_textbtn.content.cloneNode(true)); //use the template to make a clone
         
-        if(this.getAttribute("btn_text")) {
-            this.shadowRoot.querySelector(".textbtn_cont").innerText = this.getAttribute("btn_text");
-        }
-        if(this.getAttribute("color")) {
-            this.shadowRoot.querySelector(".textbtn_cont").style.color = this.getAttribute("color");
-        }
+        // if(this.getAttribute("btn_text")) {
+        //     this.shadowRoot.querySelector(".textbtn_cont").innerText = this.getAttribute("btn_text");
+        // }
+        document.querySelector("the-textbtn").changeTextBtn();
         this.shadowRoot.querySelector(".textbtn_cont").onclick = () => this.txtBtnFunc(this.getAttribute("btn_text"));
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+    changeTextBtn(){
+    if(this.getAttribute("btn_text")==="< Back") {
+        this.shadowRoot.querySelector(".textbtn_cont").innerText = "< Back"
+        this.shadowRoot.querySelector(".textbtn_cont").style.color="#FFFFFF"
+        }
+    if(this.getAttribute("btn_text")==="Got it!") {
+        this.shadowRoot.querySelector(".textbtn_cont").innerText = "Got it!"
+        this.shadowRoot.querySelector(".textbtn_cont").style.color="#6B994D"
+        }
+    if(this.getAttribute("btn_text")==="Next >") {
+        this.shadowRoot.querySelector(".textbtn_cont").innerText = "Next >"
+        this.shadowRoot.querySelector(".textbtn_cont").style.color="#6B994D"
+        }    
+    }
+
     txtBtnFunc(button="< Back") {
         this.btntext = button;
         if(button==="< Back") {
@@ -53,8 +66,7 @@ class TheTextBtn extends HTMLElement {
         }
 
         if(button==="Next >") {
-            document.querySelector("/").functionthatcausesoverlaytochange();
-            //if click on the next button, show the infocard_num
+            document.querySelector("#infocard").updateInfoCard();
         }
 
 }
