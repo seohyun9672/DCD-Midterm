@@ -28,6 +28,7 @@ the-textcont {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 /* STORY */
@@ -68,7 +69,9 @@ body {
 .textbox{
     width: 100%;
 }
-
+#infocard{
+    display: none;
+}
 
 /* CTA */
 /* /////need to adjust width and height ///// */
