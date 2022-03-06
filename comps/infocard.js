@@ -66,21 +66,24 @@ class TheInfoCard extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_infocard.content.cloneNode(true)); //use the template to make a clone
         // document.querySelector("#infocard").changeInfoText(this.getAttribute("info_text"));
-        document.querySelector("#infocard").updateInfoCard(
+        document.querySelector("#infocard").showInfoCard(
             // this.getAttribute("card_img"),
             // this.getAttribute("info_text")
         );
-        this.shadowRoot.querySelector(".text_btn").changeTextBtn(this.getAttribute("btn_text"));
+        
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     showInfocard(){
         document.querySelector("#infocard").style.display = "block";
+        this.changeInfoImage();
+        this.changeInfoText();
+        this.shadowRoot.querySelector(".text_btn").changeTextBtn(this.getAttribute("btn_text"));
     }
     removeInfoCard(){
         document.querySelector("#infocard").style.display = "none";
     }
-    changeInfoText(type="switch"){
+    changeInfoText(type="phone"){
         this.objName=type;
         if(type==="phone"){
             this.shadowRoot.querySelector(".head_text").innerHTML=`
@@ -89,6 +92,7 @@ class TheInfoCard extends HTMLElement {
             this.shadowRoot.querySelector(".em_text1").style.cssText=`
             color: #08509C;
             `
+            // this.shadowRoot.querySelector(".text_btn").innerText=`Next >`
         }
         if(type==="phone2"){
             this.shadowRoot.querySelector(".head_text").innerHTML=`
@@ -303,11 +307,11 @@ class TheInfoCard extends HTMLElement {
       this.shadowRoot.querySelector(".info-img").src= `./imgs/infoimg/${this.getAttribute("card_img")}.svg`;
     }
 
-    updateInfoCard(){
-        this.changeInfoImage();
-        this.changeInfoText();
+    // updateInfoCard(){
+    //     this.changeInfoImage();
+    //     this.changeInfoText();
             
-    } 
+    // } 
 }
 //MUST HAVE - define the tag for the custom elements
 customElements.define("the-infocard", TheInfoCard)
