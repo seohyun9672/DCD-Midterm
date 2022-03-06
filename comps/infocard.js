@@ -4,42 +4,49 @@ var template_infocard = document.createElement("template"); //<template> </templ
 //To-do - CREATE THE UI HERE!
 template_infocard.innerHTML = `
 <div class="infocard-cont">
-    <p class ="head_text"> Number of <br> SMARTPHONE WASTED <br> every year
-    <p class ="sub_text><p>
-    <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
+    <img class="info-img" src="./imgs/infoimg/phone.svg alt="">
+    <p class ="head_text">head_text</p>
+    <p class ="sub_text">sub_text</p>
+    <p class ="desc_text">desc_text</p>
     <the-textbtn
-    btn_text ="Got it!"
-    class ="gotit"
-    color= "green"
-    ><the-textbtn>
+    class="text_btn"
+    btn_text="Got it!"
+    ></the-textbtn>
 </div>
 <style>
     .infocard-cont {
         background-color:#FFFFFF;
         border: none;
         border-radius:5pt;
-        width: 230px;
+        width: 220px;
         height: 320px;
         box-shadow: 0em 0em 1em 0.2em #d3d3d3;
-        padding:1em;    
-        display: none;
+        display: flex;
+        flex-direction: column;
         position: relative;
+        align-items: center;
+        padding: .8em;
+        justify-content: center;
+    }
+    p {
         text-align: center;
     }
     .head_text {
         font-family:"ibm plex sans", "Ubuntu", sans-serif;
-        text-transform:uppercase;
+        text-transform: uppercase;
         font-weight:bold;
         letter-spacing:2.26pt;
         line-height: 2em;
-        margin-top:.5em;
         text-transform: uppercase;
+        font-size: 14px;
     }
     .sub_text{
         display: none;
     }
-    .info-img {
-        margin-bottom: 1em;
+    .desc_text{
+        display: none;
+        font-size: 14px;
+        line-height: 20px;
     }
 </style>
 `;
@@ -59,234 +66,248 @@ class TheInfoCard extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_infocard.content.cloneNode(true)); //use the template to make a clone
         // document.querySelector("#infocard").changeInfoText(this.getAttribute("info_text"));
-        // document.querySelector("#infocard").changeInfoImage(this.getAttribute("card_img"));
         document.querySelector("#infocard").updateInfoCard(
-            this.getAttribute("card_img"),
-            this.getAttribute("info_text")
+            // this.getAttribute("card_img"),
+            // this.getAttribute("info_text")
         );
-        this.objName=type;
-        
+        this.shadowRoot.querySelector(".text_btn").changeTextBtn(this.getAttribute("btn_text"));
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     showInfocard(){
-        this.shadowRoot.querySelector(".infocard-cont").style.display = "block";
+        document.querySelector("#infocard").style.display = "block";
     }
     removeInfoCard(){
-        this.shadowRoot.querySelector(".infocard-cont").style.display = "none";
+        document.querySelector("#infocard").style.display = "none";
     }
-    changeInfoText(type="phone"){
+    changeInfoText(type="switch"){
+        this.objName=type;
         if(type==="phone"){
-            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
-            number of smartphones wasted every year
+            this.shadowRoot.querySelector(".head_text").innerHTML=`
+            number of <span class ="em_text1"> smartphones wasted </span> every year 
             `
-            this.shadowRoot.querySelector(".head_text").cssText=`
-            
+            this.shadowRoot.querySelector(".em_text1").style.cssText=`
+            color: #08509C;
             `
         }
         if(type==="phone2"){
-            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
-            a single Iphone 12 pro max
+            this.shadowRoot.querySelector(".head_text").innerHTML=`
+            a single Iphone <br> 12 pro max
+            `
+            this.shadowRoot.querySelector(".sub_text").innerHTML=`
+            generates total of <br><span class ="em_text1">86kg</span> <span class ="em_text2"> CO2 Emission </span>
+            `
+            this.shadowRoot.querySelector(".sub_text").style.cssText=`
+            line-height: 2em;
+            `
+            this.shadowRoot.querySelector(".em_text1").style.cssText=`
+            color: #BD484A;
+            font-size: 16px;
+            font-weight: bolder;
+            `
+            this.shadowRoot.querySelector(".em_text2").style.cssText=`
+            font-weight: bolder
             `
         }
-        if(type==="car"){
-            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
-            greenhouse gas emissions from transportation
+        else if(type==="car"){
+            this.shadowRoot.querySelector(".head_text").innerHTML=`
+            <span class ="em_text1"> greenhouse gas </span> emissions from transportation 
+            `
+            this.shadowRoot.querySelector(".em_text1").style.cssText=`
+            color: #08509C;
             `
         }   
-        if(type==="waterbottle"){
-            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
-            greenhouse gas emissions from transportation
+        else if(type==="waterbottle"){
+            this.shadowRoot.querySelector(".head_text").innerHTML=`
+            increase in annual <span class ="em_text1"> carbon footprint <br> per year </span> 
+            `
+            this.shadowRoot.querySelector(".head_text").style.cssText=`
+            margin:0;
+            `
+            this.shadowRoot.querySelector(".em_text1").style.cssText=`
+            color: #A8C956;
+            `
+            this.shadowRoot.querySelector(".sub_text").innerHTML=`
+            Per single disposable cup
+            `
+            this.shadowRoot.querySelector(".sub_text").style.cssText=`
+            display:block;
+            font-size: 12px;
+            margin-top:0;
             `
         }
-        if(type==="fan"){
-            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
-            increase in annual carbon footprint per year
+        else if(type==="fan"){
+            this.shadowRoot.querySelector(".infocard-cont").innerHTML=`
+            <p class ="head_text">head_text</p>
+            <div class = "img_cont">
+                <img class="info-img" src="./imgs/infoimg/fan.svg alt="">
+                <p class ="sub_text">sub_text</p>
+            </div>
+            <p class ="desc_text">desc_text</p>
+            <the-textbtn
+            btn_text="Got it!"></the-textbtn>
+            `
+            this.shadowRoot.querySelector(".head_text").innerHTML=`
+            Heat island effect
+            `
+            this.shadowRoot.querySelector(".head_text").style.cssText=`
+            color: #A8C956;
+            `
+            this.shadowRoot.querySelector(".sub_text").innerHTML=`
+            Urban areas are <br> <span class = "em_text1"> 1-7° hotter </span> <br> than outlying areas during the day.
+            `
+            this.shadowRoot.querySelector(".sub_text").style.cssText=`
+            display: block;
+            font-size: 12px;
+            line-height: 24px;
+            `
+            this.shadowRoot.querySelector(".em_text1").style.cssText=`
+            color: #BD484A;
+            font-size: 18px;
+            letter-spacing: 0.45px;
+            font-weight: bold;
+            `
+            this.shadowRoot.querySelector(".desc_text").innerHTML=`
+            Due to structures such as buildings and roads which <span class ="em_text2"> absorb and re-emit more heat </span> than water and trees.
+            `
+            this.shadowRoot.querySelector(".em_text2").style.cssText=`
+            color: #BD484A;
+            `
+            this.shadowRoot.querySelector(".desc_text").style.cssText=`
+            display: block;
+            width: 90%;
             `
         }
-        if(type==="screen"){
-            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
-            greenhouse gas emissions from transportation
+       else if(type==="screen"){
+            this.shadowRoot.querySelector(".head_text").style.cssText=`
+            display: none;
             `
-        }
-        if(type==="laundrybasket"){
-            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
-            Laundry Footprints
+            this.shadowRoot.querySelector(".desc_text").innerHTML=`
+            Urbanization accounts for <span class ="em_text1"> nearly a quarter </span> of the causes behind Toronto's <span class ="em_text2"> increase in rain </span> over the past 180 years.
+            `
+            this.shadowRoot.querySelector(".desc_text").style.cssText=`
+            display: block;
+            `
+            this.shadowRoot.querySelector(".em_text1, .em_text2").style.cssText=`
+            color: #6B994D;
+            font-size: 14px;
+            font-weight: bolder;
             `
         }
         if(type==="laundrydetergent"){
-            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
-            Greenwashing
-            `
-        }
-          if(type==="laundrybasket"){
-            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
+            this.shadowRoot.querySelector(".head_text").innerHTML=`
             Laundry Footprints
             `
-        }
-        if(type==="laundrydetergent"){
-            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
-            Greenwashing
+            this.shadowRoot.querySelector(".head_text").style.cssText=`
+            color: #6B994D;
+            `
+            this.shadowRoot.querySelector(".sub_text").innerHTML=`
+            These chemicals wash down the drain and go straight into the lakes and rivers.  
+            `
+            this.shadowRoot.querySelector(".sub_text").style.cssText=`
+            display: block;
             `
         }
-        if(type==="laundrydetergent2"){
-            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
+        else if(type==="laundrydetergent2"){
+            this.shadowRoot.querySelector(".head_text").innerHTML=`
             Greenwashing
             `
+            this.shadowRoot.querySelector(".head_text").style.cssText=`
+            color: #6B994D;
+            `
+            this.shadowRoot.querySelector(".sub_text").innerHTML=`
+            Consider if the product is..
+            `
+            this.shadowRoot.querySelector(".sub_text").style.cssText=`
+            display: block;
+            `
+            this.shadowRoot.querySelector(".desc_text").innerHTML=`
+                <div class ="list">    
+                    <the-checkbtn></the-checkbtn>
+                    <span> Having multiple environmental attributes? </span>
+                </div>
+                <div class ="list">    
+                    <the-checkbtn></the-checkbtn>
+                    <span> Applying only a do-good label? </span>
+                </div>
+                <div class ="list">    
+                    <the-checkbtn></the-checkbtn>
+                    <span> Using illegal materials? </span>
+                </div>
+                <div class ="list">    
+                    <the-checkbtn></the-checkbtn>
+                    <span> Sustainable? </span>
+                </div>
+                <style>
+                .list{
+                    display:flex;
+                    align-items: center;
+                }
+                span{
+                    text-align: left
+                }
+                </style>
+            `
+            this.shadowRoot.querySelector(".desc_text").style.cssText=`
+            display: block;
+            ` 
         }
-          if(type==="tablet"){
-            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
+        else if(type==="laundrybasket"){
+            this.shadowRoot.querySelector(".head_text").innerHTML=`
+            generated co2 <b> per load
+            `
+            this.shadowRoot.querySelector(".head_text").style.cssText=`
+            color: #6B994D;
+            `
+            this.shadowRoot.querySelector(".sub_text").innerHTML=`
+            Generating heat from dryers is <br> more than <br> <span class="em_text1"> twice as carbon-intensive </span> as creating heat from gas.
+            `
+            this.shadowRoot.querySelector(".sub_text").style.cssText=`
+            display: block
+            `
+            this.shadowRoot.querySelector(".em_text1").style.cssText=`
+            color: #6B994D;
+            font-weight: bold;
+            `
+        }
+        else if(type==="tablet"){
+            this.shadowRoot.querySelector(".head_text").innerHTML=`
             Excessive electronic devices
             `
         }
-        if(type==="switch"){
-            this.shadowRoot.querySelector(".infocard-cont > p").innerText=`
-            Americans spend $350 billion/yr on electricity. 75% of it goes to waste 
+        else if(type==="switch"){
+            this.shadowRoot.querySelector(".head_text").style.cssText=`
+            display: none;
+            `
+            this.shadowRoot.querySelector(".sub_text").innerHTML=`
+            Americans spend <span class="em_text1"> $350 billion per year </span> on electricity. <br> <span class="em_text2"> But 75% of </span> it goes to waste. 
+            `
+            this.shadowRoot.querySelector(".sub_text").style.cssText=`
+            display: block;
+            font-family:"ibm plex sans", "Ubuntu", sans-serif;
+            font-size: 16px;
+            font-weight: lighter;
+            text-align: center;
+            line-height: 24px;
+            `
+            this.shadowRoot.querySelector(".em_text1").style.cssText=`
+            color: #BD484A;
+            `
+             this.shadowRoot.querySelector(".em_text2").style.cssText=`
+            color: #BD484A;
             `
         }
         }
-    
-        // this.shadowRoot.querySelector(".infocard-cont > p").innerText = this.getAttribute("info_text");
 
-   
-
-    
     changeInfoImage(){
-        this.shadowRoot.querySelector(".infocard-cont > img").src= `imgs/infoimg/${this.getAttribute("card_img")}.svg`;
+      this.shadowRoot.querySelector(".info-img").src= `./imgs/infoimg/${this.getAttribute("card_img")}.svg`;
     }
 
-    updateInfoCard(type="phone"){
-
-        if(type==="phone2"){
-            this.changeInfoImage();
-            this.changeInfoText();
-            // this.shadowRoot.querySelector(".infocard-cont").innerHTML=`
-            // `
-        }
-        if(type==="phone"){
-            this.changeInfoImage();
-            this.changeInfoText(); 
-        }
-
+    updateInfoCard(){
+        this.changeInfoImage();
+        this.changeInfoText();
+            
     } 
-    }
-        // this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
-        // <div class="infocard-cont">
-        //     <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
-        //     <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
-        //     <the-textbtn
-        //     btn_text ="Got it!"
-        //     class ="gotit"
-        //     color= "green"
-        //     ><the-textbtn>
-        // </div>`
-    
-    // updateInfoCard(objName="phone"){ 
-
-    //      if(type === "phone2")
-    //     this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
-    //     <div class="infocard-cont">
-    //         <p> A SINGLE <br> IPHONE 12 PRO MAX </p>
-    //         <img class="info-img" src="imgs/infoimg/card_phone2.svg" alt="The bar graph showing how CO2 emission is generated">
-    //         <the-textbtn
-    //         btn_text ="Got it!"
-    //         class ="gotit"
-    //         color= "green"
-    //         ><the-textbtn>
-    //     </div>`
-
-
-    //     if(type === "car")
-    //     this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
-    //     <div class="infocard-cont">
-    //         <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
-    //         <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
-    //         <the-textbtn
-    //         btn_text ="Got it!"
-    //         class ="gotit"
-    //         color= "green"
-    //         ><the-textbtn>
-    //     </div>`
-    //     if(type === "fan")
-    //     this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
-    //     <div class="infocard-cont">
-    //         <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
-    //         <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
-    //         <the-textbtn
-    //         btn_text ="Got it!"
-    //         class ="gotit"
-    //         color= "green"
-    //         ><the-textbtn>
-    //     </div>`
-    //     if(type === "laundrybasket")
-    //     this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
-    //     <div class="infocard-cont">
-    //         <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
-    //         <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
-    //         <the-textbtn
-    //         btn_text ="Got it!"
-    //         class ="gotit"
-    //         color= "green"
-    //         ><the-textbtn>
-    //     </div>`
-    //     if(type === "laundrydetergent")
-    //     this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
-    //     <div class="infocard-cont">
-    //         <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
-    //         <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
-    //         <the-textbtn
-    //         btn_text ="Got it!"
-    //         class ="gotit"
-    //         color= "green"
-    //         ><the-textbtn>
-    //     </div>`
-    //     if(type === "screen")
-    //     this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
-    //     <div class="infocard-cont">
-    //         <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
-    //         <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
-    //         <the-textbtn
-    //         btn_text ="Got it!"
-    //         class ="gotit"
-    //         color= "green"
-    //         ><the-textbtn>
-    //     </div>`
-    //     if(type === "switch")
-    //     this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
-    //     <div class="infocard-cont">
-    //         <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
-    //         <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
-    //         <the-textbtn
-    //         btn_text ="Got it!"
-    //         class ="gotit"
-    //         color= "green"
-    //         ><the-textbtn>
-    //     </div>`
-    //     if(type === "tablet")
-    //     this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
-    //     <div class="infocard-cont">
-    //         <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
-    //         <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
-    //         <the-textbtn
-    //         btn_text ="Got it!"
-    //         class ="gotit"
-    //         color= "green"
-    //         ><the-textbtn>
-    //     </div>`
-    //     if(type === "waterbottle")
-    //     this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
-    //     <div class="infocard-cont">
-    //         <p> Number of <br> SMARTPHONE WASTED <br> every year </p>
-    //         <img class="info-img" src="imgs/infoimg/card_phone.svg" alt="">
-    //         <the-textbtn
-    //         btn_text ="Got it!"
-    //         class ="gotit"
-    //         color= "green"
-    //         ><the-textbtn>
-    //     </div>`
-    // }
-
-
-
+}
 //MUST HAVE - define the tag for the custom elements
 customElements.define("the-infocard", TheInfoCard)
