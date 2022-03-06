@@ -29,12 +29,6 @@ class TheEmoji extends HTMLElement {
         this.shadowRoot.querySelector(".emoji").src = `./imgs/emojis/${this.getAttribute("feeling")}.svg`
         this.shadowRoot.querySelector(".emoji").onclick = () => this.HandleEmoji();
     }
-    // changeEmoji(){
-    //     if(type==="Embarrassed"){
-    //         this.shadowRoot.querySelector(".emoji > img").src=`./imgs/emojis/${this.getAttribute("feeling")}.svg`;
-    //     }
-
-    // }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     HandleEmoji() {
