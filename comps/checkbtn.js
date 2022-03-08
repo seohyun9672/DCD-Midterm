@@ -3,9 +3,13 @@ var template_checkbtn = document.createElement("template"); //<template> </templ
 
 //To-do - CREATE THE UI HERE!
 template_checkbtn.innerHTML = `
-<div class="check-cont">
-    <img src="imgs/check.svg">
-</div>
+<img class = "checkbtn" src="imgs/check.svg">
+<style>
+.checkbtn{
+    width: 26px;
+    height: 26px;
+}
+</style>
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
