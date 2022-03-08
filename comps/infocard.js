@@ -4,7 +4,7 @@ var template_infocard = document.createElement("template"); //<template> </templ
 //To-do - CREATE THE UI HERE!
 template_infocard.innerHTML = `
 <div class="infocard-cont">
-    <img class="info-img" src="./imgs/infoimg/phone.svg alt="">
+    <img class="info-img" src="./imgs/infoimg/phone.svg" alt="">
     <p class ="head_text">head_text</p>
     <p class ="sub_text">sub_text</p>
     <p class ="desc_text">desc_text</p>
