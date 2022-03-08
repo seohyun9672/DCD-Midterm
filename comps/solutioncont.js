@@ -100,10 +100,15 @@ class TheSolutionCont extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_solutioncont.content.cloneNode(true)); //use the template to make a clone
+        this.hideSolutionCont()
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+    hideSolutionCont(){
+        document.querySelector("the-solutioncont").style.visibility = "hidden";
+    }
     openSolutionCont(feeling="Worried") {
+        this.shadowRoot.querySelector(".solutioncont").style.visibility = "visible"
         this.emoji_state=feeling;;
         if(feeling==="Worried"){
             this.shadowRoot.querySelector(".solution_img").src = "imgs/SolutionCont/Bicycle.svg";
@@ -145,7 +150,7 @@ class TheSolutionCont extends HTMLElement {
             this.shadowRoot.querySelector(".header_text").innerText = `
             Feeling Inspired?
             `
-            this.shadowRoot.querySelector(".subheader_text").innerText = `Do your research!`
+            this.shadowRoot.querySelector(".subheader_text").innerHTML = `Do your research!`
             this.shadowRoot.querySelector(".desc_text").innerText = `
             Greenwashing is prevalent in almost all consumer industries. By staying informed, you can ensure that the sustainable steps you are taking are actually making an impact.
             `
