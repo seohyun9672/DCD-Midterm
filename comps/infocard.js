@@ -89,8 +89,7 @@ class TheInfoCard extends HTMLElement {
 
 showPrimary(){
       this.shadowRoot.querySelector(".secondary").style.display = "none";
-      this.shadowRoot.querySelector(".primary").style.display = "block";
-            
+      
       this.shadowRoot.querySelector("img").src = `imgs/infoimg/phone2.svg`;
       this.shadowRoot.querySelector(".head_text").innerHTML = `
       a single Iphone <br> 12 pro max
@@ -110,7 +109,10 @@ showPrimary(){
       font-weight: bolder
       `;
       this.shadowRoot.querySelector("the-textbtn").changeTextBtn("Got it!", "green");
-      this.shadowRoot.querySelector("the-textbtn").onclick = () => this.removeInfoCard()    
+      this.shadowRoot.querySelector("the-textbtn").onclick = () => {
+            this.removeInfoCard();
+            document.querySelector("the-textcont").nextTextCont();
+      }
 }
 
 showInfocard() {
