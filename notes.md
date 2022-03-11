@@ -9,7 +9,6 @@ Tasks
         - when clicking next button, primary = display:none; and secondary > display:block;
         - objects with only one card: secondary div only
 
-- click on got it > changes text cont, time, adds object
 
 
 FUNCTIONS:
@@ -24,7 +23,7 @@ FUNCTIONS:
 - display:block to display:none;
 - click got it > this function
 
-4. ChangeTextBtn("color","text")
+4. ChangeTextBtn("color","text") 
 - changing textbtn color and inner text
 
 this.story = 1;
@@ -35,7 +34,7 @@ remove chevrons
 textOrder becomes the state of the story image. so according to the state, we could control the
 text container, objects, and the infocard accordingly. 
 
-clicking got it > closes overlay and triggers NextStory()
+clicking got it > closes overlay and triggers NextStory() <cheryl!>
 
 NextStory() increases textOrder ++; then runs UpdateStoryUI
 
