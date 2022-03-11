@@ -48,9 +48,9 @@ class TheTextcont extends HTMLElement {
             color: darkgrey;
             font-weight: bold;
             `;
-            document.querySelector(".cycleimg").changeFootprintCycle(type === "footprintcycle1");
-            document.querySelector(".storybg").changeStory(type === "story1");
-            document.querySelector(".greenmanimg").changeGreenman(type === "greenman1");
+            document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle1");
+            document.querySelector(".storybg").changeStory("story1");
+            document.querySelector(".greenmanimg").changeGreenman("greenman1");
         }
         if (this.textOrder === 2) {
             this.shadowRoot.querySelector(".textcont > p").innerHTML = `
@@ -60,9 +60,9 @@ class TheTextcont extends HTMLElement {
             color: yellow;
             font-weight: bold;
             `;
-            document.querySelector(".cycleimg").changeFootprintCycle(type === "footprintcycle1");
-            document.querySelector(".storybg").changeStory(type === "story1");
-            document.querySelector(".greenmanimg").changeGreenman(type === "greenman2");
+            document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle1");
+            document.querySelector(".storybg").changeStory("story1");
+            document.querySelector(".greenmanimg").changeGreenman("greenman2");
         }
         if (this.textOrder === 3) {
             this.shadowRoot.querySelector(".textcont > p").innerHTML = `
@@ -72,62 +72,62 @@ class TheTextcont extends HTMLElement {
             color: skyblue;
             font-weight: bold;
             `;
-            document.querySelector(".cycleimg").changeFootprintCycle(type === "footprintcycle2");
-            document.querySelector(".storybg").changeStory(type === "story2");
-            document.querySelector(".greenmanimg").changeGreenman(type === "greenman2");
+            document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle2");
+            document.querySelector(".storybg").changeStory("story2");
+            document.querySelector(".greenmanimg").changeGreenman("greenman2");
         }
         if (this.textOrder === 4) {
             this.shadowRoot.querySelector(".textcont > p").innerHTML = `
             Great! However, the water doesn’t seem to help. He wants to turn on his fan. <br>
             Click on his desk <span>fan</span> to help him cool down.
             `;
-            document.querySelector(".cycleimg").changeFootprintCycle(type === "footprintcycle3");
-            document.querySelector(".storybg").changeStory(type === "story2");
-            document.querySelector(".greenmanimg").changeGreenman(type === "greenman3");
+            document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle3");
+            document.querySelector(".storybg").changeStory("story2");
+            document.querySelector(".greenmanimg").changeGreenman("greenman3");
         }
         if (this.textOrder === 5) {
             this.shadowRoot.querySelector(".textcont > p").innerHTML = `
             Mr. Green is feeling cool now! <br>
             Click on Mr. Green’s computer <span>screen</span> to get his work day started.
             `;
-            document.querySelector(".cycleimg").changeFootprintCycle(type === "footprintcycle3");
-            document.querySelector(".storybg").changeStory(type === "story2");
-            document.querySelector(".greenmanimg").changeGreenman(type === "greenman3");
+            document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle3");
+            document.querySelector(".storybg").changeStory("story2");
+            document.querySelector(".greenmanimg").changeGreenman("greenman3");
         }
         if (this.textOrder === 6) {
             this.shadowRoot.querySelector(".textcont > p").innerHTML = `
             Mr. Green usually does his laundry after work. <br>
             Click on the laundry detergent to help Mr. Green start his laundry.
             `;
-            document.querySelector(".cycleimg").changeFootprintCycle(type === "footprintcycle4");
-            document.querySelector(".storybg").changeStory(type === "story3");
-            document.querySelector(".greenmanimg").changeGreenman(type === "greenman4");
+            document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle4");
+            document.querySelector(".storybg").changeStory("story3");
+            document.querySelector(".greenmanimg").changeGreenman("greenman4");
         }
         if (this.textOrder === 7) {
             this.shadowRoot.querySelector(".textcont > p").innerHTML = `
             Mr. Green finishes his laundry. <br>
             Click on the <span>laundry basket</span> to help him throw his clothes into the dryer. 
             `;
-            document.querySelector(".cycleimg").changeFootprintCycle(type === "footprintcycle4");
-            document.querySelector(".storybg").changeStory(type === "story3");
-            document.querySelector(".greenmanimg").changeGreenman(type === "greenman4");
+            document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle4");
+            document.querySelector(".storybg").changeStory("story3");
+            document.querySelector(".greenmanimg").changeGreenman("greenman4");
         }
         if (this.textOrder === 8) {
             this.shadowRoot.querySelector(".textcont > p").innerHTML = `
             While folding his laundry, Mr. Green remembers the movie that his colleague recommended. <br>
             Click on the <span>tablet</span> to watch Netflix.`;
-            document.querySelector(".cycleimg").changeFootprintCycle(type === "footprintcycle5");
-            document.querySelector(".storybg").changeStory(type === "story4");
-            document.querySelector(".greenmanimg").changeGreenman(type === "greenman5");
+            document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle5");
+            document.querySelector(".storybg").changeStory("story4");
+            document.querySelector(".greenmanimg").changeGreenman("greenman5");
         }
         if (this.textOrder === 9) {
             this.shadowRoot.querySelector(".textcont > p").innerText = `
             Mr. Green fell asleep on the couch while watching TV. It seems that he forgot to turn off the light. <br>
             Click on the switch to turn off the light for him.
             `;
-            document.querySelector(".cycleimg").changeFootprintCycle(type === "footprintcycle6");
-            document.querySelector(".storybg").changeStory(type === "story4");
-            document.querySelector(".greenmanimg").changeGreenman(type === "greenman6");
+            document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle6");
+            document.querySelector(".storybg").changeStory("story4");
+            document.querySelector(".greenmanimg").changeGreenman("greenman6");
         }
         if (this.textOrder === 10) {
             window.location.href = "/cta.html";
@@ -142,7 +142,7 @@ class TheTextcont extends HTMLElement {
     nextTextCont() {
         this.textOrder = this.textOrder + 1;
         document.querySelector("the-time").increaseTime();
-        this.updateStoryUI();
+        this.updateStoryUI(); 
     }
 }
 

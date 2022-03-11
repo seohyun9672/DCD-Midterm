@@ -30,21 +30,20 @@ class TheTextBtn extends HTMLElement {
 
         document.querySelector(".btn_back").changeTextBtn("< Back", "white");
         document.querySelector(".btn_back").style.opacity = "0.8";
-
-        // this.currentState = null;
+        document.querySelector(".btn_back").onclick = () => {
+            location.href = "/"
+        }
     }
 
-    //To-do - CREATE THE FUNCTIONALITIES HERE!
+        //To-do - CREATE THE FUNCTIONALITIES HERE!
     changeTextBtn(txt, color) {
-        this.shadowRoot.querySelector(".textbtn_cont").innerText = txt;
-        this.shadowRoot.querySelector(".textbtn_cont").style.color = color;
+            this.shadowRoot.querySelector(".textbtn_cont").innerText = txt;
+            this.shadowRoot.querySelector(".textbtn_cont").style.color = color;
+        }
+        // changeStory() {
+        //     this.shadowRoot
+        // }
     }
-
-    // changeBtnState(state = "phone") {
-    //     this.currentState = state;
-    // }
-
-}
 
 //MUST HAVE - define the tag for the custom elements
 customElements.define("the-textbtn", TheTextBtn)
