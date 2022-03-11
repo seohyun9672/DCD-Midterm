@@ -32,25 +32,24 @@ class TheFootprintCycle extends HTMLElement {
     }
 
     changeFootprintCycle(type="footprint_num"){
-        this.shadowRoot.querySelector(".footprintcycle").src = `imgs/FootprintCycle/${this.getAttribute("footprint_num")}.svg`;
 
         if(type==="footprintcycle1"){
-            this.shadowRoot.querySelector(".footprintcycle").src=`imgs/FootprintCycle/${this.getAttribute("footprint_num")}.svg`;
+            this.shadowRoot.querySelector(".footprintcycle").src=`imgs/FootprintCycle/footprintcycle1.svg`;
         }
         if(type==="footprintcycle2"){
-            this.shadowRoot.querySelector(".footprintcycle").src=`imgs/FootprintCycle/${this.getAttribute("footprint_num")}.svg`;
+            this.shadowRoot.querySelector(".footprintcycle").src=`imgs/FootprintCycle/footprintcycle2.svg`;
         }
         if(type==="footprintcycle3"){
-            this.shadowRoot.querySelector(".footprintcycle").src=`imgs/FootprintCycle/${this.getAttribute("footprint_num")}.svg`;
+            this.shadowRoot.querySelector(".footprintcycle").src=`imgs/FootprintCycle/footprintcycle3.svg`;
         }
         if(type==="footprintcycle4"){
-            this.shadowRoot.querySelector(".footprintcycle").src=`imgs/FootprintCycle/${this.getAttribute("footprint_num")}.svg`;
+            this.shadowRoot.querySelector(".footprintcycle").src=`imgs/FootprintCycle/footprintcycle4.svg`;
         }
         if(type==="footprintcycle5"){
-            this.shadowRoot.querySelector(".footprintcycle").src=`imgs/FootprintCycle/${this.getAttribute("footprint_num")}.svg`;
+            this.shadowRoot.querySelector(".footprintcycle").src=`imgs/FootprintCycle/footprintcycle5.svg`;
         }
         if(type==="footprintcycle6"){
-            this.shadowRoot.querySelector(".footprintcycle").src=`imgs/FootprintCycle/${this.getAttribute("footprint_num")}.svg`;
+            this.shadowRoot.querySelector(".footprintcycle").src=`imgs/FootprintCycle/footprintcycle6.svg`;
         }
         
 
@@ -59,7 +58,7 @@ class TheFootprintCycle extends HTMLElement {
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     // changeFootprintCycle(type="footprint_num"){
     //     if(type==="footprintcycle3"){
-    //         this.shadowRoot.querySelector(".footprintcycle").src=`./imgs/FootprintCycle/${this.getAttribute("footprint_num")}.svg`;
+    //         this.shadowRoot.querySelector(".footprintcycle").src=`./imgs/FootprintCycle/footprintcycle.svg`;
     //     }
         
     // }
