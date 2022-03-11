@@ -18,75 +18,31 @@ template_textbtn.innerHTML = `
 class TheTextBtn extends HTMLElement {
 
     //MUST HAVE - CREATE A CONSTRUCTOR TO DO INITAL ASSOCIATIONS
-    constructor(){
+    constructor() {
         super(); //pass on the HTMLElement super powers!
-        this.attachShadow({mode:"open"}) //Attach it to the shadowRoot
+        this.attachShadow({ mode: "open" }) //Attach it to the shadowRoot
         //To-do - CREATE THE STATES FOR THE UI HERE!
     }
 
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
-    connectedCallback(){
+    connectedCallback() {
         this.shadowRoot.appendChild(template_textbtn.content.cloneNode(true)); //use the template to make a clone
-        // if(this.getAttribute("btn_text")) {
-        //     this.shadowRoot.querySelector(".textbtn_cont").innerText = this.getAttribute("btn_text");
-        // }
-        this.changeTextBtn();
-        this.shadowRoot.querySelector(".textbtn_cont").innerText = this.getAttribute("btn_next")
-        this.shadowRoot.querySelector(".textbtn_cont").onclick = () => this.txtBtnFunc();
-        this.currentState = null;
-        //document.querySelector()
+
+        document.querySelector(".btn_back").changeTextBtn("< Back", "white");
+        document.querySelector(".btn_back").style.opacity = "0.8";
+
+        // this.currentState = null;
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
-    changeTextBtn(txt, color){
-    /*if(this.getAttribute("btn_text")==="< Back") {
-        this.shadowRoot.querySelector(".textbtn_cont").innerText = "< Back"
-        this.shadowRoot.querySelector(".textbtn_cont").style.color="#FFFFFF"
-        }
-    if(this.getAttribute("btn_text")==="Got it!") {
-        this.shadowRoot.querySelector(".textbtn_cont").innerText = "Got it!"
-        this.shadowRoot.querySelector(".textbtn_cont").style.color="#6B994D"
-        }
-    if(this.getAttribute("btn_text")==="Next >") {
-        this.shadowRoot.querySelector(".textbtn_cont").innerText = "Next >"
-        this.shadowRoot.querySelector(".textbtn_cont").style.color="#6B994D"
-        } 
-        */
-       
+    changeTextBtn(txt, color) {
         this.shadowRoot.querySelector(".textbtn_cont").innerText = txt;
         this.shadowRoot.querySelector(".textbtn_cont").style.color = color;
     }
 
-    txtBtnFunc(button="< Back") {
-        // this.btntext = button;
-        // if(button==="< Back") {
-        //     window.location.href = "/index.html";
-        // }
-        // if(button==="Got it!") {
-        //     document.querySelector("the-object").addObj();
-        //     document.querySelector("the-infocard").removeInfoCard();
-        //     document.querySelector(".storybg").changeStory();
-        //     document.querySelector(".cycleimg").changeFootprintCycle();
-        //     document.querySelector(".greenmanimg").changeGreenman();
-        //     document.querySelector("the-textcont").increaseTextCont();
-
-        // }
-
-        // if(button==="Next >") {
-        //     document.querySelector("#infocard").changeInfoCard("phone2");
-        // }
-
-        if(this.currentState === 'phone'){
-            
-        }
-
-    }
-
-    changeBtnState(state='phone'){
-        this.currentState = state;
-    }
-
-
+    // changeBtnState(state = "phone") {
+    //     this.currentState = state;
+    // }
 
 }
 
