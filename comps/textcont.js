@@ -42,21 +42,19 @@ class TheTextcont extends HTMLElement {
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     updateTextCont(){
-        // if(this.textOrder === 0) {
-        //    window.location.href="/";
-        // }
-
-        ///change innerText to innerHTML so we can have em text 
         if(this.textOrder === 1) {
             this.shadowRoot.querySelector(".textcont > p").innerHTML = `
             Mr. Green wakes up in the morning with an alarm from his brand new phone. 
             Click on his phone to turn the alarm off.`
+            this.document.querySelector("the-footprincycle").changeFootPrintCycle(type="ddd");
+
         }
 
         if(this.textOrder === 2) {
             this.shadowRoot.querySelector(".textcont > p").innerHTML = 
             `Great! Now Mr. Green is ready to go to work.
         Click on his car to get it started. `
+
         }
         if(this.textOrder === 3) {
             this.shadowRoot.querySelector(".textcont > p").innerText = 
@@ -108,7 +106,7 @@ class TheTextcont extends HTMLElement {
         this.textOrder = this.textOrder + 1;
         document.querySelector("the-time").increaseTime();
         this.updateTextCont();
-        document.querySelector("the-object").addObj();
+        // document.querySelector("the-object").addObj();
     }
 }
 

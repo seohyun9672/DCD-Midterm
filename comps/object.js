@@ -29,8 +29,7 @@ class TheObject extends HTMLElement {
         this.shadowRoot.appendChild(template_object.content.cloneNode(true)); //use the template to make a clone
         this.objName = "phone";
         this.shadowRoot.querySelector(".obj-cont").onclick = () => {
-          document.querySelector("the-infocard").showInfocard();
-          // document.querySelector("the-infocard").updateInfoCard();
+          document.querySelector("the-infocard").changeInfoCard();
         }
     }
 
