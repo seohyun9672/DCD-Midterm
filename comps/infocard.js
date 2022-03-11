@@ -4,17 +4,29 @@ var template_infocard = document.createElement("template"); //<template> </templ
 //To-do - CREATE THE UI HERE!
 template_infocard.innerHTML = `
 <div class="infocard-cont">
-    <img class="info-img" src="./imgs/infoimg/phone.svg" alt="">
-    <p class ="head_text">head_text</p>
-    <p class ="sub_text">sub_text</p>
-    <p class ="desc_text">desc_text</p>
-    <the-textbtn
-    class="text_btn"
-    btn_text="Next >"
-    ></the-textbtn>
+      <div class ="primary">
+            <img class="info-img" src="./imgs/infoimg/phone.svg" alt="">
+            <p class ="head_text">head_text</p>
+            <p class ="sub_text">sub_text</p>
+            <p class ="desc_text">desc_text</p>
+            <the-textbtn
+            class="text_btn"
+            btn_text="Next >"
+            ></the-textbtn>
+      </div>
+      <div class ="secondary">
+            <img class="info-img" src="./imgs/infoimg/phone.svg" alt="">
+            <p class ="head_tet">head_text</p>
+            <p class ="sub_text">sub_text</p>
+            <p class ="desc_text">desc_text</p>
+            <the-textbtn
+            class="text_btn"
+            btn_text="Got it!"
+            ></the-textbtn>
+      </div>
 </div>
 <style>
-    .infocard-cont {
+    .primary, .secondary{
         background-color:#FFFFFF;
         border: none;
         border-radius:5pt;
@@ -48,6 +60,9 @@ template_infocard.innerHTML = `
         font-size: 14px;
         line-height: 20px;
     }
+    .secondary{
+          display: none;
+    }
 </style>
 `;
 
@@ -64,19 +79,25 @@ class TheInfoCard extends HTMLElement {
   //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
   connectedCallback() {
     this.shadowRoot.appendChild(template_infocard.content.cloneNode(true)); //use the template to make a clone
-    this.shadowRoot.querySelector("the-textbtn").changeTextBtn("Next >", "blue");
+        this.shadowRoot.querySelector("the-textbtn").changeTextBtn("Got it!", "green");
+        this.shadowRoot.querySelector("the-textbtn").innerText = this.getAttribute("btn_text");
+        document.querySelector("the-object").onclick = () => this.showInfocard();
+        this.shadowRoot.querySelector("the-textbtn")
+//     this.shadowRoot.querySelector("the-textbtn").onclick = () => this.removeInfoCard();
   }
 
   //To-do - CREATE THE FUNCTIONALITIES HERE!
 
-  removeInfoCard() {
-    document.querySelector("#infocard").style.display = "none";
+  showInfocard() {
+      document.querySelector("#infocard").style.display = "block";
+      } 
+      removeInfoCard() {
+    this.shadowRoot.querySelector(".infocard-cont").style.display = "none";
   }
+  
 
   changeInfoCard(name = "phone") {
-    document.querySelector("the-infocard").style.display = "block"
     this.objName = name;
-    this.shadowRoot.querySelector("the-textbtn").changeBtnState(name);
     if (name === "phone") {
       this.shadowRoot.querySelector("img").src = `imgs/infoimg/phone.svg`;
       this.shadowRoot.querySelector(".head_text").innerHTML = `
@@ -85,7 +106,7 @@ class TheInfoCard extends HTMLElement {
       this.shadowRoot.querySelector(".em_text1").style.cssText = `
             color: #08509C;
             `;
-        // this.shadowRoot.querySelector("the-textbtn").setAttribute("btn_text", "Next >");
+            
     }
     if (name === "phone2") {
       this.shadowRoot.querySelector("img").src = `imgs/infoimg/phone2.svg`;
@@ -197,7 +218,9 @@ class TheInfoCard extends HTMLElement {
             `;
     }
     if (name === "laundrydetergent") {
-      this.shadowRoot.querySelector("img").src = `imgs/infoimg/laundrydetergent.svg`;
+      this.shadowRoot.querySelector(
+        "img"
+      ).src = `imgs/infoimg/laundrydetergent.svg`;
       this.shadowRoot.querySelector(".head_text").innerHTML = `
             Laundry Footprints
             `;
@@ -212,7 +235,9 @@ class TheInfoCard extends HTMLElement {
             `;
     }
     if (name === "laundrydetergent2") {
-      this.shadowRoot.querySelector("img").src = `imgs/infoimg/laundrydetergent2.svg`;
+      this.shadowRoot.querySelector(
+        "img"
+      ).src = `imgs/infoimg/laundrydetergent2.svg`;
       this.shadowRoot.querySelector(".head_text").innerHTML = `
             Greenwashing
             `;
@@ -255,9 +280,11 @@ class TheInfoCard extends HTMLElement {
       this.shadowRoot.querySelector(".desc_text").style.cssText = `
             display: block;
             `;
-    } 
+    }
     if (name === "laundrybasket") {
-      this.shadowRoot.querySelector("img").src = `imgs/infoimg/laundrybasket.svg`;
+      this.shadowRoot.querySelector(
+        "img"
+      ).src = `imgs/infoimg/laundrybasket.svg`;
       this.shadowRoot.querySelector(".head_text").innerHTML = `
             generated co2 <b> per load
             `;

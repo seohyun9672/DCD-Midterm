@@ -30,8 +30,7 @@ class TheTextBtn extends HTMLElement {
 
         document.querySelector(".btn_back").changeTextBtn("< Back", "white");
         document.querySelector(".btn_back").style.opacity = "0.8";
-
-        // this.currentState = null;
+        document.querySelector(".btn_back").onclick = () => location.href ="/index.html"
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
@@ -39,10 +38,6 @@ class TheTextBtn extends HTMLElement {
         this.shadowRoot.querySelector(".textbtn_cont").innerText = txt;
         this.shadowRoot.querySelector(".textbtn_cont").style.color = color;
     }
-
-    // changeBtnState(state = "phone") {
-    //     this.currentState = state;
-    // }
 
 }
 
