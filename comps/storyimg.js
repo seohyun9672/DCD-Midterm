@@ -21,53 +21,33 @@ template_storyimg.innerHTML = `
 class TheStoryImg extends HTMLElement {
 
     //MUST HAVE - CREATE A CONSTRUCTOR TO DO INITAL ASSOCIATIONS
-    constructor(){
+    constructor() {
         super(); //pass on the HTMLElement super powers!s
-        this.attachShadow({mode:"open"}) //Attach it to the shadowRoot
+        this.attachShadow({ mode: "open" }) //Attach it to the shadowRoot
 
         //To-do - CREATE THE STATES FOR THE UI HERE!
     }
 
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
-    connectedCallback(){
+    connectedCallback() {
         this.shadowRoot.appendChild(template_storyimg.content.cloneNode(true)); //use the template to make a clone
     }
-    
-    changeStory(type="story_num"){
-    this.shadowRoot.querySelector("#bg > img").src = `imgs/storyimg/${this.getAttribute("story_num")}.jpeg`;
-
-        if(type==="story1"){
-            this.shadowRoot.querySelector("#bg > img").src = `imgs/storyimg/${this.getAttribute("story_num")}.jpeg`;
-        }
-        if(type==="story2"){
-            this.shadowRoot.querySelector("#bg > img").src = `imgs/storyimg/${this.getAttribute("story_num")}.jpeg`;
-        }
-        if(type==="story3"){
-            this.shadowRoot.querySelector("#bg > img").src = `imgs/storyimg/${this.getAttribute("story_num")}.jpeg`;
-        }
-        if(type==="story4"){
-            this.shadowRoot.querySelector("#bg > img").src = `imgs/storyimg/${this.getAttribute("story_num")}.jpeg`;
-        }
-
-         
-
-        // document.querySelector("#storybg")= document.querySelector(".foootprintcycle").changeFootprintCycle(`./imgs/FootprintCycle/${this.getAttribute("footprint_num")}.svg)`;
-
-        // if (this.getAttribute("story_num")==="story1"){
-        //     this.shadowRoot.querySelector("#bg > img").changeFootprintCycle();
-        // }
-        
-        //     if(this.getAttribute("story_num")){
-        //         this.shadowRoot.querySelector("#item").changeOb(this.getAttribute("story_num="));}
-
-    
     //To-do - CREATE THE FUNCTIONALITIES HERE!
-   
-
+    changeStory(type = "story_num") {
+        if (type === "story1") {
+            this.shadowRoot.querySelector("#bg > img").src = `imgs/storyimg/story1.jpeg`;
+        }
+        if (type === "story2") {
+            this.shadowRoot.querySelector("#bg > img").src = `imgs/storyimg/story2.jpeg`;
+        }
+        if (type === "story3") {
+            this.shadowRoot.querySelector("#bg > img").src = `imgs/storyimg/story3.jpeg`;
+        }
+        if (type === "story4") {
+            this.shadowRoot.querySelector("#bg > img").src = `imgs/storyimg/story4.jpeg`;
+        }
+    }
 }
-    
-    // }
-} 
 
 
 //MUST HAVE - define the tag for the custom elements
