@@ -23,27 +23,27 @@ FUNCTIONS:
 - display:block to display:none;
 - click got it > this function
 
+//done//
 4. ChangeTextBtn("color","text") 
 - changing textbtn color and inner text
 
 this.story = 1;
 
-remove chevrons
-
+//done// remove chevrons 
 
 textOrder becomes the state of the story image. so according to the state, we could control the
 text container, objects, and the infocard accordingly. 
 
 clicking got it > closes overlay and triggers NextStory() <cheryl!>
 
-NextStory() increases textOrder ++; then runs UpdateStoryUI
+//done// NextStory() increases textOrder ++; then runs UpdateStoryUI
 
 5. UpdateStoryUI() 
 - add:
-    - change footprint cycle
-    - change time
-    - change story img
-    - greenman
+    - change footprint cycle //done
+    - change time //maybe?
+    - change story img //done
+    - greenman //done
     - object
 
  
