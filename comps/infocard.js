@@ -3,28 +3,28 @@ var template_infocard = document.createElement("template"); //<template> </templ
 
 //To-do - CREATE THE UI HERE!
 template_infocard.innerHTML = `
-<div class="infocard-cont">
-      <div class ="primary">
-            <img class="info-img" src="./imgs/infoimg/phone.svg" alt="">
-            <p class ="head_text">head_text</p>
-            <p class ="sub_text">sub_text</p>
-            <p class ="desc_text">desc_text</p>
-            <the-textbtn
-            class="text_btn"
-            btn_text="Next >"
-            ></the-textbtn>
-      </div>
-      <div class ="secondary">
-            <img class="info-img" src="./imgs/infoimg/phone.svg" alt="">
-            <p class ="head_tet">head_text</p>
-            <p class ="sub_text">sub_text</p>
-            <p class ="desc_text">desc_text</p>
-            <the-textbtn
-            class="text_btn"
-            btn_text="Got it!"
-            ></the-textbtn>
-      </div>
+<div class ="primary">
+      <img class="info-img" src="./imgs/infoimg/phone.svg" alt="">
+      <p class ="head_text">head_text</p>
+      <p class ="sub_text">sub_text</p>
+      <p class ="desc_text">desc_text</p>
+      <the-textbtn
+      class="text_btn"
+      btn_text=""
+      ></the-textbtn>
 </div>
+<div class ="secondary">
+      <img class="info-img" src="./imgs/infoimg/phone.svg" alt="">
+      <p class ="head_text">head_text</p>
+      <p class ="sub_text">sub_text</p>
+      <p class ="desc_text">desc_text</p>
+      <the-textbtn
+      class="text_btn"
+      btn_text="Got it!"
+      ></the-textbtn>
+</div>
+
+
 <style>
     .primary, .secondary{
         background-color:#FFFFFF;
@@ -40,10 +40,11 @@ template_infocard.innerHTML = `
         padding: .8em;
         justify-content: center;
     }
-    p {
+
+    p{
         text-align: center;
     }
-    .head_text {
+    .head_text{
         font-family:"ibm plex sans", "Ubuntu", sans-serif;
         text-transform: uppercase;
         font-weight:bold;
@@ -78,24 +79,47 @@ class TheInfoCard extends HTMLElement {
 
   //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
   connectedCallback() {
-    this.shadowRoot.appendChild(template_infocard.content.cloneNode(true)); //use the template to make a clone
-        this.shadowRoot.querySelector("the-textbtn").changeTextBtn("Got it!", "green");
-        this.shadowRoot.querySelector("the-textbtn").innerText = this.getAttribute("btn_text");
-        document.querySelector("the-object").onclick = () => this.showInfocard();
-        this.shadowRoot.querySelector("the-textbtn")
-//     this.shadowRoot.querySelector("the-textbtn").onclick = () => this.removeInfoCard();
+      this.shadowRoot.appendChild(template_infocard.content.cloneNode(true)); //use the template to make a clone
+        
+      document.querySelector("the-object").onclick = () => this.showInfocard();
+      this.shadowRoot.querySelector("the-textbtn");
   }
 
   //To-do - CREATE THE FUNCTIONALITIES HERE!
 
-  showInfocard() {
-      document.querySelector("#infocard").style.display = "block";
-      } 
-      removeInfoCard() {
-    this.shadowRoot.querySelector(".infocard-cont").style.display = "none";
-  }
-  
+showPrimary(){
+      this.shadowRoot.querySelector(".secondary").style.display = "none";
+      this.shadowRoot.querySelector(".primary").style.display = "block";
+            
+      this.shadowRoot.querySelector("img").src = `imgs/infoimg/phone2.svg`;
+      this.shadowRoot.querySelector(".head_text").innerHTML = `
+      a single Iphone <br> 12 pro max
+      `;
+      this.shadowRoot.querySelector(".sub_text").innerHTML = `
+      generates total of <br><span class ="em_text1">86kg</span> <span class ="em_text2"> CO2 Emission </span>
+      `;
+      this.shadowRoot.querySelector(".sub_text").style.cssText = `
+      line-height: 2em;
+      `;
+      this.shadowRoot.querySelector(".em_text1").style.cssText = `
+      color: #BD484A;
+      font-size: 16px;
+      font-weight: bolder;
+      `;
+      this.shadowRoot.querySelector(".em_text2").style.cssText = `
+      font-weight: bolder
+      `;
+      this.shadowRoot.querySelector("the-textbtn").changeTextBtn("Got it!", "green");
+      this.shadowRoot.querySelector("the-textbtn").onclick = () => this.removeInfoCard()    
+}
 
+showInfocard() {
+      document.querySelector("#infocard").style.display = "block";
+} 
+removeInfoCard() {
+      document.querySelector("#infocard").style.display = "none";
+}
+      
   changeInfoCard(name = "phone") {
     this.objName = name;
     if (name === "phone") {
@@ -106,28 +130,11 @@ class TheInfoCard extends HTMLElement {
       this.shadowRoot.querySelector(".em_text1").style.cssText = `
             color: #08509C;
             `;
-            
+          this.shadowRoot.querySelector("the-textbtn").changeTextBtn("Next >", "green");
+          this.shadowRoot.querySelector("the-textbtn").onclick = () => this.showPrimary()    
+          
     }
-    if (name === "phone2") {
-      this.shadowRoot.querySelector("img").src = `imgs/infoimg/phone2.svg`;
-      this.shadowRoot.querySelector(".head_text").innerHTML = `
-            a single Iphone <br> 12 pro max
-            `;
-      this.shadowRoot.querySelector(".sub_text").innerHTML = `
-            generates total of <br><span class ="em_text1">86kg</span> <span class ="em_text2"> CO2 Emission </span>
-            `;
-      this.shadowRoot.querySelector(".sub_text").style.cssText = `
-            line-height: 2em;
-            `;
-      this.shadowRoot.querySelector(".em_text1").style.cssText = `
-            color: #BD484A;
-            font-size: 16px;
-            font-weight: bolder;
-            `;
-      this.shadowRoot.querySelector(".em_text2").style.cssText = `
-            font-weight: bolder
-            `;
-    }
+
     if (name === "car") {
       this.shadowRoot.querySelector("img").src = `imgs/infoimg/car.svg`;
       this.shadowRoot.querySelector(".head_text").innerHTML = `
