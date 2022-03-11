@@ -30,7 +30,7 @@ class TheChevron extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_chevron.content.cloneNode(true)); //use the template to make a clone
-    
+        this.story = 1;
         if(this.getAttribute("direction")) {
             this.shadowRoot.querySelector(".chev-cont").style.transform = "scaleX(-1)";
         }

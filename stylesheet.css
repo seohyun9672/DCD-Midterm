@@ -28,6 +28,7 @@ the-textcont {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 /* STORY */
@@ -35,6 +36,11 @@ the-textcont {
 body {
     margin:0;
 }
+.btn_back{
+    position: absolute;
+    padding:1em;
+}
+
 .section_story{
     display: flex;
     flex-direction: column;
@@ -45,6 +51,10 @@ body {
     flex-direction: column;
     top:0;
     height: 100%;
+    
+}
+.objoverlay{
+    position: absolute;
 }
 .scriptbox{
     background-color: #C8D5AE;
@@ -59,19 +69,22 @@ body {
 .textbox{
     width: 100%;
 }
+#infocard{
+    display: none;
+}
 
 /* CTA */
 /* /////need to adjust width and height ///// */
 
 .section_cta_first{
     background-color: #FEFFF6;
-    width: 100%;
+    width: auto;
     height: 100%;
     padding: 3em;
 }
 .section_clickable{
     display:flex;
-    width: 100%;
+    width: auto;
 }
 .section_emoji{
     display: flex;
@@ -87,16 +100,20 @@ body {
 
 .section_cta_second{
     background-color: #C6E1E5;
-    width: 100%;
+    width: auto;
     height: 100%;
     padding: 3em;
 }
 .section_cta_desc{
     display: flex;
     flex-direction: column;
+    align-content:center;
 }
 .section_ctabtn{
     display: flex;
     justify-content: space-between;
     
+}
+the-solutioncont {
+    align-self:center;
 }

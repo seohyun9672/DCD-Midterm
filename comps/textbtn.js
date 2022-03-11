@@ -9,8 +9,6 @@ template_textbtn.innerHTML = `
 <style>
     .textbtn_cont{
         font-weight:bolder;
-        padding:1em;
-        position:absolute;
         cursor: pointer;
     }
 </style>
@@ -20,31 +18,32 @@ template_textbtn.innerHTML = `
 class TheTextBtn extends HTMLElement {
 
     //MUST HAVE - CREATE A CONSTRUCTOR TO DO INITAL ASSOCIATIONS
-    constructor(){
+    constructor() {
         super(); //pass on the HTMLElement super powers!
-        this.attachShadow({mode:"open"}) //Attach it to the shadowRoot
-
+        this.attachShadow({ mode: "open" }) //Attach it to the shadowRoot
         //To-do - CREATE THE STATES FOR THE UI HERE!
     }
 
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
-    connectedCallback(){
+    connectedCallback() {
         this.shadowRoot.appendChild(template_textbtn.content.cloneNode(true)); //use the template to make a clone
-        
-        if(this.getAttribute("btn_text")) {
-            this.shadowRoot.querySelector(".textbtn_cont").innerText = this.getAttribute("btn_text");
-        }
-        if(this.getAttribute("color")) {
-            this.shadowRoot.querySelector(".textbtn_cont").style.color = this.getAttribute("color");
-        }
-        if(this.getAttribute("href")) {
-            this.shadowRoot.querySelector(".textbtn_cont").href = this.getAttribute("href");
-        }
 
-    //To-do - CREATE THE FUNCTIONALITIES HERE!
+        document.querySelector(".btn_back").changeTextBtn("< Back", "white");
+        document.querySelector(".btn_back").style.opacity = "0.8";
+        document.querySelector(".btn_back").onclick = () => {
+            location.href = "/"
+        }
     }
 
-}
+        //To-do - CREATE THE FUNCTIONALITIES HERE!
+    changeTextBtn(txt, color) {
+            this.shadowRoot.querySelector(".textbtn_cont").innerText = txt;
+            this.shadowRoot.querySelector(".textbtn_cont").style.color = color;
+        }
+        // changeStory() {
+        //     this.shadowRoot
+        // }
+    }
 
 //MUST HAVE - define the tag for the custom elements
 customElements.define("the-textbtn", TheTextBtn)

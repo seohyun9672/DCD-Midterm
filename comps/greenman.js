@@ -33,20 +33,20 @@ class TheGreenman extends HTMLElement {
         if(this.getAttribute("direction")){
             this.shadowRoot.querySelector(".greenman").style.transform= "scaleX(-1)";
         }
-        if(this.getAttribute("greenman_num")){
-            this.shadowRoot.querySelector(".greenman").src=this.changeGreenman();
-        }
+        // if(this.getAttribute("greenman_num")){
+        //     this.shadowRoot.querySelector(".greenman").src=this.changeGreenman();
+        // }
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     changeGreenman(type="greenman_num"){
         this.shadowRoot.querySelector(".greenman > img").src = `./imgs/Greenman/${this.getAttribute("greenman_num")}.svg`;
-
+        console.log(type);
         if(type==="greenman1"){
             this.shadowRoot.querySelector(".greenman > img").src=`./imgs/Greenman/${this.getAttribute("greenman_num")}.svg`;
         }
-        if(type==="greenman2"){
-            this.shadowRoot.querySelector(".greenman > img").src=`./imgs/Greenman/${this.getAttribute("greenman_num")}.svg`;
+        if (type === "greenman2") {
+            this.shadowRoot.querySelector(".greenman > img").src=`./imgs/Greenman/greenman2.svg`;
         }
         if(type==="greenman3"){
             this.shadowRoot.querySelector(".greenman > img").src=`./imgs/Greenman/${this.getAttribute("greenman_num")}.svg`;

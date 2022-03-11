@@ -9,7 +9,7 @@ template_storyimg.innerHTML = `
       height: 100%;
   }
   #bg{
-      height: 540px;
+      height: 620px;
   }
 </style>
 <div id="bg">

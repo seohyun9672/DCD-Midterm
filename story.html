@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="story">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,8 +29,10 @@
     <script src="comps/greenman.js"></script>
     <script src="comps/storyimg.js"></script>
 </head>
+
 <body>
     <section class="section_story">
+<<<<<<< HEAD
         <the-textbtn
         btn_text="< Back"
         color="white"
@@ -47,94 +50,45 @@
             <the-object
             id = "object"
             ob_name ="car"></the-object>
+=======
+        <the-textbtn 
+        class="btn_back">
+        </the-textbtn>
+        <the-footprintcycle 
+        class="cycleimg" 
+        footprint_num="footprintcycle1">
+        </the-footprintcycle>
+        <div class="story">
+            <the-storyimg 
+            story_num="story1" 
+            class="storybg">
+            </the-storyimg>
+            <div class="objoverlay">
+                <the-object 
+                name="phone">
+                </the-object>
+                <the-infocard 
+                id="infocard">
+                </the-infocard>
+            </div>
+>>>>>>> anna
             <div class="scriptbox">
-                <the-chevron
-                direction="scaleX(-1)"
-                ></the-chevron>
-                <the-greenman
-                class="greenmanimg"
-                greenman_num ="greenman4"
-                ></the-greenman>
+                <the-greenman 
+                class="greenmanimg" 
+                greenman_num="greenman4">
+                </the-greenman>
                 <div class="textbox">
-                    <the-time
-                    time_text = "6:00AM"
+                    <the-time 
+                    time_text="6:00AM"
                     ></the-time>
                     <the-textcont
-                    id="textcont"
-                    story_text ="Mr. Green wakes up in the morning with an alarm from his brand new phone.
-                    Click on his phone to turn the alarm off."
-                    em_text =""
-                    ></the-textcont>
+                    class="textcont"></the-textcont>
                 </div>
-                <the-chevron
-                id="right"></the-chevron>
                 </the-chevron>
                 
             </div>
         </div>
     </section>
-    <!-- .textcont{
-                     story_text ="Mr. Green wakes up in the morning with an alarm from his brand new phone.
-                    Click on his phone to turn the alarm off."
-        width: 100%;
-        height: auto;
-        background-color: #C8D5AE;
-        display: flex;
-        justify-content:center;
-        align-items:center;
-        padding:10px;
-    }
-    .textbox{
-        margin: 1em;
-        width:80vw;
-        background-color: white;
-        font-size: 1.5em;
-        padding:1em;
-    }
-    .emtext{
-        font-weight: bolder;
-        color: red;
-        font-style: normal;
-    }
-    the-time{
-        position:absolute;
-        top:0.75em;
-        left:5em;
-    } -->
-    
-<!--     
-   
-    
-   <the-textbtn
-    btn_text="Got it!"
-    color="#6B994D"
-    ></the-textbtn>
-    <the-footprintcycle></the-footprintcycle>
-    
-    <the-textcont></the-textcont>
-    <the-object></the-object>
-    <the-infocard
-    num_text="15"
-    main_text=""
-    desc_text="excessive electronic devices"
-    capt_text=""
-    src="imgs/puzzle.svg"
-    em_text=""
-    em_color="#EB933B"
-    ></the-infocard>
-    <the-feetbtn
-    text_color="#08509C"
-    btn_text="Re-watch the story &#8227;"
-    ></the-feetbtn>
-    <the-footprintbtn></the-footprintbtn>
-    <the-time
-    time_text="6:00AM"
-    ></the-time>
-    <the-object></the-object>
-    <the-feelingbtn
-    btn_text="Embarrassed"
-    ></the-feelingbtn>
-    <the-greenman></the-greenman> -->
-
 </body>
+
 </html>

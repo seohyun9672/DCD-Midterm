@@ -20,15 +20,18 @@
     <script src="comps/greenman.js"></script>
     <script src="comps/emoji.js"></script>
     <script src="comps/feetbtn.js"></script>
+    <script src="comps/solutioncont.js"></script>
+    <script src="comps/exit.js"></script>
+    <script src="comps/checkbtn.js"></script>
 </head>
 
 <body>
     <section class="cta">
         <section class = section_cta_first>
             <the-header
-            head_text="Now Reflect Yourself to Mr. Green"
-            desc_text="How do you feel about making a" 
-            em_text="difference in a day?"
+            head_text="Now Reflect Yourself to Mr. Green."
+            desc_text="How do you feel about your <em>impact</em> on the planet?" 
+            em_color="#A8C956"
             ></the-header>
             <div class = section_clickable>
                 <the-greenman 
@@ -39,30 +42,36 @@
                         <the-emoji
                         feeling ="Worried"
                         ></the-emoji>
-                        <the-feelingbtn></the-feelingbtn>
+                        <the-feelingbtn
+                        btn_text="Worried"></the-feelingbtn>
+                        <the-solutioncont></the-solutioncont>
                     </div>
                     <div class="btn_emoji">
                         <the-emoji
                         feeling ="Helpless"></the-emoji>
-                        <the-feelingbtn></the-feelingbtn>
+                        <the-feelingbtn
+                        btn_text="Helpless"></the-feelingbtn>
                     </div>
                     <div class="btn_emoji">
                         <the-emoji
                         feeling ="Inspired"
                         ></the-emoji>
-                        <the-feelingbtn></the-feelingbtn>
+                        <the-feelingbtn
+                        btn_text="Inspired"></the-feelingbtn>
                     </div>
                     <div class="btn_emoji">
                         <the-emoji
                         feeling ="Embarrassed">
                         </the-emoji>
-                        <the-feelingbtn></the-feelingbtn>
+                        <the-feelingbtn
+                        btn_text="Embarrassed"></the-feelingbtn>
                     </div>
                     <div class="btn_emoji">
                         <the-emoji
                         feeling ="Shocked"
                         ></the-emoji>
-                        <the-feelingbtn></the-feelingbtn>
+                        <the-feelingbtn
+                        btn_text="Shocked"></the-feelingbtn>
                     </div>
                 </div>
                 <the-greenman
@@ -73,12 +82,19 @@
         </section>
         <section class="section_cta_second">
             <div class="cta_desc">
-                <the-header></the-header>
-                <p>It is impossible to leave the carbon footprint behind human action. However, that could not be the reason to stop trying. Think about the actions and choices that you make in daily life. You'll be able to start reducing your personal footprints after all.</p>
+                <the-header
+                head_text="Be Cautious About Your Choices!"
+                desc_text="<em>There are many ways to reduce your negative impact.</em>"
+                em_color="#003E4F"></the-header>
+                <p class="cta_capt">It is impossible to completely eliminate our impact on the environment. However, that should not be the reason to stop trying. Reconsider the actions and choices you make in your daily life; perhaps there are ways to reduce your personal impact after all.</p>
             </div>
             <div class="section_ctabtn">
-                <the-feetbtn></the-feetbtn>
-                <the-feetbtn></the-feetbtn>
+                <the-feetbtn
+                btn_text="&#9666; Back to main page"
+                name="back"></the-feetbtn>
+                <the-feetbtn
+                btn_text="Re-watch the story &#9656;"
+                name="rewatch"></the-feetbtn>
             </div>
         </section>
     </section>

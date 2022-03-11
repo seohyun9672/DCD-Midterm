@@ -27,16 +27,13 @@ class TheEmoji extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_emoji.content.cloneNode(true)); //use the template to make a clone
         this.shadowRoot.querySelector(".emoji").src = `./imgs/emojis/${this.getAttribute("feeling")}.svg`
-    
+        this.shadowRoot.querySelector(".emoji").onclick = () => this.HandleEmoji();
     }
-    // changeEmoji(){
-    //     if(type==="Embarrassed"){
-    //         this.shadowRoot.querySelector(".emoji > img").src=`./imgs/emojis/${this.getAttribute("feeling")}.svg`;
-    //     }
-
-    // }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+    HandleEmoji() {
+        document.querySelector("the-solutioncont").openSolutionCont(this.getAttribute("feeling"));
+    }
 }
 
 //MUST HAVE - define the tag for the custom elements
