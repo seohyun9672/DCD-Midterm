@@ -41,7 +41,6 @@ class TheGreenman extends HTMLElement {
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     changeGreenman(type="greenman_num"){
         this.shadowRoot.querySelector(".greenman > img").src = `./imgs/Greenman/${this.getAttribute("greenman_num")}.svg`;
-        console.log(type);
         if(type==="greenman1"){
             this.shadowRoot.querySelector(".greenman > img").src=`./imgs/Greenman/${this.getAttribute("greenman_num")}.svg`;
         }

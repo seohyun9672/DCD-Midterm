@@ -4,7 +4,7 @@ var template_infocard = document.createElement("template"); //<template> </templ
 //To-do - CREATE THE UI HERE!
 template_infocard.innerHTML = `
 <div class ="primary">
-      <img class="info-img" src="./imgs/infoimg/phone.svg" alt="">
+      <img class="info-img" src="./imgs/infoimg/phone2.svg" alt="">
       <p class ="head_text">head_text</p>
       <p class ="sub_text">sub_text</p>
       <p class ="desc_text">desc_text</p>
@@ -80,9 +80,7 @@ class TheInfoCard extends HTMLElement {
   //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
   connectedCallback() {
       this.shadowRoot.appendChild(template_infocard.content.cloneNode(true)); //use the template to make a clone
-        
-      document.querySelector("the-object").onclick = () => this.showInfocard();
-      this.shadowRoot.querySelector("the-textbtn");
+      this.objName = objName;
   }
 
   //To-do - CREATE THE FUNCTIONALITIES HERE!
@@ -111,20 +109,22 @@ showPrimary(){
       this.shadowRoot.querySelector("the-textbtn").changeTextBtn("Got it!", "green");
       this.shadowRoot.querySelector("the-textbtn").onclick = () => {
             this.removeInfoCard();
-            document.querySelector("the-textcont").nextTextCont();
+            document.querySelector("the-textcont").nextStory();
+            
       }
 }
 
-showInfocard() {
+showInfoCard() {
       document.querySelector("#infocard").style.display = "block";
+      this.changeInfoCard();
 } 
 removeInfoCard() {
       document.querySelector("#infocard").style.display = "none";
 }
       
-  changeInfoCard(name = "phone") {
-    this.objName = name;
-    if (name === "phone") {
+  changeInfoCard(objName = "phone") {
+      this.objName = objName;
+    if (objName === "phone") {
       this.shadowRoot.querySelector("img").src = `imgs/infoimg/phone.svg`;
       this.shadowRoot.querySelector(".head_text").innerHTML = `
             number of <span class ="em_text1"> smartphones wasted </span> every year 
@@ -132,12 +132,12 @@ removeInfoCard() {
       this.shadowRoot.querySelector(".em_text1").style.cssText = `
             color: #08509C;
             `;
-          this.shadowRoot.querySelector("the-textbtn").changeTextBtn("Next >", "green");
-          this.shadowRoot.querySelector("the-textbtn").onclick = () => this.showPrimary()    
+      this.shadowRoot.querySelector("the-textbtn").changeTextBtn("Next >", "green");
+      this.shadowRoot.querySelector("the-textbtn").onclick = () => this.showPrimary()    
           
     }
 
-    if (name === "car") {
+    if (objName === "car") {
       this.shadowRoot.querySelector("img").src = `imgs/infoimg/car.svg`;
       this.shadowRoot.querySelector(".head_text").innerHTML = `
             <span class ="em_text1"> greenhouse gas </span> emissions from transportation 
@@ -145,8 +145,13 @@ removeInfoCard() {
       this.shadowRoot.querySelector(".em_text1").style.cssText = `
             color: #08509C;
             `;
+      this.shadowRoot.querySelector("the-textbtn").changeTextBtn("Got it!", "green");
+          this.shadowRoot.querySelector("the-textbtn").onclick = () => {
+                this.removeInfoCard();
+                document.querySelector("the-textcont").nextStory();
+          }
     }
-    if (name === "waterbottle") {
+    if (objName === "waterbottle") {
       this.shadowRoot.querySelector("img").src = `imgs/infoimg/waterbottle.svg`;
       this.shadowRoot.querySelector(".head_text").innerHTML = `
             increase in annual <span class ="em_text1"> carbon footprint <br> per year </span> 
@@ -166,7 +171,7 @@ removeInfoCard() {
             margin-top:0;
             `;
     }
-    if (name === "fan") {
+    if (objName === "fan") {
       this.shadowRoot.querySelector("img").src = `imgs/infoimg/fan.svg`;
       this.shadowRoot.querySelector(".infocard-cont").innerHTML = `
             <p class ="head_text">head_text</p>
@@ -209,7 +214,7 @@ removeInfoCard() {
             width: 90%;
             `;
     }
-    if (name === "screen") {
+    if (objName === "screen") {
       this.shadowRoot.querySelector("img").src = `imgs/infoimg/screen.svg`;
       this.shadowRoot.querySelector(".head_text").style.cssText = `
             display: none;
@@ -226,7 +231,7 @@ removeInfoCard() {
             font-weight: bolder;
             `;
     }
-    if (name === "laundrydetergent") {
+    if (objName === "laundrydetergent") {
       this.shadowRoot.querySelector(
         "img"
       ).src = `imgs/infoimg/laundrydetergent.svg`;
@@ -243,7 +248,7 @@ removeInfoCard() {
             display: block;
             `;
     }
-    if (name === "laundrydetergent2") {
+    if (objName === "laundrydetergent2") {
       this.shadowRoot.querySelector(
         "img"
       ).src = `imgs/infoimg/laundrydetergent2.svg`;
@@ -290,7 +295,7 @@ removeInfoCard() {
             display: block;
             `;
     }
-    if (name === "laundrybasket") {
+    if (objName === "laundrybasket") {
       this.shadowRoot.querySelector(
         "img"
       ).src = `imgs/infoimg/laundrybasket.svg`;
@@ -311,13 +316,13 @@ removeInfoCard() {
             font-weight: bold;
             `;
     }
-    if (name === "tablet") {
+    if (objName === "tablet") {
       this.shadowRoot.querySelector("img").src = `imgs/infoimg/tablet.svg`;
       this.shadowRoot.querySelector(".head_text").innerHTML = `
             Excessive electronic devices
             `;
     }
-    if (name === "switch") {
+    if (objName === "switch") {
       this.shadowRoot.querySelector("img").src = `imgs/infoimg/switch.svg`;
       this.shadowRoot.querySelector(".head_text").style.cssText = `
             display: none;

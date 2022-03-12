@@ -51,6 +51,7 @@ class TheTextcont extends HTMLElement {
             document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle1");
             document.querySelector(".storybg").changeStory("story1");
             document.querySelector(".greenmanimg").changeGreenman("greenman1");
+            
         }
         if (this.textOrder === 2) {
             this.shadowRoot.querySelector(".textcont > p").innerHTML = `
@@ -63,6 +64,7 @@ class TheTextcont extends HTMLElement {
             document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle1");
             document.querySelector(".storybg").changeStory("story1");
             document.querySelector(".greenmanimg").changeGreenman("greenman2");
+            document.querySelector("the-object").addObj("car");
         }
         if (this.textOrder === 3) {
             this.shadowRoot.querySelector(".textcont > p").innerHTML = `
@@ -75,6 +77,7 @@ class TheTextcont extends HTMLElement {
             document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle2");
             document.querySelector(".storybg").changeStory("story2");
             document.querySelector(".greenmanimg").changeGreenman("greenman2");
+            document.querySelector("the-object").addObj("waterbottle");
         }
         if (this.textOrder === 4) {
             this.shadowRoot.querySelector(".textcont > p").innerHTML = `
@@ -84,6 +87,7 @@ class TheTextcont extends HTMLElement {
             document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle3");
             document.querySelector(".storybg").changeStory("story2");
             document.querySelector(".greenmanimg").changeGreenman("greenman3");
+            document.querySelector("the-object").addObj("fan");
         }
         if (this.textOrder === 5) {
             this.shadowRoot.querySelector(".textcont > p").innerHTML = `
@@ -93,15 +97,17 @@ class TheTextcont extends HTMLElement {
             document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle3");
             document.querySelector(".storybg").changeStory("story2");
             document.querySelector(".greenmanimg").changeGreenman("greenman3");
+            document.querySelector("the-object").addObj("screen");
         }
         if (this.textOrder === 6) {
             this.shadowRoot.querySelector(".textcont > p").innerHTML = `
             Mr. Green usually does his laundry after work. <br>
-            Click on the laundry detergent to help Mr. Green start his laundry.
+            Click on the <span>laundry</span> detergent to help Mr. Green start his laundry.
             `;
             document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle4");
             document.querySelector(".storybg").changeStory("story3");
             document.querySelector(".greenmanimg").changeGreenman("greenman4");
+            document.querySelector("the-object").addObj("laundrydetergent");
         }
         if (this.textOrder === 7) {
             this.shadowRoot.querySelector(".textcont > p").innerHTML = `
@@ -111,6 +117,7 @@ class TheTextcont extends HTMLElement {
             document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle4");
             document.querySelector(".storybg").changeStory("story3");
             document.querySelector(".greenmanimg").changeGreenman("greenman4");
+            document.querySelector("the-object").addObj("laundrybasket");
         }
         if (this.textOrder === 8) {
             this.shadowRoot.querySelector(".textcont > p").innerHTML = `
@@ -119,27 +126,23 @@ class TheTextcont extends HTMLElement {
             document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle5");
             document.querySelector(".storybg").changeStory("story4");
             document.querySelector(".greenmanimg").changeGreenman("greenman5");
+            document.querySelector("the-object").addObj("tablet");
         }
         if (this.textOrder === 9) {
             this.shadowRoot.querySelector(".textcont > p").innerText = `
             Mr. Green fell asleep on the couch while watching TV. It seems that he forgot to turn off the light. <br>
-            Click on the switch to turn off the light for him.
+            Click on the <span>switch</span> to turn off the light for him.
             `;
             document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle6");
             document.querySelector(".storybg").changeStory("story4");
             document.querySelector(".greenmanimg").changeGreenman("greenman6");
+            document.querySelector("the-object").addObj("switch");
         }
         if (this.textOrder === 10) {
             window.location.href = "/cta.html";
         }
     }
-    previousTextCont() {
-        this.textOrder = this.textOrder - 1;
-        document.querySelector("the-time").decreaseTime();
-        this.updateStoryUI();
-    }
-
-    nextTextCont() {
+    nextStory() {
         this.textOrder = this.textOrder + 1;
         document.querySelector("the-time").increaseTime();
         this.updateStoryUI(); 

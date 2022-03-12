@@ -26,19 +26,17 @@ class TheObject extends HTMLElement {
 
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
-        this.shadowRoot.appendChild(template_object.content.cloneNode(true)); //use the template to make a clone
-        this.objName = "phone";
+      this.shadowRoot.appendChild(template_object.content.cloneNode(true)); //use the template to make a clone
+          
         this.shadowRoot.querySelector(".obj-cont").onclick = () => {
-          document.querySelector("the-infocard").changeInfoCard();
+              document.querySelector("the-infocard").showInfoCard();
         }
     }
-
-    handleObject(){
-    document.querySelector("the-infocard").updateInfoCard(this.getAttribute("objName"))
-    }
+  
  
-    updateObj() {
-        if(this.objName === "phone") {
+  addObj(objName = "phone") {
+    this.objName = objName;
+    if (objName === "phone") {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = 
         `<div class="object">
           <img class="first" src="imgs/objects/phone.svg" alt="phone">
@@ -62,7 +60,7 @@ class TheObject extends HTMLElement {
         </style>`; 
         }
 
-        if(this.objName === "car") {
+        if(objName === "car") {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = 
         `<div class="object">
           <img class="first" src="imgs/objects/phone.svg" alt="phone">
@@ -87,9 +85,10 @@ class TheObject extends HTMLElement {
             }
           }
         </style>`;  
+  
         }
         
-        if(this.objName === "waterbottle") {
+        if(objName === "waterbottle") {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = `
         <div class="object">
           <img class="first" src="imgs/objects/waterbottle.svg" alt="waterbottle">
@@ -113,7 +112,7 @@ class TheObject extends HTMLElement {
         </style>`;
         }
         
-        if(this.objName === "fan") {
+        if(objName === "fan") {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = `
         <div class="object">
           <img class="first" src="imgs/objects/waterbottle.svg" alt="waterbottle">
@@ -139,7 +138,7 @@ class TheObject extends HTMLElement {
           }
         </style>`;  
         }
-        if(this.objName === "screen") {
+        if(objName === "screen") {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = `
         <div class="object">
           <img class="first" src="imgs/objects/waterbottle.svg" alt="waterbottle">
@@ -168,7 +167,7 @@ class TheObject extends HTMLElement {
           }
         </style>`;   
         }
-        if(this.objName === "laundrydetergent") {
+        if(objName === "laundrydetergent") {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = `
         <div class="object">
           <img class="first" src="imgs/objects/laundrydetergent.svg" alt="detergent">
@@ -191,7 +190,7 @@ class TheObject extends HTMLElement {
           }
         </style>`;  
         }
-        if(this.objName === "laundrybasket") {
+        if(objName === "laundrybasket") {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = `
         <div class="object">
           <img class="first" src="imgs/objects/laundrydetergent.svg" alt="detergent">
@@ -217,7 +216,7 @@ class TheObject extends HTMLElement {
           }
         </style>`;  
         }
-        if(this.objName === "tablet") {
+        if(objName === "tablet") {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = `
         <div class="object">
           <img class="first" src="imgs/objects/tablet.svg" alt="tablet">
@@ -241,7 +240,7 @@ class TheObject extends HTMLElement {
           }
         </style>`;  
         }
-        if(this.objName === "switch") {
+        if(objName === "switch") {
         this.shadowRoot.querySelector(".obj-cont").innerHTML = `
         <div class="object">
          <img class="first" src="imgs/objects/tablet.svg" alt="tablet">
@@ -269,15 +268,7 @@ class TheObject extends HTMLElement {
         </style>`;  
         }
     }
-    remObj() {
-        this.objNum = this.objNum - 1;
-        this.updateObj();
-    }
-    
-    addObj() {
-        this.objNum = this.objNum + 1;
-        this.updateObj();
-    }
+
 
 }
 
