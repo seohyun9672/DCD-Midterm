@@ -34,7 +34,7 @@ this.story = 1;
 textOrder becomes the state of the story image. so according to the state, we could control the
 text container, objects, and the infocard accordingly. 
 
-clicking got it > closes overlay and triggers NextStory() <cheryl!>
+clicking got it > closes overlay and triggers NextStory() 
 
 //done// NextStory() increases textOrder ++; then runs UpdateStoryUI
 
@@ -47,3 +47,7 @@ clicking got it > closes overlay and triggers NextStory() <cheryl!>
     - object
 
  
+
+when the car is shown, the infocard information should be change, but HOW???? WHY IS IT NOT CHANGING??? HUH???
+How do we link the new infocard information with new object huh? 
+reposition objects
