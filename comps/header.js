@@ -5,9 +5,7 @@ var template_header = document.createElement("template"); //<template> </templat
 template_header.innerHTML = `
 <div class="head_cont">
     <h1>heading text</h1>
-    <div class="desc">
-    <p class="desc_text">description text</p>
-    </div>
+    <p>description text</p>
 </div>
 <style>
     .head_cont {
@@ -21,13 +19,8 @@ template_header.innerHTML = `
         color: #08509C;
         font-style:normal;
         font-weight:bold;
-        text-indent:0.25em;
-        display: inline;
     }
-    .desc {
-        display:flex;
-        align-items:center;
-        justify-content:center;
+    p {
         font-size:20pt;
     }
 </style>
@@ -37,29 +30,24 @@ template_header.innerHTML = `
 class TheHeader extends HTMLElement {
 
     //MUST HAVE - CREATE A CONSTRUCTOR TO DO INITAL ASSOCIATIONS
-    constructor(){
+    constructor() {
         super(); //pass on the HTMLElement super powers!
-        this.attachShadow({mode:"open"}) //Attach it to the shadowRoot
+        this.attachShadow({ mode: "open" }) //Attach it to the shadowRoot
 
         //To-do - CREATE THE STATES FOR THE UI HERE!
     }
 
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
-    connectedCallback(){
+    connectedCallback() {
         this.shadowRoot.appendChild(template_header.content.cloneNode(true)); //use the template to make a clone
-    
-        if(this.getAttribute("head_text")) {
+
+        if (this.getAttribute("head_text")) {
             this.shadowRoot.querySelector("h1").innerText = this.getAttribute("head_text");
         }
-        if(this.getAttribute("desc_text")) {
-            this.shadowRoot.querySelector("p").innerHTML = this.getAttribute("desc_text");
-        }
-        if(this.getAttribute("em_text")) {
-            this.shadowRoot.querySelector("em").innerText = this.getAttribute("em_text");
-        }
-        if(this.getAttribute("em_color")) {
-            this.shadowRoot.querySelector("em").style.color = this.getAttribute("em_color");
-        }
+        
+        this.shadowRoot.querySelector("p").innerHTML = `
+        See how your everyday actions contribute to your <em>carbon footprint.</em>
+        `
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
