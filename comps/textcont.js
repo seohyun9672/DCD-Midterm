@@ -138,7 +138,7 @@ class TheTextcont extends HTMLElement {
             document.querySelector("the-object").onclick = () => document.querySelector("the-infocard").changeInfoCard("tablet");
         }
         if (this.textOrder === 9) {
-            this.shadowRoot.querySelector(".textcont > p").innerText = `
+            this.shadowRoot.querySelector(".textcont > p").innerHTML = `
             Mr. Green fell asleep on the couch while watching TV. It seems that he forgot to turn off the light. <br>
             Click on the <span>switch</span> to turn off the light for him.
             `;
