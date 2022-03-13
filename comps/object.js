@@ -10,7 +10,11 @@ template_object.innerHTML = `
   .obj-cont {
     position: absolute;
     top: 300px;   
-    left: 750px
+    left: 750px;
+  }
+  img[alt="phone"] {
+    position:absolute;
+    top:180px;
   }
 `;
 
@@ -46,6 +50,8 @@ class TheObject extends HTMLElement {
             animation: 3s fadeIn;
             animation-fill-mode: forwards;
             visibility: hidden;
+            position:absolute;
+            top:500px;
           }
           
           @keyframes fadeIn {
@@ -73,6 +79,9 @@ class TheObject extends HTMLElement {
             animation: 3s fadeIn;
             animation-fill-mode: forwards;
             visibility: hidden;
+            position:absolute;
+            top:-50px;
+            left:205px;
           }
         
           @keyframes fadeIn {
@@ -94,10 +103,14 @@ class TheObject extends HTMLElement {
           <img class="first" src="imgs/objects/waterbottle.svg" alt="waterbottle">
         </div>
         <style>
-        .first {
+          .first {
             animation: 3s fadeIn;
             animation-fill-mode: forwards;
             visibility: hidden;
+            position:absolute;
+            top:100px;
+            right:500px;
+
           }
           
           @keyframes fadeIn {
@@ -121,10 +134,18 @@ class TheObject extends HTMLElement {
           <img class="second" src="imgs/objects/fan.svg" alt="fan">
         </div>
         <style>
+        .first {
+          position:absolute;
+          top:100px;
+          right:500px;
+        }
         .second {
             animation: 3s fadeIn;
             animation-fill-mode: forwards;
             visibility: hidden;
+            position:absolute;
+            top:-10px;
+            right:100px;
           }
           
           @keyframes fadeIn {
@@ -150,10 +171,22 @@ class TheObject extends HTMLElement {
           <img class="third" src="imgs/objects/screen.svg" alt="screen">
         </div>
         <style>
+        .first {
+          position:absolute;
+          top:100px;
+          right:500px;
+        }
+        .second {
+          position:absolute;
+          top:-10px;
+          right:100px;
+        }
         .third {
             animation: 3s fadeIn;
             animation-fill-mode: forwards;
             visibility: hidden;
+            position:absolute;
+            top:-50px;
           }
           
           @keyframes fadeIn {
@@ -177,6 +210,9 @@ class TheObject extends HTMLElement {
             animation: 3s fadeIn;
             animation-fill-mode: forwards;
             visibility: hidden;
+            position:absolute;
+            top:100px;
+            right:175px;
           }
           
           @keyframes fadeIn {
@@ -199,10 +235,18 @@ class TheObject extends HTMLElement {
           <img class="second" src="imgs/objects/laundrybasket.svg" alt="basket">
         </div>
         <style>
+        .first {
+          position:absolute;
+          top:100px;
+          right:175px;
+        }
         .second {
             animation: 3s fadeIn;
             animation-fill-mode: forwards;
             visibility: hidden;
+            position:absolute;
+            top:80px;
+            left:200px;
           }
           
           @keyframes fadeIn {
@@ -225,8 +269,10 @@ class TheObject extends HTMLElement {
         .first {
             animation: 3s fadeIn;
             animation-fill-mode: forwards;
-            
             visibility: hidden;
+            position:absolute;
+            top:200px;
+            right:200px;
           }
           
           @keyframes fadeIn {
@@ -249,11 +295,18 @@ class TheObject extends HTMLElement {
           <img class="second" src="imgs/objects/switch.svg" alt="switch">
         </div>
         <style>
+        .first {
+          position:absolute;
+          top:200px;
+          right:200px;
+        }
         .second {
             animation: 3s fadeIn;
             animation-fill-mode: forwards;
-            
             visibility: hidden;
+            position:absolute;
+            top:-200px;
+            left:500px;
           }
           
           @keyframes fadeIn {
