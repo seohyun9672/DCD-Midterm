@@ -192,7 +192,7 @@ class TheSolutionCont extends HTMLElement {
         
     }
     closeSolutionCont() {
-        this.shadowRoot.querySelector(".solutioncont").style.display = "none";
+        this.shadowRoot.querySelector(".solutioncont").style.visibility = "hidden";
     }
 }
 
