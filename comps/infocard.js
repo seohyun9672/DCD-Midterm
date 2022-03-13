@@ -17,7 +17,7 @@ template_infocard.innerHTML = `
 </div>
 
 <style>
-    .primary{
+    .primary, .secondary{
         background-color:#FFFFFF;
         border: none;
         border-radius:5pt;
@@ -30,8 +30,7 @@ template_infocard.innerHTML = `
         align-items: center;
         padding: .8em;
         justify-content: center;
-    }
-
+    } 
     p {
         text-align: center;
     }
@@ -73,12 +72,13 @@ class TheInfoCard extends HTMLElement {
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 
     showPrimary(type = "") {
-        this.shadowRoot.querySelector("the-textbtn").changeTextBtn("Got it!", "green");
         this.shadowRoot.querySelector("the-textbtn").onclick = () => {
             this.removeInfoCard();
             document.querySelector("the-textcont").nextStory();
+
         }
         if (type === "phone") {
+            this.shadowRoot.querySelector("the-textbtn").changeTextBtn("Got it!", "green");
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/phone2.svg`;
             this.shadowRoot.querySelector(".head_text").innerHTML = `
             a single Iphone <br> 12 pro max
@@ -99,50 +99,49 @@ class TheInfoCard extends HTMLElement {
             font-weight: bolder
             `;
         }
-        // if (type === "laundrydetergent")
-        //     this.shadowRoot.querySelector("img").src = `imgs/infoimg/laundrydetergent2.svg`;
-        //     this.shadowRoot.querySelector(".head_text").innerHTML = `
-        //     Greenwashing
-        //     `;
-        //     this.shadowRoot.querySelector(".head_text").style.cssText = `
-        //     color: #6B994D;
-        //     `;
-        //     this.shadowRoot.querySelector(".sub_text").innerHTML = `
-        //     Consider if the product is..
-        //     `;
-        //     this.shadowRoot.querySelector(".sub_text").style.cssText = `
-        //     display: block;
-        //     `;
-        //     this.shadowRoot.querySelector(".desc_text").innerHTML = `
-        //         <div class ="list">    
-        //             <the-checkbtn></the-checkbtn>
-        //             <span> Having multiple environmental attributes? </span>
-        //         </div>
-        //         <div class ="list">    
-        //             <the-checkbtn></the-checkbtn>
-        //             <span> Applying only a do-good label? </span>
-        //         </div>
-        //         <div class ="list">    
-        //             <the-checkbtn></the-checkbtn>
-        //             <span> Using illegal materials? </span>
-        //         </div>
-        //         <div class ="list">    
-        //             <the-checkbtn></the-checkbtn>
-        //             <span> Sustainable? </span>
-        //         </div>
-        //         <style>
-        //         .list{
-        //             display:flex;
-        //             align-items: center;
-        //         }
-        //         span{
-        //             text-align: left
-        //         }
-        //         </style>
-        //     `;
-        //     this.shadowRoot.querySelector(".desc_text").style.cssText = `
-        //     display: block;
-        //     `;
+        else {
+            this.shadowRoot.querySelector("the-textbtn").changeTextBtn("Got it!", "green");
+            this.shadowRoot.querySelector("img").src = `imgs/infoimg/laundrydetergent2.svg`;
+            this.shadowRoot.querySelector(".head_text").innerHTML = `
+            Greenwashing
+            `;
+            this.shadowRoot.querySelector(".head_text").style.cssText = `
+            color: #6B994D;
+            `;
+            this.shadowRoot.querySelector(".sub_text").innerHTML = `
+            Consider if the product is..
+            `;
+            this.shadowRoot.querySelector(".desc_text").innerHTML = `
+                <div class ="list">    
+                    <the-checkbtn></the-checkbtn>
+                    <span> Having multiple environmental attributes? </span>
+                </div>
+                <div class ="list">    
+                    <the-checkbtn></the-checkbtn>
+                    <span> Applying only a do-good label? </span>
+                </div>
+                <div class ="list">    
+                    <the-checkbtn></the-checkbtn>
+                    <span> Using illegal materials? </span>
+                </div>
+                <div class ="list">    
+                    <the-checkbtn></the-checkbtn>
+                    <span> Sustainable? </span>
+                </div>
+                <style>
+                .list{
+                    display:flex;
+                    align-items: center;
+                }
+                span{
+                    text-align: left
+                }
+                </style>
+            `;
+            this.shadowRoot.querySelector(".desc_text").style.cssText = `
+            display: block;
+            `;
+        }
     }
 
     showInfoCard() {
@@ -204,10 +203,6 @@ class TheInfoCard extends HTMLElement {
             font-size: 12px;
             margin-top:0;
             `;
-            this.shadowRoot.querySelector("the-textbtn").onclick = () => {
-                document.querySelector("the-infocard").removeInfoCard();
-                document.querySelector("the-textcont").nextStory();
-            }
         }
         if (objName === "fan") {
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/fan.svg`;
@@ -244,12 +239,6 @@ class TheInfoCard extends HTMLElement {
             display: block;
             width: 90%;
             `;
-            this.shadowRoot.querySelector("the-textbtn").changeTextBtn("Got it!", "green");
-            this.shadowRoot.querySelector("the-textbtn").onclick = () => {
-                document.querySelector("the-infocard").removeInfoCard();
-                document.querySelector("the-textcont").nextStory();
-            }
-
         }
         if (objName === "screen") {
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/screen.svg`;
@@ -317,12 +306,14 @@ class TheInfoCard extends HTMLElement {
             color: #6B994D;
             font-weight: bold;
             `;
+            this.shadowRoot.querySelector(".desc_text").style.display = "none";
         }
         if (objName === "tablet") {
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/tablet.svg`;
             this.shadowRoot.querySelector(".head_text").innerHTML = `
             Excessive electronic devices
             `;
+            this.shadowRoot.querySelector(".sub_text").style.display = "none";
         }
         if (objName === "switch") {
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/switch.svg`;
