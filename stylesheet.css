@@ -105,8 +105,8 @@ body{
 .section_cta_second{
     background-color: #C6E1E5;
     width: auto;
-    height: 100%;
     padding: 3em;
+    height:45vh;
 }
 .section_cta_desc{
     display: flex;
@@ -127,3 +127,12 @@ body{
 the-solutioncont {
     align-self:center;
 }  
+the-feetbtn {
+    position:absolute;
+    bottom:5em;
+}
+.right {
+    position:absolute;
+    bottom:5em;
+    right:5em;
+}
