@@ -136,3 +136,19 @@ the-feetbtn {
     bottom:5em;
     right:5em;
 }
+
+/* fade in effect */
+body {
+    animation: fadeInAnimation ease-in-out 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+  
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+     }
+}
