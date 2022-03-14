@@ -352,11 +352,11 @@ class TheInfoCard extends HTMLElement {
             display: none;
             `;
             this.shadowRoot.querySelector(".sub_text").innerHTML = `
-            Americans spend <span class="em_text1"> $350 billion per year </span> on electricity. <br> <span class="em_text2"> But 75% of </span> it goes to waste. 
+            Americans spend <span class="em_text1"> $350 billion per year </span> on electricity. <br> But <span class="em_text2">75%</span> of it goes to waste. 
             `;
             this.shadowRoot.querySelector(".sub_text").style.cssText = `
             display: block;
-            font-family:"ibm plex sans", "Ubuntu", sans-serif;
+            font-family: Lato, sans-serif;
             font-size: 16pt;
             font-weight: lighter;
             text-align: center;
