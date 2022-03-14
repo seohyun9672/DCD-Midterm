@@ -32,7 +32,7 @@ template_solutioncont.innerHTML = `
     }
     .solutioncont {
         width: 600px;
-        height: 320px;
+        height:auto;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -40,6 +40,8 @@ template_solutioncont.innerHTML = `
         box-shadow: 0 8px 20px -4px lightgrey;
         position: absolute;
         background-color: #FFFFFF;
+        padding-bottom:30px;
+        z-index:999;
     }
     .solutioncont > img {
         width: 180px;
@@ -83,6 +85,9 @@ template_solutioncont.innerHTML = `
     the-checkbtn {
         padding-right: 1em;
     }
+    @media screen and (max-width: 1980px) (
+
+    )
 </style>
 `;
 
@@ -115,6 +120,7 @@ class TheSolutionCont extends HTMLElement {
             this.shadowRoot.querySelector(".header_text").innerText = `
             Feeling Worried?
             `
+            this.shadowRoot.querySelector(".solutioncont").style.left = "10%";
             this.shadowRoot.querySelector(".subheader_text").innerText = `Walk, Bike, or Carpool!`
             this.shadowRoot.querySelector(".desc_text").innerText = `
             Choosing a sustainable commute method (such as walking or biking) just once a week can prevent 158.1kg of CO2 from being produced each year*.
@@ -122,9 +128,11 @@ class TheSolutionCont extends HTMLElement {
             this.shadowRoot.querySelector(".sub_desc_text").innerText = `
             *20 mins at 50km/hr = ~16km/commute; 190g CO2 per km x 16km = 3.04kg CO2 x 52 weeks = 158.1kg/year.
             `
+            this.shadowRoot.querySelector(".sub_cont:last-of-type").style.display = "none";
         }
         if(feeling==="Helpless") {
             this.shadowRoot.querySelector(".solution_img").src = "imgs/SolutionCont/Mobile.svg";
+            this.shadowRoot.querySelector(".solutioncont").style.left = "20%";
             this.shadowRoot.querySelector(".header_text").innerText = `
             Feeling Helpless?
             `
@@ -147,6 +155,7 @@ class TheSolutionCont extends HTMLElement {
 
         if(feeling==="Inspired") {
             this.shadowRoot.querySelector(".solution_img").src = "imgs/SolutionCont/Lightbulb.svg";
+            this.shadowRoot.querySelector(".solutioncont").style.left = "40%";
             this.shadowRoot.querySelector(".header_text").innerText = `
             Feeling Inspired?
             `
@@ -155,9 +164,11 @@ class TheSolutionCont extends HTMLElement {
             Greenwashing is prevalent in almost all consumer industries. By staying informed, you can ensure that the sustainable steps you are taking are actually making an impact.
             `
             this.shadowRoot.querySelector(".sub_desc_text").style.display = "none";
+            this.shadowRoot.querySelector(".sub_cont:last-of-type").style.display = "none";
         }
         if(feeling==="Embarrassed") {
             this.shadowRoot.querySelector(".solution_img").src = "imgs/SolutionCont/Cup.svg";
+            this.shadowRoot.querySelector(".solutioncont").style.left = "55%";
             this.shadowRoot.querySelector(".header_text").innerText = `
             Feeling Embarrassed?
             `
@@ -165,13 +176,13 @@ class TheSolutionCont extends HTMLElement {
             Recycle paper cups
             `
             this.shadowRoot.querySelector(".desc_text").innerHTML =`
-            Recycled paper cups’ carbon footprint is 40% lower than that of landfilled paper cups.
+            Recycled paper cups’ carbon footprints are 40% lower than those of landfilled paper cups.
             `
             this.shadowRoot.querySelector(".sub_cont:last-of-type").innerHTML = `
             <the-checkbtn></the-checkbtn>
                 <div class = "textbox">
-                <p class = "subheader_text">Make the most out of your phone!</p>
-                <p class = "desc_text">Producing reusable cups produces less carbon emissions than disposable paper cups, allowing you to continue enjoying your drinks.</p>
+                <p class = "subheader_text">Use Reusable Cups!</p>
+                <p class = "desc_text">Reusable cups yield less carbon emissions than disposable paper cups, allowing you to continue enjoying your drinks.</p>
             </div>
             `
             this.shadowRoot.querySelector(".sub_cont:last-of-type").style.display = "flex";
@@ -180,14 +191,16 @@ class TheSolutionCont extends HTMLElement {
 
         if(feeling==="Shocked") {
             this.shadowRoot.querySelector(".solution_img").src = "imgs/SolutionCont/Bag.svg";
+            this.shadowRoot.querySelector(".solutioncont").style.left = "70%";
             this.shadowRoot.querySelector(".header_text").innerText = `
-            Feeling Shocked?
-            `
+            Feeling Shocked?`
             this.shadowRoot.querySelector(".subheader_text").innerText = `Reconsider your consumption!`
             this.shadowRoot.querySelector(".desc_text").innerText = `
-            Consider your purchases and how you are contributing to excess waste and an increase in the demand for goods. Are there any items you could survive without? Are there items you can repurpose?
+            Consider your purchases and how you creating waste and increasing demand. Are there any items you could survive without and or repurpose?
             `
-            this.shadowRoot.querySelector(".sub_desc_text").style.display = "none"
+            this.shadowRoot.querySelector(".sub_desc_text").style.display = "none";
+            this.shadowRoot.querySelector(".sub_cont:last-of-type").style.display = "none";
+
         }
         
     }

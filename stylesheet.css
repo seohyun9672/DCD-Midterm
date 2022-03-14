@@ -118,6 +118,12 @@ body{
     justify-content: space-between;
     
 }
+.cta_capt {
+    text-align:center;
+    font-size:24px;
+    padding: 0 20%;
+}
+
 the-solutioncont {
     align-self:center;
 }  
