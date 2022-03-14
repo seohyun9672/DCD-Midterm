@@ -322,7 +322,7 @@ class TheObject extends HTMLElement {
             visibility: hidden;
             position:absolute;
             top: 250px;
-            left: 750px;
+            left: 720px;
           }
           
           @keyframes fadeIn {
