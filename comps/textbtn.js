@@ -10,6 +10,7 @@ template_textbtn.innerHTML = `
     .textbtn_cont{
         font-weight:bolder;
         cursor: pointer;
+        font-size: 20pt;
     }
 </style>
 `;
