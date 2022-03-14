@@ -10,12 +10,13 @@ template_textcont.innerHTML = `
     .textcont {
         background-color: white;
         width: 100%;
-        height:140px;
+        height: 140pt;
     }
     .textcont > p {
-        font-size: 24px;
+        font-size: 24pt;
         line-height: 1.3em;
         padding: 1em;
+        margin: 0;
     }
 </style>
 `;
