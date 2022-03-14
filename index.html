@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="landing" lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +15,6 @@
         html {
             font-family: lato, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
-
     </style>
     <script src="comps/header.js"></script>
     <script src="comps/subheader.js"></script>
@@ -22,62 +22,29 @@
     <script src="comps/greenman.js"></script>
     <script src="comps/storyimg.js"></script>
 </head>
+
 <body>
     <div class="landing-cont">
-        <the-header
+        <the-header 
         head_text="What's Your Environmental Impact?"
-        desc_text="See how your everyday actions contribute to your <em>carbon footprint.</em>"
         ></the-header>
-        <the-subheader
-        subheader_text="Click the footprint to start &or;"></the-subheader>
-        <div class = landing_clickable>
-            <the-greenman greenman_num="greenman1"></the-greenman>
+        <the-subheader 
+        ></the-subheader>
+        <div class = landing-clickable>
             <the-footprintbtn></the-footprintbtn>
-            <the-greenman greenman_num="greenman6" direction="scaleX(-1)"></the-greenman>
+            <div class = "greenmen">
+                <the-greenman               
+                greenman_num="greenman1"
+                ></the-greenman>
+                <the-greenman 
+                    greenman_num="greenman6" 
+                    direction="scaleX(-1)"
+                    ></the-greenman>
+            </div>
         </div>
     </div>
     <div>
-        <img class="earth" src="imgs/earth.svg" alt="earth">
+        <img class="earth" src="../imgs/earth.svg" alt="The Earth">
     </div>
-    
-        
-    
-    
-   
-
-</body>
-</html>
-    <!-- <the-exit></the-exit>
-    <the-solutioncont></the-solutioncont>
-    <the-textbtn
-    btn_text="Got it!"
-    color="#6B994D"
-    ></the-textbtn>
-    <the-checkbtn></the-checkbtn>
-    <the-infocard
-    num_text="15"
-    main_text=""
-    desc_text="excessive electronic devices"
-    capt_text=""
-    src="imgs/puzzle.svg"
-    em_text=""
-    em_color="#EB933B"
-    ></the-infocard>
-    <the-feetbtn
-    text_color="#08509C"
-    btn_text="Re-watch the story &#8227;"
-    ></the-feetbtn>
-    <the-chevron
-    direction="left"
-    ></the-chevron>
-    <the-time
-    time_text="6:00AM"
-    ></the-time>
-    <the-object></the-object>
-    <the-feelingbtn
-    btn_text="Embarrassed"
-    ></the-feelingbtn>
-    <the-greenman></the-greenman>
-    <the-storyimg></the-storyimg>
 </body>
 </html>

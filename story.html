@@ -21,8 +21,6 @@
     <script src="comps/textbtn.js"></script>
     <script src="comps/checkbtn.js"></script>
     <script src="comps/infocard.js"></script>
-    <script src="comps/feetbtn.js"></script>
-    <script src="comps/chevron.js"></script>
     <script src="comps/footprintbtn.js"></script>
     <script src="comps/time.js"></script>
     <script src="comps/object.js"></script>
@@ -38,26 +36,27 @@
         <the-footprintcycle 
         class="cycleimg">
         </the-footprintcycle>
+        <the-object
+            class = "object"
+            ></the-object>
+            <the-infocard 
+            id="infocard">
+            </the-infocard>
         <div class="story">
             <the-storyimg
             class="storybg">
             </the-storyimg>
-            <div class="objoverlay">
-                <the-object></the-object>
-                <the-infocard 
-                id="infocard">
-                </the-infocard>
-            </div>
             <div class="scriptbox">
                 <the-greenman 
-                class="greenmanimg">
-                </the-greenman>
+                class="greenmanimg"
+                size = "160pt"
+                ></the-greenman>
                 <div class="textbox">
                     <the-time></the-time>
                     <the-textcont
-                    class="textcont"></the-textcont>
+                    class="textcont"
+                    ></the-textcont>
                 </div>
-                </the-chevron>
             </div>
         </div>
     </section>

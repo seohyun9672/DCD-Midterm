@@ -1,82 +1,85 @@
-/* the-infocard {
-    display:none;
-}
-the-textcont {
-    position:absolute;
-    bottom:0;
-    width:100vw;
-} */
-/* landing page */
+/* LANDING PAGE */
 .landing {
-    background:linear-gradient(lightblue,white);
-    height:100%;
-    margin:0;
+    background: linear-gradient(#AEE2FF,#FFFFFF);
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
-.landing-cont {
-    margin-top: 2em;
+.landing-cont{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    margin-top: 90pt;
+}
+.landing-clickable{
+    display: flex;
     align-items: center;
     justify-content: center;
+}
+.greenmen {
+    display: flex;
+    justify-content: space-between;
+    width: 280pt;
+    position: absolute;
 }
 .earth {
-    position:absolute;
-    bottom:0;
-    width:100vw;
-}
-.landing_clickable{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    left: 0;
 }
 
 /* STORY */
-
-body {
-    margin:0;
+body{
+    margin: 0;
 }
 .btn_back{
     position: absolute;
     padding:1em;
 }
-
-.section_story{
+.story {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    margin: 0;
 }
-.story{
-    display: flex;
-    flex-direction: column;
-    top:0;
-    height: 100%;
-    
-}
+/* 
 .objoverlay{
     position: absolute;
-}
+}  */
 .scriptbox{
     background-color: #C8D5AE;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    height: 180pt;
     width: 100%;
-    position:fixed;
+    padding: 1em;
+    justify-content: center;
+    position: fixed;
     bottom: 0;
-    height: 180px;
+
 }
+.greenmanimg {
+    padding: 1em;
+}
+
 .textbox{
-    width: 100%;
-    padding:25px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
 }
+.textcont {
+    width: 100%;
+}
+
 #infocard{
     display: none;
-}
+    position: absolute;
+} 
+
 
 /* CTA */
-/* /////need to adjust width and height ///// */
-
 .section_cta_first{
     background-color: #FEFFF6;
     width: auto;
@@ -117,4 +120,4 @@ body {
 }
 the-solutioncont {
     align-self:center;
-}
+}  
