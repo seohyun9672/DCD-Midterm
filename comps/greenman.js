@@ -3,9 +3,15 @@ var template_greenman = document.createElement("template"); //<template> </templ
 
 //To-do - CREATE THE UI HERE!
 template_greenman.innerHTML = `
-<div class = "greenman">
+<div class ="greenman">
     <img src="./imgs/greenman/Greenman1.svg" alt= Greenman Image>
 </div>
+<style>
+    .greenman > img {
+        width: 40pt;
+        height: 225pt;
+    }
+</style>
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
@@ -27,7 +33,8 @@ class TheGreenman extends HTMLElement {
         if (this.getAttribute("direction")) {
             this.shadowRoot.querySelector(".greenman").style.transform = "scaleX(-1)";
         }
-        this.shadowRoot.querySelector(".greenman").src = this.getAttribute("greenman_num")
+        this.shadowRoot.querySelector(".greenman > img").src = `./imgs/greenman/${this.getAttribute("greenman_num")}.svg`;
+
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
