@@ -14,6 +14,9 @@ template_object.innerHTML = `
     width: 10%; 
     height: 10%;
   }
+  .obj-cont {
+    cursor:pointer;
+  }
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
