@@ -44,10 +44,9 @@ class TheHeader extends HTMLElement {
         if (this.getAttribute("head_text")) {
             this.shadowRoot.querySelector("h1").innerText = this.getAttribute("head_text");
         }
-
-        this.shadowRoot.querySelector("p").innerHTML = `
-        See how your everyday actions contribute to your <em>carbon footprint.</em>
-        `
+        if (this.getAttribute("desc_text")) {
+            this.shadowRoot.querySelector("p").innerHTML = this.getAttribute("desc_text");
+        }
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
