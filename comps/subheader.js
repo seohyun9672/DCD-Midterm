@@ -3,12 +3,15 @@ var template_subheader = document.createElement("template"); //<template> </temp
 
 //To-do - CREATE THE UI HERE!
 template_subheader.innerHTML = `
-<div class= "sub-header_text">text</div>
+<p class= "sub-header_text">text</p>
+<link rel="stylesheet" href="path/to/font-awesome/font-awesome-4.7.0/css/font-awesome.min.css">
 <style>
-.sub-header_text{  
-    fontSize: 18px;
-    color: #08509C;
-    font-weight: bolder;
+    .sub-header_text{  
+        font-size: 18pt;
+        color: #08509C;
+        font-weight: bolder;
+        text-align: center;
+    }
 </style>
 
 `;
@@ -31,6 +34,10 @@ class TheSubheader extends HTMLElement {
         if(this.getAttribute("subheader_text")) {
             this.shadowRoot.querySelector(".sub-header_text").innerText = this.getAttribute("subheader_text");
         }
+        this.shadowRoot.querySelector(".sub-header_text").innerHTML = `
+        Click the Footprint To Start
+        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        `
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
