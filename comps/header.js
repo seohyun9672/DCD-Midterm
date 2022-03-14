@@ -12,7 +12,7 @@ template_header.innerHTML = `
         text-align:center;
     }
     h1 {
-        font-size:40pt;
+        font-size: 64pt;
         margin-bottom:0;
     }
     em {
@@ -21,7 +21,7 @@ template_header.innerHTML = `
         font-weight:bold;
     }
     p {
-        font-size:20pt;
+        font-size: 24pt;
     }
 </style>
 `;
@@ -44,7 +44,7 @@ class TheHeader extends HTMLElement {
         if (this.getAttribute("head_text")) {
             this.shadowRoot.querySelector("h1").innerText = this.getAttribute("head_text");
         }
-        
+
         this.shadowRoot.querySelector("p").innerHTML = `
         See how your everyday actions contribute to your <em>carbon footprint.</em>
         `
