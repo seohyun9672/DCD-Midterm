@@ -34,7 +34,9 @@ class TheGreenman extends HTMLElement {
             this.shadowRoot.querySelector(".greenman").style.transform = "scaleX(-1)";
         }
         this.shadowRoot.querySelector(".greenman > img").src = `./imgs/greenman/${this.getAttribute("greenman_num")}.svg`;
-
+        if (this.getAttribute("size")) {
+            this.shadowRoot.querySelector(".greenman >img").style.height = "160pt";
+        }
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!

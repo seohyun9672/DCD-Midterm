@@ -3,30 +3,37 @@ var template_infocard = document.createElement("template"); //<template> </templ
 
 //To-do - CREATE THE UI HERE!
 template_infocard.innerHTML = `
-<div class ="primary">
-    <p class ="head_text">head_text</p>
-    <div class = "img_cont">
-        <img class="info-img" src="./imgs/infoimg/fan.svg" alt="">
-        <p class ="sub_text">sub_text</p>
+<div class = "info-cont">
+    <div class ="primary">
+        <p class ="head_text">head_text</p>
+        <div class = "img_cont">
+            <img class="info-img" src="./imgs/infoimg/fan.svg" alt="">
+            <p class ="sub_text">sub_text</p>
+        </div>
+        <p class ="desc_text">sub_text</p>
+        <the-textbtn
+        class = "text_btn"
+        btn_text = ""
+        ></the-textbtn>
     </div>
-    <p class ="desc_text">sub_text</p>
-    <the-textbtn
-    class = "text_btn"
-    btn_text = ""
-    ></the-textbtn>
 </div>
 
 <style>
-    .primary, .secondary{
+    .info-cont{
+        position: absolute;
+        top: 400px;
+        left: 1100px;
+        right: 0px;
+    }
+    .primary {
         background-color:#FFFFFF;
         border: none;
         border-radius:5pt;
-        width: 220px;
-        height: 320px;
+        width: 220pt;
+        height: 320pt;
         box-shadow: 0em 0em 1em 0.2em #d3d3d3;
         display: flex;
         flex-direction: column;
-        position: relative;
         align-items: center;
         padding: .8em;
         justify-content: center;
@@ -41,15 +48,18 @@ template_infocard.innerHTML = `
         letter-spacing:2.26pt;
         line-height: 2em;
         text-transform: uppercase;
-        font-size: 14px;
+        font-size: 14pt;
     }
     .sub_text {
         display: none;
     }
     .desc_text {
         display: none;
-        font-size: 14px;
-        line-height: 20px;
+        font-size: 14pt;
+        line-height: 20pt;
+    }
+    .text_btn {
+        padding: 1em;
     }
 </style>
 `;
@@ -70,7 +80,6 @@ class TheInfoCard extends HTMLElement {
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
-
     showPrimary(type = "") {
         this.shadowRoot.querySelector("the-textbtn").onclick = () => {
             this.removeInfoCard();
@@ -92,7 +101,7 @@ class TheInfoCard extends HTMLElement {
             `;
             this.shadowRoot.querySelector(".em_text1").style.cssText = `
             color: #BD484A;
-            font-size: 16px;
+            font-size: 16pt;
             font-weight: bolder;
             `;
             this.shadowRoot.querySelector(".em_text2").style.cssText = `
@@ -102,6 +111,7 @@ class TheInfoCard extends HTMLElement {
         else {
             this.shadowRoot.querySelector("the-textbtn").changeTextBtn("Got it!", "green");
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/laundrydetergent2.svg`;
+            this.shadowRoot.querySelector(".primary").style.height = "fit-content";
             this.shadowRoot.querySelector(".head_text").innerHTML = `
             Greenwashing
             `;
@@ -131,10 +141,9 @@ class TheInfoCard extends HTMLElement {
                 <style>
                 .list{
                     display:flex;
-                    align-items: center;
                 }
                 span{
-                    text-align: left
+                    text-align: left;
                 }
                 </style>
             `;
@@ -173,6 +182,10 @@ class TheInfoCard extends HTMLElement {
             this.shadowRoot.querySelector("the-textbtn").onclick = () => this.showPrimary("phone")
         }
         if (objName === "car") {
+            this.shadowRoot.querySelector(".info-cont").style.cssText=`
+            top: 150px;
+            left: 1250px;
+            `
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/car.svg`;
             this.shadowRoot.querySelector(".head_text").innerHTML = `
             <span class ="em_text1"> greenhouse gas </span> emissions from transportation 
@@ -185,6 +198,10 @@ class TheInfoCard extends HTMLElement {
             `;
         }
         if (objName === "waterbottle") {
+            this.shadowRoot.querySelector(".info-cont").style.cssText=`
+            top: 350px;
+            left: 600px;
+            `
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/waterbottle.svg`;
             this.shadowRoot.querySelector(".head_text").innerHTML = `
             increase in annual <span class ="em_text1"> carbon footprint <br> per year </span> 
@@ -200,7 +217,7 @@ class TheInfoCard extends HTMLElement {
             `;
             this.shadowRoot.querySelector(".sub_text").style.cssText = `
             display:block;
-            font-size: 12px;
+            font-size: 12pt;
             margin-top:0;
             `;
         }
@@ -220,13 +237,13 @@ class TheInfoCard extends HTMLElement {
             `;
             this.shadowRoot.querySelector(".sub_text").style.cssText = `
             display: block;
-            font-size: 12px;
-            line-height: 24px;
+            font-size: 12pt;
+            line-height: 24pt;
             `;
             this.shadowRoot.querySelector(".em_text1").style.cssText = `
             color: #BD484A;
-            font-size: 18px;
-            letter-spacing: 0.45px;
+            font-size: 18pt;
+            letter-spacing: 0.45pt;
             font-weight: bold;
             `;
             this.shadowRoot.querySelector(".desc_text").innerHTML = `
@@ -241,6 +258,10 @@ class TheInfoCard extends HTMLElement {
             `;
         }
         if (objName === "screen") {
+            this.shadowRoot.querySelector(".info-cont").style.cssText=`
+            top: 350px;
+            left: 900px;
+            `
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/screen.svg`;
             this.shadowRoot.querySelector(".head_text").style.cssText = `
             display: none;
@@ -256,11 +277,15 @@ class TheInfoCard extends HTMLElement {
             `;
             this.shadowRoot.querySelector(".em_text1, .em_text2").style.cssText = `
             color: #6B994D;
-            font-size: 14px;
+            font-size: 14pt;
             font-weight: bolder;
             `;
         }
         if (objName === "laundrydetergent") {
+            this.shadowRoot.querySelector(".info-cont").style.cssText=`
+            top: 380px;
+            left: 1300px;
+            `
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/laundrydetergent.svg`;
             this.shadowRoot.querySelector(".head_text").innerHTML = `
             Laundry Footprints
@@ -287,9 +312,11 @@ class TheInfoCard extends HTMLElement {
         }
 
         if (objName === "laundrybasket") {
-            this.shadowRoot.querySelector(
-                "img"
-            ).src = `imgs/infoimg/laundrybasket.svg`;
+            this.shadowRoot.querySelector(".info-cont").style.cssText=`
+            top: 380px;
+            left: 1600px;
+            `
+            this.shadowRoot.querySelector("img").src = `imgs/infoimg/laundrybasket.svg`;
             this.shadowRoot.querySelector(".head_text").innerHTML = `
             generated co2 <b> per load
             `;
@@ -309,6 +336,10 @@ class TheInfoCard extends HTMLElement {
             this.shadowRoot.querySelector(".desc_text").style.display = "none";
         }
         if (objName === "tablet") {
+            this.shadowRoot.querySelector(".info-cont").style.cssText=`
+            top: 480px;
+            left: 500px;
+            `
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/tablet.svg`;
             this.shadowRoot.querySelector(".head_text").innerHTML = `
             Excessive electronic devices
@@ -326,10 +357,10 @@ class TheInfoCard extends HTMLElement {
             this.shadowRoot.querySelector(".sub_text").style.cssText = `
             display: block;
             font-family:"ibm plex sans", "Ubuntu", sans-serif;
-            font-size: 16px;
+            font-size: 16pt;
             font-weight: lighter;
             text-align: center;
-            line-height: 24px;
+            line-height: 24pt;
             `;
             this.shadowRoot.querySelector(".em_text1").style.cssText = `
             color: #BD484A;

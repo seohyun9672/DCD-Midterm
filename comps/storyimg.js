@@ -5,11 +5,8 @@ var template_storyimg = document.createElement("template"); //<template> </templ
 template_storyimg.innerHTML = `
 <style>
   #bg > img{
-      width: 100%;
+      width: 100vw;
       height: 100%;
-  }
-  #bg{
-      height: 620px;
   }
 </style>
 <div id="bg">
