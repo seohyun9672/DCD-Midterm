@@ -15,6 +15,9 @@ template_feelingbtn.innerHTML = `
         border-radius: 5px;
         background-color:#D9E694;
     }
+    .btn_text {
+        font-size: 16pt;
+    }
 </style>
 `;
 
