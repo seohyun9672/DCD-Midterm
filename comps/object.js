@@ -17,6 +17,12 @@ template_object.innerHTML = `
   .obj-cont {
     cursor:pointer;
   }
+  @media screen and (max-width:1440px) {
+    img[alt="phone"].first {
+      top:32em;
+      left:50em;
+    }
+  }
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
@@ -85,6 +91,12 @@ class TheObject extends HTMLElement {
             width: 20%;
             height: 20%;
           }
+          @media screen and (max-width:1440px) {
+            .second {
+              top:14em;
+              right:17em;
+            }
+          }
         
           @keyframes fadeIn {
             0% {
@@ -113,6 +125,12 @@ class TheObject extends HTMLElement {
             left:150px;
             width: 25%;
             height: 25%;
+          }
+          @media screen and (max-width:1440px){
+            .first {
+              top:300px;
+            left:150px;
+            }
           }
           
           @keyframes fadeIn {
@@ -159,6 +177,15 @@ class TheObject extends HTMLElement {
             100% {
               visibility: visible;
               opacity: 1;
+            }
+          }
+          @media screen and (max-width:1440px){
+            .first {
+              top:300px;
+            left:150px;
+            }
+            .second {
+              top:300px;
             }
           }
         </style>`;

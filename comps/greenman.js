@@ -11,12 +11,6 @@ template_greenman.innerHTML = `
         width: 40pt;
         height: 225pt;
     }
-    @media only screen and (max-width: 1440px){
-        .greenman > img{
-            width: 32pt;
-            height: 200pt;
-        }
-    }
 </style>
 `;
 
@@ -41,7 +35,7 @@ class TheGreenman extends HTMLElement {
         }
         this.shadowRoot.querySelector(".greenman > img").src = `./imgs/greenman/${this.getAttribute("greenman_num")}.svg`;
         if (this.getAttribute("size")) {
-            this.shadowRoot.querySelector(".greenman >img").style.height = "160pt";
+            this.shadowRoot.querySelector(".greenman >img").style.height = "8em";
         }
     }
 

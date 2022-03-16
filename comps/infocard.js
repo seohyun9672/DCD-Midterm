@@ -61,6 +61,19 @@ template_infocard.innerHTML = `
     .text_btn {
         padding: 1em;
     }
+    @media screen and (max-width:1440px) {
+        .primary *, .secondary * {
+            font-size:10pt;
+        }
+        .primary, .secondary {
+            width:170pt;
+            height:auto;
+        }
+        .info-cont {
+            top:100px;
+            left: 800px;
+        }
+    }
 </style>
 `;
 
@@ -185,6 +198,10 @@ class TheInfoCard extends HTMLElement {
             this.shadowRoot.querySelector(".info-cont").style.cssText=`
             top: 150px;
             left: 1250px;
+            @media screen and (max-width:1440px) {
+                top: 50px;
+                left:-300px;
+            }
             `
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/car.svg`;
             this.shadowRoot.querySelector(".head_text").innerHTML = `

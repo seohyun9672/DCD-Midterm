@@ -186,6 +186,10 @@ body {
     }
 
     /* Story */
+    .scriptbox {
+        height:auto; 
+    }
+
     /* CTA */
         .cta{
             height: 100%;
