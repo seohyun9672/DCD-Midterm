@@ -198,13 +198,13 @@ body {
             width: 80%;
         }
         .section_cta_first{
-            padding: 2em 3em;
+            padding: 2em 5em;
         }
         .section_clickable{
             align-items: center;
         }
         .section_cta_second{
-            padding: 2em 3em 3.5em 3em;
+            padding: 2em 5em 3.5em 5em;
             overflow: hidden;
             height: auto;
         }
