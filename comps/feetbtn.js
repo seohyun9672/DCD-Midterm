@@ -16,6 +16,9 @@ template_feetbtn.innerHTML = `
         flex-direction:column;
         align-items:center;
     }
+    .feetbtn-cont > img {
+        cursor: pointer;
+    }
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
