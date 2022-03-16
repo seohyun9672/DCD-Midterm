@@ -11,7 +11,7 @@
 .landing-cont{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-top: 90pt;
 }
 .landing-clickable{
@@ -152,3 +152,40 @@ body {
         opacity: 1;
      }
 }
+
+/* Responsive Design */
+
+/* Sue's laptop */
+  @media only screen and (max-width: 1440px){ 
+    /* Landing Page */
+    .landing {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .landing-cont{
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10pt;
+    }
+    .landing-clickable{
+        margin-top: -35pt;
+    }
+    .greenmen {
+        display: flex;
+        justify-content: space-between;
+        width: 200pt;
+        position: absolute;
+    }
+    .earth {
+        bottom: -10pt;
+        width: 100%;
+        position: fixed;
+        
+    }
+
+    /* Story */
+    /* CTA */
+    
+  }

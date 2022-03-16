@@ -11,6 +11,12 @@ template_greenman.innerHTML = `
         width: 40pt;
         height: 225pt;
     }
+    @media only screen and (max-width: 1440px){
+        .greenman > img{
+            width: 32pt;
+            height: 200pt;
+        }
+    }
 </style>
 `;
 

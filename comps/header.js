@@ -23,6 +23,20 @@ template_header.innerHTML = `
     p {
         font-size: 24pt;
     }
+
+    @media only screen and (max-width: 1440px){
+        .head_cont {
+            margin-bottom: -20pt;
+        }
+        h1 {
+            font-size: 36pt;
+            margin-top: 5pt;
+        }
+        p{
+            font-size: 18pt;
+        }
+
+    } 
 </style>
 `;
 
