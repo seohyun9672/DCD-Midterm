@@ -14,9 +14,15 @@ template_feelingbtn.innerHTML = `
         height: fit-content;
         border-radius: 5px;
         background-color:#D9E694;
+        margin-top: 5px;
     }
     .btn_text {
         font-size: 16pt;
+    }
+    @media only screen and (max-width: 1440px){
+        .btn_text{
+            font-size:14pt;
+        }
     }
 </style>
 `;

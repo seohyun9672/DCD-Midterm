@@ -9,6 +9,12 @@ template_emoji.innerHTML = `
             width: 100%;
             height: 100%;
         }
+        @media only screen and (max-width: 1440px){
+            .emoji{
+                width: 85px;
+                height: 85px;
+            }
+        }
     </style>
 `;
 
