@@ -16,6 +16,12 @@ template_emoji.innerHTML = `
                 height: 85px;
             }
         }
+        @media only screen and (min-width: 1440px) and (max-width: 1920px){
+            .emoji{
+                width: 100%;
+                height: 100%;
+            }
+        }
     </style>
 `;
 

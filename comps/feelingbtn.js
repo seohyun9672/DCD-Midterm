@@ -24,6 +24,11 @@ template_feelingbtn.innerHTML = `
             font-size:14pt;
         }
     }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px){
+        .btn_text{
+            font-size:15pt;
+        }
+    }
 </style>
 `;
 

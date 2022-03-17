@@ -24,6 +24,13 @@ template_object.innerHTML = `
       left: 750px;
     }
   }
+  @media only screen and (min-width: 1440px) and (max-width: 1920px){
+    img[alt="phone"].first {
+      position: absolute;
+      top:650px;
+      left: 1030px;
+    }
+  }
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)

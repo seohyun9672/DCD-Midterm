@@ -85,7 +85,7 @@ template_solutioncont.innerHTML = `
     the-checkbtn {
         padding-right: 1em;
     }
-    @media only screen and (min-width: 1440px){
+    @media only screen and (max-width: 1440px){
         .solutioncont {
             width: 400px;
             height: auto;
@@ -98,7 +98,24 @@ template_solutioncont.innerHTML = `
             font-size: 20px;
         }
         .subheader_text {
-            font-size: 18px;
+            font-size: 20px;
+        }
+
+    }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px){
+        .solutioncont {
+            width: 500px;
+            height: auto;
+        }
+        .solutioncont > img {
+            width: 150px;
+            height: 150px;
+        }
+        .header_text{
+            font-size: 22px;
+        }
+        .subheader_text {
+            font-size: 20px;
         }
 
     }
