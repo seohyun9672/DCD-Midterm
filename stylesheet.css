@@ -250,3 +250,66 @@ body {
         }
         
   }
+
+  @media only screen and (max-width: 1920px) and (min-width:1441px){ 
+    /* Landing Page */
+    .landing {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .landing-cont{
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        margin-top: 5pt;
+    }
+    .landing-clickable{
+        margin-top: -35pt;
+    }
+    .greenmen {
+        display: flex;
+        justify-content: space-between;
+        width: 200pt;
+        position: absolute;
+    }
+    .earth {
+        bottom: -10pt;
+        width: 100%;
+        position: fixed;
+        
+    }
+
+    /* Story */
+    .story body {
+        overflow:hidden;
+        margin:0;
+    }
+    .storybg{
+        width: 100vw;
+        height: auto;
+        margin:0;
+        overflow:hidden;
+    }
+
+    .scriptbox{
+        height: 150pt;
+        padding: 0.5em 0.7em 0.7em 0;
+        position: absolute;
+        margin: 0;
+        width: 100%;
+        align-items: center;
+        overflow:hidden;
+    
+    }
+    
+    .textbox{
+        justify-content: center;
+    }
+
+    .greenmanimg {
+        padding-left:0.5em;
+    
+    }
+
+  }

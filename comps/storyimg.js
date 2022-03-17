@@ -14,6 +14,8 @@ template_storyimg.innerHTML = `
           margin-bottom: -4px;
       }
   }
+
+}
 </style>
 <div id="bg">
     <img src="imgs/storyimg/story1.jpeg" alt="bedroom">
