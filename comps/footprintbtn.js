@@ -32,6 +32,13 @@ template_footprintbtn.innerHTML = `
             border: white solid 30px;
         }
     }
+    @media only screen and (max-width: 1920px) and (min-width:1441px){
+        .footprint_btn{
+            width: 250pt;
+            height: 250pt;
+            border: white solid 30px;
+        }
+    }
 </style>
 `;
 

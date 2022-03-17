@@ -14,12 +14,13 @@ template_storyimg.innerHTML = `
           margin-bottom: -4px;
       }
   }
-  @media only screen and (min-width: 1441px) and (max-width: 1920px){
+
+  @media only screen and (max-width: 1920px) and (min-width:1441px){
     #bg > img{
-        object-fit: fill;
-        margin-bottom: -4px;
+        width:100.1%;
     }
 }
+
 </style>
 <div id="bg">
     <img src="imgs/storyimg/story1.jpeg" alt="bedroom">

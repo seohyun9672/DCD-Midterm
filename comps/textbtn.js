@@ -17,9 +17,10 @@ template_textbtn.innerHTML = `
             font-size: 17pt;
         }
     }
-    @media only screen and (min-width: 1441px) and (max-width: 1920px){
+    @media only screen and (max-width: 1920px) and (min-width:1441px){
         .textbtn_cont{
-            font-size: 19pt;
+            font-size: 18pt;
+
         }
     }
 </style>

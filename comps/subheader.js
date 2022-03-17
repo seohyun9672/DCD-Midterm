@@ -12,7 +12,8 @@ template_subheader.innerHTML = `
         font-weight: bolder;
         text-align: center;
     }
-    @media only screen and (max-width: 1440px){
+
+    @media only screen and (max-width: 1920px) and (min-width:1441px){
         .sub-header_text{
             font-size: 16pt;
             margin: -30pt;

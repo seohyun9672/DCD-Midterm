@@ -75,6 +75,20 @@ template_infocard.innerHTML = `
             height: auto;
         }
     }
+    @media only screen and (max-width: 1920px) and (min-width:1441px){
+        .info-cont{
+            position: absolute;
+            top: 160px;
+            left: 600px;
+        }
+        .primary *, .secondary * {
+            font-size: 14pt;
+        }
+        .primary, .secondary {
+            width: 170pt;
+            height: auto;
+        }
+    }
 </style>
 `;
 
@@ -200,6 +214,10 @@ class TheInfoCard extends HTMLElement {
             this.shadowRoot.querySelector(".info-cont").style.cssText=`
             top: 150px;
             left: 1250px;
+            @media screen and (max-width:1440px) {
+                top: 50px;
+                left:-300px;
+            }
             `
             if (window.innerWidth <= 1440){
                 this.shadowRoot.querySelector(".info-cont").style.cssText=`
@@ -226,6 +244,12 @@ class TheInfoCard extends HTMLElement {
             if (window.innerWidth <= 1440){
                 this.shadowRoot.querySelector(".info-cont").style.cssText=`
                 top: 120px;
+                left: 380px;
+            `
+            }
+            if (window.innerWidth <= 1920 && window.innerWidth > 1440){
+                this.shadowRoot.querySelector(".info-cont").style.cssText=`
+                top: 75px;
                 left: 380px;
             `
             }
@@ -301,6 +325,12 @@ class TheInfoCard extends HTMLElement {
                 right: 100px;
             `
             }
+            if (window.innerWidth <= 1920 && window.innerWidth > 1440){
+                this.shadowRoot.querySelector(".info-cont").style.cssText=`
+                top: 50px;
+                left: 380px;
+            `
+            }
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/screen.svg`;
             this.shadowRoot.querySelector(".head_text").style.cssText = `
             display: none;
@@ -328,6 +358,12 @@ class TheInfoCard extends HTMLElement {
             if (window.innerWidth <= 1440){
                 this.shadowRoot.querySelector(".info-cont").style.cssText=`
                 top: 110px;
+                left: 580px;
+            `
+            }
+            if (window.innerWidth <= 1920 && window.innerWidth > 1440){
+                this.shadowRoot.querySelector(".info-cont").style.cssText=`
+                top: 80px;
                 left: 580px;
             `
             }
@@ -367,6 +403,12 @@ class TheInfoCard extends HTMLElement {
                 right: 100px;
             `
             }
+            if (window.innerWidth <= 1920 && window.innerWidth > 1440){
+                this.shadowRoot.querySelector(".info-cont").style.cssText=`
+                top: 80px;
+                right:0px;
+            `
+            }
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/laundrybasket.svg`;
             this.shadowRoot.querySelector(".head_text").innerHTML = `
             generated co2 <b> per load
@@ -397,6 +439,12 @@ class TheInfoCard extends HTMLElement {
                 left: 550px;
             `
             }
+            if (window.innerWidth <= 1920 && window.innerWidth > 1440){
+                this.shadowRoot.querySelector(".info-cont").style.cssText=`
+                top: 200px;
+                left: 600px;
+            `
+            }
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/tablet.svg`;
             this.shadowRoot.querySelector(".head_text").innerHTML = `
             Excessive electronic devices
@@ -409,6 +457,12 @@ class TheInfoCard extends HTMLElement {
                 this.shadowRoot.querySelector(".info-cont").style.cssText=`
                 top: 100px;
                 left: 450px;
+            `
+            }
+            if (window.innerWidth <= 1920 && window.innerWidth > 1440){
+                this.shadowRoot.querySelector(".info-cont").style.cssText=`
+                top: 200px;
+                left: 300px;
             `
             }
             this.shadowRoot.querySelector(".head_text").style.cssText = `

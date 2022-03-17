@@ -24,11 +24,11 @@ template_object.innerHTML = `
       left: 750px;
     }
   }
+
   @media only screen and (min-width: 1441px) and (max-width: 1920px){
     img[alt="phone"].first {
       position: absolute;
       top:650px;
-      left: 1030px;
     }
   }
 `;
@@ -99,6 +99,18 @@ class TheObject extends HTMLElement {
             width: 20%;
             height: 20%;
           }
+          @media screen and (max-width:1440px) {
+            .second {
+              top:14em;
+              right:17em;
+            }
+          }
+          @media screen and (max-width:1920px) and (min-width:1440px) {
+            .second {
+              top:20em;
+              right:21em;
+            }
+          }
         
           @keyframes fadeIn {
             0% {
@@ -134,6 +146,18 @@ class TheObject extends HTMLElement {
             left:150px;
             width: 25%;
             height: 25%;
+          }
+          @media screen and (max-width:1440px){
+            .first {
+              top:300px;
+            left:150px;
+            }
+          }
+          @media screen and (max-width:1920px) and (min-width:1440px){
+            .first {
+              top:400px;
+            left:150px;
+            }
           }
           
           @keyframes fadeIn {
@@ -201,6 +225,17 @@ class TheObject extends HTMLElement {
               right:750px;
             }
           }
+          @media screen and (max-width:1920px) and (min-width:1441px){
+            .first {
+              top:400px;
+            left:150px;
+            }
+            img[alt="fan"].second {
+              position:absolute;
+              top:400px;
+              right:1100px;
+            }
+          }
         </style>`;
     }
     if (objName === "screen") {
@@ -233,7 +268,7 @@ class TheObject extends HTMLElement {
             visibility: hidden;
             position:absolute;
             top:300px;
-            right: 395px;
+            right: 380px;
             width: 35%;
             height: 35%;
           }
@@ -261,9 +296,27 @@ class TheObject extends HTMLElement {
             img[alt="screen"].third {
               position:absolute;
               top:170px;
-              right:226px;
+              right:200px;
               width: 34%;
               height: 34%;
+            }
+          }
+          @media screen and (max-width:1920px) and (min-width:1441px){
+            .first {
+              top:400px;
+            left:150px;
+            }
+            img[alt="fan"].second {
+              position:absolute;
+              top:400px;
+              right:1100px;
+            }
+            img[alt="screen"].third {
+              position:absolute;
+              top:230px;
+              right:300px;
+              width: 35%;
+              height: 35%;
             }
           }
         </style>`;
@@ -299,6 +352,15 @@ class TheObject extends HTMLElement {
               position:absolute;
               top:227px;
               left:330px;
+              width: 23%;
+              height:23%
+            }
+          }
+          @media only screen and (max-width: 1920px) and (min-width:1441px){
+            img[alt="detergent"].first {
+              position:absolute;
+              top:330px;
+              left:400px;
               width: 23%;
               height:23%
             }
@@ -355,6 +417,20 @@ class TheObject extends HTMLElement {
               right: 270px;
             } 
           }
+          @media only screen and (max-width: 1920px) and (min-width:1441px){
+            img[alt="detergent"].first {
+              position:absolute;
+              top:330px;
+              left:400px;
+              width: 23%;
+              height:23%
+            }
+            img[alt="basket"].second{
+              position: absolute;
+              top: 550px;
+              right: 270px;
+            } 
+          }
         </style>`;
     }
     if (objName === "tablet") {
@@ -388,6 +464,13 @@ class TheObject extends HTMLElement {
               position: absolute;
               top: 490px;
               left: 400px;
+            } 
+          }
+          @media only screen and (max-width: 1920px) and (min-width:1441px){
+            img[alt="tablet"].first{
+              position: absolute;
+              top: 600px;
+              left: 500px;
             } 
           }
         </style>`;
@@ -436,6 +519,20 @@ class TheObject extends HTMLElement {
               position: absolute;
               top: 160px;
               left: 360px;
+              width: 8%;
+              height: 8%;
+            }
+          }
+          @media only screen and (max-width: 1920px) and (min-width:1441px){
+            img[alt="tablet"].first{
+              position: absolute;
+              top: 600px;
+              left: 500px;
+            } 
+            img[alt="switch"].second{
+              position: absolute;
+              top: 160px;
+              left: 490px;
               width: 8%;
               height: 8%;
             }

@@ -23,6 +23,14 @@ template_textcont.innerHTML = `
             height: 90pt;
         }
         .textcont > p {
+            font-size: 16pt;
+        }
+    }
+    @media only screen and (max-width: 1920px)and (min-width:1441px){
+        .textcont{
+            height: 100pt;
+        }
+        .textcont > p {
             font-size: 18pt;
         }
     }
@@ -75,7 +83,7 @@ class TheTextcont extends HTMLElement {
             Great! Now Mr. Green is ready to go to work. <br> 
             Click on his <span>car</span> to get it started.`;
             this.shadowRoot.querySelector("span").style.cssText = `
-            color: yellow;
+            color: #DBA800;
             font-weight: bold;
             `;
             document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle2");
