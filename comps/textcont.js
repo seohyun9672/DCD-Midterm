@@ -18,6 +18,14 @@ template_textcont.innerHTML = `
         padding: 1em;
         margin: 0;
     }
+    @media only screen and (max-width: 1440px){
+        .textcont{
+            height: 90pt;
+        }
+        .textcont > p {
+            font-size: 18pt;
+        }
+    }
 </style>
 `;
 
