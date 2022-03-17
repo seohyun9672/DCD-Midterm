@@ -85,9 +85,23 @@ template_solutioncont.innerHTML = `
     the-checkbtn {
         padding-right: 1em;
     }
-    @media screen and (max-width: 1980px) (
+    @media only screen and (min-width: 1440px){
+        .solutioncont {
+            width: 400px;
+            height: auto;
+        }
+        .solutioncont > img {
+            width: 120px;
+            height: 120px;
+        }
+        .header_text{
+            font-size: 20px;
+        }
+        .subheader_text {
+            font-size: 18px;
+        }
 
-    )
+    }
 </style>
 `;
 

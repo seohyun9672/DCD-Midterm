@@ -11,6 +11,12 @@ template_greenman.innerHTML = `
         width: 40pt;
         height: 225pt;
     }
+    @media only screen and (max-width: 1440px){
+        .greenman > img{
+            width: 32pt;
+            height: 200pt;
+        }
+    }
 </style>
 `;
 
@@ -36,6 +42,14 @@ class TheGreenman extends HTMLElement {
         this.shadowRoot.querySelector(".greenman > img").src = `./imgs/greenman/${this.getAttribute("greenman_num")}.svg`;
         if (this.getAttribute("size")) {
             this.shadowRoot.querySelector(".greenman >img").style.height = "160pt";
+        }
+        
+        let mediaQuery = window.matchMedia("(max-width: 1440px)");
+        if (mediaQuery.matches){
+                this.shadowRoot.querySelector(".greenman > img").style.height = "110pt";
+        }
+        if (this.getAttribute("size2")) {
+            this.shadowRoot.querySelector(".greenman >img").style.height = "200pt";
         }
     }
 

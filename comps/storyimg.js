@@ -8,6 +8,12 @@ template_storyimg.innerHTML = `
       width: 100vw;
       height: 100%;
   }
+  @media only screen and (max-width: 1440px){
+      #bg > img{
+          object-fit: fill;
+          margin-bottom: -4px;
+      }
+  }
 </style>
 <div id="bg">
     <img src="imgs/storyimg/story1.jpeg" alt="bedroom">

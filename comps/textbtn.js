@@ -12,6 +12,11 @@ template_textbtn.innerHTML = `
         cursor: pointer;
         font-size: 20pt;
     }
+    @media only screen and (max-width: 1440px){
+        .textbtn_cont{
+            font-size: 17pt;
+        }
+    }
 </style>
 `;
 

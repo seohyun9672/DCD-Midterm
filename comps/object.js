@@ -17,6 +17,13 @@ template_object.innerHTML = `
   .obj-cont {
     cursor:pointer;
   }
+  @media only screen and (max-width: 1440px){
+    img[alt="phone"].first {
+      position: absolute;
+      top:530px;
+      left: 750px;
+    }
+  }
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
@@ -95,6 +102,13 @@ class TheObject extends HTMLElement {
               opacity: 1;
             }
           }
+          @media only screen and (max-width: 1440px){
+            img[alt="car"].second {
+              position: absolute;
+              top: 225px;
+              right: 281px;
+            }
+          }
         </style>`;
     }
 
@@ -122,6 +136,13 @@ class TheObject extends HTMLElement {
             100% {
               visibility: visible;
               opacity: 1;
+            }
+          }
+          @media only screen and (max-width: 1440px){
+            img[alt="waterbottle"].first {
+              position: absolute;
+              top: 350px;
+              left: 120px;
             }
           }
         </style>`;
@@ -159,6 +180,18 @@ class TheObject extends HTMLElement {
             100% {
               visibility: visible;
               opacity: 1;
+            }
+          }
+          @media only screen and (max-width: 1440px){
+            .first {
+              position: absolute;
+              top: 350px;
+              left: 120px;
+            }
+            img[alt="fan"].second {
+              position:absolute;
+              top:300px;
+              right:750px;
             }
           }
         </style>`;
@@ -207,6 +240,25 @@ class TheObject extends HTMLElement {
               opacity: 1;
             }
           }
+          @media only screen and (max-width: 1440px){
+            .first {
+              position: absolute;
+              top: 350px;
+              left: 120px;
+            }
+            .second {
+              position:absolute;
+              top:300px;
+              right:750px;
+            }
+            img[alt="screen"].third {
+              position:absolute;
+              top:170px;
+              right:226px;
+              width: 34%;
+              height: 34%;
+            }
+          }
         </style>`;
     }
     if (objName === "laundrydetergent") {
@@ -233,6 +285,15 @@ class TheObject extends HTMLElement {
             100% {
               visibility: visible;
               opacity: 1;
+            }
+          }
+          @media only screen and (max-width: 1440px){
+            img[alt="detergent"].first {
+              position:absolute;
+              top:227px;
+              left:330px;
+              width: 23%;
+              height:23%
             }
           }
         </style>`;
@@ -273,6 +334,20 @@ class TheObject extends HTMLElement {
               opacity: 1;
             }
           }
+          @media only screen and (max-width: 1440px){
+            .first {
+              position:absolute;
+              top:227px;
+              left:330px;
+              width: 23%;
+              height:23%
+            }
+            img[alt="basket"].second{
+              position: absolute;
+              top: 410px;
+              right: 270px;
+            } 
+          }
         </style>`;
     }
     if (objName === "tablet") {
@@ -300,6 +375,13 @@ class TheObject extends HTMLElement {
               visibility: visible;
               opacity: 1;
             }
+          }
+          @media only screen and (max-width: 1440px){
+            img[alt="tablet"].first{
+              position: absolute;
+              top: 490px;
+              left: 400px;
+            } 
           }
         </style>`;
     }
@@ -335,6 +417,20 @@ class TheObject extends HTMLElement {
             100% {
               visibility: visible;
               opacity: 1;
+            }
+          }
+          @media only screen and (max-width: 1440px){
+            .first{
+              position: absolute;
+              top: 490px;
+              left: 400px;
+            }
+            img[alt="switch"].second{
+              position: absolute;
+              top: 160px;
+              left: 360px;
+              width: 8%;
+              height: 8%;
             }
           }
         </style>`;

@@ -25,6 +25,13 @@ template_footprintbtn.innerHTML = `
         height: 80%;
         z-index: 1;
     }
+    @media only screen and (max-width: 1440px){
+        .footprint_btn{
+            width: 200pt;
+            height: 200pt;
+            border: white solid 30px;
+        }
+    }
 </style>
 `;
 

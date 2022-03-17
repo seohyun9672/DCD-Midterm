@@ -8,6 +8,13 @@ template_emoji.innerHTML = `
         .emoji{
             width: 100%;
             height: 100%;
+            cursor: pointer;
+        }
+        @media only screen and (max-width: 1440px){
+            .emoji{
+                width: 85px;
+                height: 85px;
+            }
         }
     </style>
 `;

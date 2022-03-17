@@ -8,8 +8,10 @@ template_exit.innerHTML = `
 <style>
 .fa-times{
     color: #3A6742;
+    cursor: pointer;
 }
 </style>
+
 
 `;
 

@@ -11,7 +11,7 @@
 .landing-cont{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-top: 90pt;
 }
 .landing-clickable{
@@ -53,15 +53,15 @@ body{
     background-color: #C8D5AE;
     display: flex;
     height: 190pt;
-    width: 100%;
+    width: 100vw;
     padding: 1em;
     justify-content: center;
     position: fixed;
     bottom: 0;
-
 }
 .greenmanimg {
     padding: 1em;
+
 }
 
 .textbox{
@@ -152,3 +152,101 @@ body {
         opacity: 1;
      }
 }
+
+/* Responsive Design */
+
+/* Sue's laptop */
+  @media only screen and (max-width: 1440px){ 
+    /* Landing Page */
+    .landing {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .landing-cont{
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10pt;
+    }
+    .landing-clickable{
+        margin-top: -35pt;
+    }
+    .greenmen {
+        display: flex;
+        justify-content: space-between;
+        width: 200pt;
+        position: absolute;
+    }
+    .earth {
+        bottom: -10pt;
+        width: 100%;
+        position: fixed;
+        
+    }
+
+    /* Story */
+    .story body {
+        overflow: hidden;
+    }
+    .storybg{
+        width: 1440px;
+        height: 80%;
+        margin:0;
+    }
+
+    .scriptbox{
+        height: 124pt;
+        padding: 0.5em 0.7em 0.7em 0;
+        position: relative;
+        margin: 0;
+        width: 100%;
+        align-items: center;
+
+        
+    
+    }
+    
+    .textbox{
+        justify-content: center;
+    }
+
+    .greenmanimg {
+        padding-left:0.5em;
+    
+    }
+
+
+    /* CTA */
+        .cta{
+            height: 100%;
+            overflow: hidden;
+        }
+        .cta_capt {
+            font-size: 18pt;
+        }
+        .btn_emoji{
+            width: 80%;
+        }
+        .section_cta_first{
+            padding: 2em 5em;
+        }
+        .section_clickable{
+            align-items: center;
+        }
+        .section_cta_second{
+            padding: 2em 5em 3.5em 5em;
+            overflow: hidden;
+            height: auto;
+        }
+        the-feetbtn {
+            position:absolute;
+            bottom:3em;
+        }
+        .right {
+            position:absolute;
+            bottom:3em;
+            right:5em;
+        }
+        
+  }

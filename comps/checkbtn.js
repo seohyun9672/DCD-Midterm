@@ -9,6 +9,13 @@ template_checkbtn.innerHTML = `
     width: 26px;
     height: 26px;
 }
+@media only screen and (max-width: 1440px){
+    .checkbtn{
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+}
 </style>
 `;
 

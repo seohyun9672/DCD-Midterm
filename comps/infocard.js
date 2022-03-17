@@ -61,6 +61,20 @@ template_infocard.innerHTML = `
     .text_btn {
         padding: 1em;
     }
+    @media only screen and (max-width: 1440px){
+        .info-cont{
+            position: absolute;
+            top: 160px;
+            left: 600px;
+        }
+        .primary *, .secondary * {
+            font-size: 10pt;
+        }
+        .primary, .secondary {
+            width: 170pt;
+            height: auto;
+        }
+    }
 </style>
 `;
 
@@ -145,6 +159,7 @@ class TheInfoCard extends HTMLElement {
                 span{
                     text-align: left;
                 }
+                
                 </style>
             `;
             this.shadowRoot.querySelector(".desc_text").style.cssText = `
@@ -186,6 +201,12 @@ class TheInfoCard extends HTMLElement {
             top: 150px;
             left: 1250px;
             `
+            if (window.innerWidth <= 1440){
+                this.shadowRoot.querySelector(".info-cont").style.cssText=`
+                top: 70px;
+                right: 380px;
+            `
+            }
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/car.svg`;
             this.shadowRoot.querySelector(".head_text").innerHTML = `
             <span class ="em_text1"> greenhouse gas </span> emissions from transportation 
@@ -202,6 +223,12 @@ class TheInfoCard extends HTMLElement {
             top: 350px;
             left: 600px;
             `
+            if (window.innerWidth <= 1440){
+                this.shadowRoot.querySelector(".info-cont").style.cssText=`
+                top: 120px;
+                left: 380px;
+            `
+            }
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/waterbottle.svg`;
             this.shadowRoot.querySelector(".head_text").innerHTML = `
             increase in annual <span class ="em_text1"> carbon footprint <br> per year </span> 
@@ -222,6 +249,12 @@ class TheInfoCard extends HTMLElement {
             `;
         }
         if (objName === "fan") {
+            if (window.innerWidth <= 1440){
+                this.shadowRoot.querySelector(".info-cont").style.cssText=`
+                top: 120px;
+                left: 700px;
+            `
+            }
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/fan.svg`;
             this.shadowRoot.querySelector(".head_text").innerHTML = `
             Heat island effect
@@ -262,6 +295,12 @@ class TheInfoCard extends HTMLElement {
             top: 350px;
             left: 900px;
             `
+            if (window.innerWidth <= 1440){
+                this.shadowRoot.querySelector(".info-cont").style.cssText=`
+                top: 80px;
+                right: 100px;
+            `
+            }
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/screen.svg`;
             this.shadowRoot.querySelector(".head_text").style.cssText = `
             display: none;
@@ -286,6 +325,12 @@ class TheInfoCard extends HTMLElement {
             top: 380px;
             left: 1300px;
             `
+            if (window.innerWidth <= 1440){
+                this.shadowRoot.querySelector(".info-cont").style.cssText=`
+                top: 110px;
+                left: 580px;
+            `
+            }
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/laundrydetergent.svg`;
             this.shadowRoot.querySelector(".head_text").innerHTML = `
             Laundry Footprints
@@ -316,6 +361,12 @@ class TheInfoCard extends HTMLElement {
             top: 380px;
             left: 1600px;
             `
+            if (window.innerWidth <= 1440){
+                this.shadowRoot.querySelector(".info-cont").style.cssText=`
+                top: 150px;
+                right: 100px;
+            `
+            }
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/laundrybasket.svg`;
             this.shadowRoot.querySelector(".head_text").innerHTML = `
             generated co2 <b> per load
@@ -340,6 +391,12 @@ class TheInfoCard extends HTMLElement {
             top: 480px;
             left: 500px;
             `
+            if (window.innerWidth <= 1440){
+                this.shadowRoot.querySelector(".info-cont").style.cssText=`
+                top: 150px;
+                left: 550px;
+            `
+            }
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/tablet.svg`;
             this.shadowRoot.querySelector(".head_text").innerHTML = `
             Excessive electronic devices
@@ -348,6 +405,12 @@ class TheInfoCard extends HTMLElement {
         }
         if (objName === "switch") {
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/switch.svg`;
+            if (window.innerWidth <= 1440){
+                this.shadowRoot.querySelector(".info-cont").style.cssText=`
+                top: 100px;
+                left: 450px;
+            `
+            }
             this.shadowRoot.querySelector(".head_text").style.cssText = `
             display: none;
             `;
@@ -362,6 +425,18 @@ class TheInfoCard extends HTMLElement {
             text-align: center;
             line-height: 24pt;
             `;
+            if (window.innerWidth <= 1440){
+                this.shadowRoot.querySelector(".sub_text").style.cssText=`
+                display: block;
+                font-family: Lato, sans-serif;
+                font-size: 14pt;
+                font-weight: lighter;
+                text-align: center;
+                line-height: 18pt;
+                margin-top: -10px;
+              
+            `
+            }
             this.shadowRoot.querySelector(".em_text1").style.cssText = `
             color: #BD484A;
             `;

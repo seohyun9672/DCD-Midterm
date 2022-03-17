@@ -23,6 +23,14 @@ template_time.innerHTML = `
         color: black;
         font-size: 24pt;
     }
+    @media only screen and (max-width: 1440px){
+        .time_cont {
+            padding: 3px 10px;
+        }
+        .time_cont > .time_text{
+            font-size: 16pt;
+        }
+    }
     
 </style>
 `;
