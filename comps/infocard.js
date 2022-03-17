@@ -215,6 +215,12 @@ class TheInfoCard extends HTMLElement {
             top: 350px;
             left: 600px;
             `
+            if (window.innerWidth <= 1440){
+                this.shadowRoot.querySelector(".info-cont").style.cssText=`
+                top: 120px;
+                left: 380px;
+            `
+            }
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/waterbottle.svg`;
             this.shadowRoot.querySelector(".head_text").innerHTML = `
             increase in annual <span class ="em_text1"> carbon footprint <br> per year </span> 

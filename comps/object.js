@@ -152,6 +152,13 @@ class TheObject extends HTMLElement {
               opacity: 1;
             }
           }
+          @media only screen and (max-width: 1440px){
+            img[alt="waterbottle"].first {
+              position: absolute;
+              top: 350px;
+              left: 120px;
+            }
+          }
         </style>`;
     }
 
