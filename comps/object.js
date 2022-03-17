@@ -287,6 +287,15 @@ class TheObject extends HTMLElement {
               opacity: 1;
             }
           }
+          @media only screen and (max-width: 1440px){
+            img[alt="detergent"].first {
+              position:absolute;
+              top:227px;
+              left:330px;
+              width: 23%;
+              height:23%
+            }
+          }
         </style>`;
     }
     if (objName === "laundrybasket") {
@@ -324,6 +333,20 @@ class TheObject extends HTMLElement {
               visibility: visible;
               opacity: 1;
             }
+          }
+          @media only screen and (max-width: 1440px){
+            .first {
+              position:absolute;
+              top:227px;
+              left:330px;
+              width: 23%;
+              height:23%
+            }
+            img[alt="basket"].second{
+              position: absolute;
+              top: 410px;
+              right: 270px;
+            } 
           }
         </style>`;
     }

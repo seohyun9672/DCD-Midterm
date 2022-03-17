@@ -159,6 +159,7 @@ class TheInfoCard extends HTMLElement {
                 span{
                     text-align: left;
                 }
+                
                 </style>
             `;
             this.shadowRoot.querySelector(".desc_text").style.cssText = `
@@ -324,6 +325,12 @@ class TheInfoCard extends HTMLElement {
             top: 380px;
             left: 1300px;
             `
+            if (window.innerWidth <= 1440){
+                this.shadowRoot.querySelector(".info-cont").style.cssText=`
+                top: 110px;
+                left: 580px;
+            `
+            }
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/laundrydetergent.svg`;
             this.shadowRoot.querySelector(".head_text").innerHTML = `
             Laundry Footprints
@@ -354,6 +361,12 @@ class TheInfoCard extends HTMLElement {
             top: 380px;
             left: 1600px;
             `
+            if (window.innerWidth <= 1440){
+                this.shadowRoot.querySelector(".info-cont").style.cssText=`
+                top: 150px;
+                right: 100px;
+            `
+            }
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/laundrybasket.svg`;
             this.shadowRoot.querySelector(".head_text").innerHTML = `
             generated co2 <b> per load
