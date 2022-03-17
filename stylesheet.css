@@ -202,9 +202,6 @@ body {
         margin: 0;
         width: 100%;
         align-items: center;
-
-        
-    
     }
     
     .textbox{
@@ -249,4 +246,24 @@ body {
             right:5em;
         }
         
+  }
+  @media only screen and (max-width: 1920px){
+    /* Landing Page*/
+    /* Story */
+    .greenmanimg {
+        padding-left:0.5em;
+    
+    }
+    .scriptbox{
+        height: 194pt;
+        width: 100%;
+        padding: 0.5em 0.7em 0.7em 0;
+        justify-content: center;
+        position: relative;
+    }
+    /* CTA */
+
+
+
+
   }

@@ -26,6 +26,14 @@ template_textcont.innerHTML = `
             font-size: 18pt;
         }
     }
+    @media only screen and (max-width: 1920px){
+        .textcont{
+            height: 130pt;
+        }
+        .textcont > p {
+            font-size: 22pt;
+        }
+    }
 </style>
 `;
 
