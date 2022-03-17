@@ -61,6 +61,13 @@ template_infocard.innerHTML = `
     .text_btn {
         padding: 1em;
     }
+    @media only screen and (max-width: 1440px){
+        .info-cont{
+            position: absolute;
+            top: 60px;
+            left: 600px;
+        }
+    }
 </style>
 `;
 

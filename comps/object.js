@@ -17,6 +17,13 @@ template_object.innerHTML = `
   .obj-cont {
     cursor:pointer;
   }
+  @media only screen and (max-width: 1440px){
+    img[alt="phone"].first {
+      position: absolute;
+      top:530px;
+      left: 750px;
+    }
+  }
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
