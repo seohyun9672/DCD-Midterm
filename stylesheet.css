@@ -53,15 +53,15 @@ body{
     background-color: #C8D5AE;
     display: flex;
     height: 190pt;
-    width: 100%;
+    width: 100vw;
     padding: 1em;
     justify-content: center;
     position: fixed;
     bottom: 0;
-
 }
 .greenmanimg {
     padding: 1em;
+
 }
 
 .textbox{
@@ -186,9 +186,36 @@ body {
     }
 
     /* Story */
-    .scriptbox {
-        height:auto; 
+    .story body {
+        overflow: hidden;
     }
+    .storybg{
+        width: 1440px;
+        height: 80%;
+        margin:0;
+    }
+
+    .scriptbox{
+        height: 124pt;
+        padding: 0.5em 0.7em 0.7em 0;
+        position: relative;
+        margin: 0;
+        width: 100%;
+        align-items: center;
+
+        
+    
+    }
+    
+    .textbox{
+        justify-content: center;
+    }
+
+    .greenmanimg {
+        padding-left:0.5em;
+    
+    }
+
 
     /* CTA */
         .cta{

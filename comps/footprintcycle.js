@@ -12,6 +12,13 @@ template_footprintcycle.innerHTML = `
             right:0px;
             padding: 20px;
         }
+        @media only screen and (max-width: 1440px){
+            .footprintcycle{
+                width: 110pt;
+                height: 110pt;
+                padding: 15px;
+            }
+        }
     </style>
 `;
 

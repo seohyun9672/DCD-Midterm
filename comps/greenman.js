@@ -37,6 +37,11 @@ class TheGreenman extends HTMLElement {
         if (this.getAttribute("size")) {
             this.shadowRoot.querySelector(".greenman >img").style.height = "8em";
         }
+        let mediaQuery = window.matchMedia("(max-width: 1440px)");
+        if (mediaQuery.matches){
+                this.shadowRoot.querySelector(".greenman > img").style.height = "110pt";
+        }
+        
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
