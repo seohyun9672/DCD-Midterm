@@ -64,7 +64,7 @@ template_infocard.innerHTML = `
     @media only screen and (max-width: 1440px){
         .info-cont{
             position: absolute;
-            top: 60px;
+            top: 160px;
             left: 600px;
         }
         .primary *, .secondary * {
@@ -204,7 +204,7 @@ class TheInfoCard extends HTMLElement {
             if (window.innerWidth <= 1440){
                 this.shadowRoot.querySelector(".info-cont").style.cssText=`
                 top: 70px;
-                left: 550px;
+                right: 380px;
             `
             }
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/car.svg`;
