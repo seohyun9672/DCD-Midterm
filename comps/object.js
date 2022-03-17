@@ -376,6 +376,13 @@ class TheObject extends HTMLElement {
               opacity: 1;
             }
           }
+          @media only screen and (max-width: 1440px){
+            img[alt="tablet"].first{
+              position: absolute;
+              top: 490px;
+              left: 400px;
+            } 
+          }
         </style>`;
     }
     if (objName === "switch") {
@@ -410,6 +417,20 @@ class TheObject extends HTMLElement {
             100% {
               visibility: visible;
               opacity: 1;
+            }
+          }
+          @media only screen and (max-width: 1440px){
+            .first{
+              position: absolute;
+              top: 490px;
+              left: 400px;
+            }
+            img[alt="switch"].second{
+              position: absolute;
+              top: 160px;
+              left: 360px;
+              width: 8%;
+              height: 8%;
             }
           }
         </style>`;

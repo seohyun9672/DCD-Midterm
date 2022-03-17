@@ -68,7 +68,7 @@ template_infocard.innerHTML = `
             left: 600px;
         }
         .primary *, .secondary * {
-            font-size:10pt;
+            font-size: 10pt;
         }
         .primary, .secondary {
             width: 170pt;
@@ -391,6 +391,12 @@ class TheInfoCard extends HTMLElement {
             top: 480px;
             left: 500px;
             `
+            if (window.innerWidth <= 1440){
+                this.shadowRoot.querySelector(".info-cont").style.cssText=`
+                top: 150px;
+                left: 550px;
+            `
+            }
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/tablet.svg`;
             this.shadowRoot.querySelector(".head_text").innerHTML = `
             Excessive electronic devices
@@ -399,6 +405,12 @@ class TheInfoCard extends HTMLElement {
         }
         if (objName === "switch") {
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/switch.svg`;
+            if (window.innerWidth <= 1440){
+                this.shadowRoot.querySelector(".info-cont").style.cssText=`
+                top: 100px;
+                left: 450px;
+            `
+            }
             this.shadowRoot.querySelector(".head_text").style.cssText = `
             display: none;
             `;
@@ -413,6 +425,18 @@ class TheInfoCard extends HTMLElement {
             text-align: center;
             line-height: 24pt;
             `;
+            if (window.innerWidth <= 1440){
+                this.shadowRoot.querySelector(".sub_text").style.cssText=`
+                display: block;
+                font-family: Lato, sans-serif;
+                font-size: 14pt;
+                font-weight: lighter;
+                text-align: center;
+                line-height: 18pt;
+                margin-top: -10px;
+              
+            `
+            }
             this.shadowRoot.querySelector(".em_text1").style.cssText = `
             color: #BD484A;
             `;
