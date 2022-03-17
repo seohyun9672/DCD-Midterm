@@ -14,6 +14,11 @@ template_storyimg.innerHTML = `
           margin-bottom: -4px;
       }
   }
+  @media only screen and (max-width: 1920px) and (min-width:1441px){
+    #bg > img{
+        width:100.1%;
+    }
+}
 
 }
 </style>

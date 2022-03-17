@@ -108,7 +108,7 @@ class TheObject extends HTMLElement {
           @media screen and (max-width:1920px) and (min-width:1440px) {
             .second {
               top:20em;
-              right:22em;
+              right:21em;
             }
           }
         
@@ -268,7 +268,7 @@ class TheObject extends HTMLElement {
             visibility: hidden;
             position:absolute;
             top:300px;
-            right: 395px;
+            right: 380px;
             width: 35%;
             height: 35%;
           }
@@ -296,7 +296,7 @@ class TheObject extends HTMLElement {
             img[alt="screen"].third {
               position:absolute;
               top:170px;
-              right:226px;
+              right:200px;
               width: 34%;
               height: 34%;
             }
