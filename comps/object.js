@@ -23,6 +23,20 @@ template_object.innerHTML = `
       top:530px;
       left: 750px;
     }
+    .first{
+      animation: 3s fadeIn;
+            animation-fill-mode: forwards;
+            visibility: hidden;
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
   }
 `;
 
