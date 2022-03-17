@@ -193,6 +193,12 @@ class TheInfoCard extends HTMLElement {
             top: 150px;
             left: 1250px;
             `
+            if (window.innerWidth <= 1440){
+                this.shadowRoot.querySelector(".info-cont").style.cssText=`
+                top: 70px;
+                left: 550px;
+            `
+            }
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/car.svg`;
             this.shadowRoot.querySelector(".head_text").innerHTML = `
             <span class ="em_text1"> greenhouse gas </span> emissions from transportation 

@@ -102,6 +102,13 @@ class TheObject extends HTMLElement {
               opacity: 1;
             }
           }
+          @media only screen and (max-width: 1440px){
+            img[alt="car"].second {
+              position: absolute;
+              top: 225px;
+              right: 281px;
+            }
+          }
         </style>`;
     }
 
