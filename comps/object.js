@@ -92,6 +92,12 @@ class TheObject extends HTMLElement {
             width: 20%;
             height: 20%;
           }
+          @media screen and (max-width:1440px) {
+            .second {
+              top:14em;
+              right:17em;
+            }
+          }
         
           @keyframes fadeIn {
             0% {
@@ -127,6 +133,12 @@ class TheObject extends HTMLElement {
             left:150px;
             width: 25%;
             height: 25%;
+          }
+          @media screen and (max-width:1440px){
+            .first {
+              top:300px;
+            left:150px;
+            }
           }
           
           @keyframes fadeIn {

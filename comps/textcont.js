@@ -23,7 +23,7 @@ template_textcont.innerHTML = `
             height: 90pt;
         }
         .textcont > p {
-            font-size: 18pt;
+            font-size: 16pt;
         }
     }
 </style>

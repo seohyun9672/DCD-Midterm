@@ -200,6 +200,10 @@ class TheInfoCard extends HTMLElement {
             this.shadowRoot.querySelector(".info-cont").style.cssText=`
             top: 150px;
             left: 1250px;
+            @media screen and (max-width:1440px) {
+                top: 50px;
+                left:-300px;
+            }
             `
             if (window.innerWidth <= 1440){
                 this.shadowRoot.querySelector(".info-cont").style.cssText=`
