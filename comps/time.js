@@ -31,6 +31,14 @@ template_time.innerHTML = `
             font-size: 16pt;
         }
     }
+    @media only screen and (min-width: 1441px) and (max-width: 1920px){
+        .time_cont {
+            padding: 5px 12px;
+        }
+        .time_cont > .time_text{
+            font-size: 22pt;
+        }
+    }
     
 </style>
 `;

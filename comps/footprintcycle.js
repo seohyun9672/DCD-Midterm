@@ -19,6 +19,13 @@ template_footprintcycle.innerHTML = `
                 padding: 15px;
             }
         }
+        @media only screen and (min-width: 1441px) and (max-width: 1920px){
+            .footprintcycle{
+                width: 115pt;
+                height: 115pt;
+                padding: 18px;
+            }
+        }
     </style>
 `;
 

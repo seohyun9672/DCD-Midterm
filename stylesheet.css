@@ -202,9 +202,6 @@ body {
         margin: 0;
         width: 100%;
         align-items: center;
-
-        
-    
     }
     
     .textbox{
@@ -249,4 +246,57 @@ body {
             right:5em;
         }
         
+  }
+  @media only screen and (min-width: 1440px) and (max-width: 1920px){
+    /* Landing Page*/
+    /* Story */
+    .greenmanimg {
+        padding-left:0.5em;
+    
+    }
+    .scriptbox{
+        height: 194pt;
+        width: 100%;
+        padding: 0.5em 0.7em 0.7em 0;
+        justify-content: center;
+        position: relative;
+    }
+    /* CTA */
+    .cta{
+        height: 100%;
+        overflow: hidden;
+    }
+    .cta_capt {
+        font-size: 22pt;
+    }
+    .btn_emoji{
+        width: 90%;
+    }
+    .section_cta_first{
+        padding:5em 5em 3.5em 5em;
+        height: 100%;
+        width: auto;
+    }
+    .section_clickable{
+        align-items: center;
+        justify-content: space-between;
+    }
+    .section_cta_second{
+        padding: 5em 5em 0 5em;
+        overflow: hidden;
+        height: 40vh;
+    }
+    the-feetbtn {
+        position:absolute;
+        bottom:3em;
+    }
+    .right {
+        position:absolute;
+        bottom:3em;
+        right:5em;
+    }
+    
+
+
+
   }
