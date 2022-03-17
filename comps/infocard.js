@@ -67,6 +67,13 @@ template_infocard.innerHTML = `
             top: 60px;
             left: 600px;
         }
+        .primary *, .secondary * {
+            font-size:10pt;
+        }
+        .primary, .secondary {
+            width: 170pt;
+            height: auto;
+        }
     }
 </style>
 `;
@@ -241,6 +248,12 @@ class TheInfoCard extends HTMLElement {
             `;
         }
         if (objName === "fan") {
+            if (window.innerWidth <= 1440){
+                this.shadowRoot.querySelector(".info-cont").style.cssText=`
+                top: 120px;
+                left: 700px;
+            `
+            }
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/fan.svg`;
             this.shadowRoot.querySelector(".head_text").innerHTML = `
             Heat island effect
@@ -281,6 +294,12 @@ class TheInfoCard extends HTMLElement {
             top: 350px;
             left: 900px;
             `
+            if (window.innerWidth <= 1440){
+                this.shadowRoot.querySelector(".info-cont").style.cssText=`
+                top: 80px;
+                right: 100px;
+            `
+            }
             this.shadowRoot.querySelector("img").src = `imgs/infoimg/screen.svg`;
             this.shadowRoot.querySelector(".head_text").style.cssText = `
             display: none;

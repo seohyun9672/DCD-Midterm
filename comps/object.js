@@ -23,20 +23,6 @@ template_object.innerHTML = `
       top:530px;
       left: 750px;
     }
-    .first{
-      animation: 3s fadeIn;
-            animation-fill-mode: forwards;
-            visibility: hidden;
-    }
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        visibility: visible;
-        opacity: 1;
-      }
-    }
   }
 `;
 
@@ -196,6 +182,18 @@ class TheObject extends HTMLElement {
               opacity: 1;
             }
           }
+          @media only screen and (max-width: 1440px){
+            .first {
+              position: absolute;
+              top: 350px;
+              left: 120px;
+            }
+            img[alt="fan"].second {
+              position:absolute;
+              top:300px;
+              right:750px;
+            }
+          }
         </style>`;
     }
     if (objName === "screen") {
@@ -240,6 +238,25 @@ class TheObject extends HTMLElement {
             100% {
               visibility: visible;
               opacity: 1;
+            }
+          }
+          @media only screen and (max-width: 1440px){
+            .first {
+              position: absolute;
+              top: 350px;
+              left: 120px;
+            }
+            .second {
+              position:absolute;
+              top:300px;
+              right:750px;
+            }
+            img[alt="screen"].third {
+              position:absolute;
+              top:170px;
+              right:226px;
+              width: 34%;
+              height: 34%;
             }
           }
         </style>`;
