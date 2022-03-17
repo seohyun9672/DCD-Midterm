@@ -20,6 +20,7 @@ template_textbtn.innerHTML = `
     @media only screen and (max-width: 1920px) and (min-width:1441px){
         .textbtn_cont{
             font-size: 18pt;
+
         }
     }
 </style>

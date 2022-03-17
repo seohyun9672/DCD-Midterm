@@ -24,11 +24,11 @@ template_object.innerHTML = `
       left: 750px;
     }
   }
-  @media only screen and (max-width: 1920px) and (min-width:1441px){
+
+  @media only screen and (min-width: 1441px) and (max-width: 1920px){
     img[alt="phone"].first {
       position: absolute;
       top:650px;
-      left: 1000px;
     }
   }
 `;
