@@ -1,348 +1,293 @@
 /* LANDING PAGE */
 .landing {
-    background: linear-gradient(#AEE2FF,#FFFFFF);
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+  background: linear-gradient(#aee2ff, #ffffff);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-.landing-cont{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-top: 90pt;
+
+.landing-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 5em;
 }
-.landing-clickable{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.landing-clickable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
+
 .greenmen {
-    display: flex;
-    justify-content: space-between;
-    width: 280pt;
-    position: absolute;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 12%;
 }
 .earth {
-    bottom: 0;
-    width: 100%;
-    position: fixed;
-    left: 0;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
 }
 
 /* STORY */
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
-.btn_back{
-    position: absolute;
-    padding:1em;
+.btn_back {
+  position: absolute;
+  padding: 1em;
 }
 .story {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
-/* 
-.objoverlay{
-    position: absolute;
-}  */
-.scriptbox{
-    background-color: #C8D5AE;
-    display: flex;
-    height: 190pt;
-    width: 100vw;
-    padding: 1em;
-    justify-content: center;
-    position: fixed;
-    bottom: 0;
+.scriptbox {
+  background-color: #c8d5ae;
+  display: flex;
+  height: 190pt;
+  width: 100vw;
+  padding: 1em;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
 }
 .greenmanimg {
-    padding: 1em;
-
+  padding: 1em;
 }
 
-.textbox{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
+.textbox {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
 }
 .textcont {
-    width: 100%;
+  width: 100%;
 }
 
-#infocard{
-    display: none;
-    position: absolute;
-} 
+#infocard {
+  display: none;
+  position: absolute;
+}
+*/
 
 
 /* CTA */
-.section_cta_first{
-    background-color: #FEFFF6;
-    width: auto;
-    height: 100%;
-    padding: 3em;
+.section_cta_first {
+  background-color: #fefff6;
+  width: auto;
+  height: 100%;
+  padding: 3em;
 }
-.section_clickable{
-    display:flex;
-    width: auto;
+.section_clickable {
+  display: flex;
+  width: auto;
 }
-.section_emoji{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin: 2em;
+.section_emoji {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 2em;
 }
-.btn_emoji{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.btn_emoji {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.section_cta_second{
-    background-color: #C6E1E5;
-    width: auto;
-    padding: 3em;
-    height:45vh;
+.section_cta_second {
+  background-color: #c6e1e5;
+  width: auto;
+  padding: 3em;
+  height: 45vh;
 }
-.section_cta_desc{
-    display: flex;
-    flex-direction: column;
-    align-content:center;
+.section_cta_desc {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
-.section_ctabtn{
-    display: flex;
-    justify-content: space-between;
-    
+.section_ctabtn {
+  display: flex;
+  justify-content: space-between;
 }
 .cta_capt {
-    text-align:center;
-    font-size:24px;
-    padding: 0 20%;
+  text-align: center;
+  font-size: 24px;
+  padding: 0 20%;
 }
 
 the-solutioncont {
-    align-self:center;
-}  
+  align-self: center;
+}
 the-feetbtn {
-    position:absolute;
-    bottom:5em;
+  position: absolute;
+  bottom: 5em;
 }
 .right {
-    position:absolute;
-    bottom:5em;
-    right:5em;
+  position: absolute;
+  bottom: 5em;
+  right: 5em;
 }
 
 /* fade in effect */
 body {
-    animation: fadeInAnimation ease-in-out 1.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+  animation: fadeInAnimation ease-in-out 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
-  
+
 @keyframes fadeInAnimation {
-    0% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-     }
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Responsive Design */
-
-/* Sue's laptop */
-  @media only screen and (max-width: 1440px){ 
-    /* Landing Page */
-    .landing {
-        margin: 0;
-        display: flex;
-        justify-content: center;
-    }
-    .landing-cont{
-        height: 90vh;
-        display: flex;
-        flex-direction: column;
-        margin-top: 10pt;
-    }
-    .landing-clickable{
-        margin-top: -35pt;
-    }
-    .greenmen {
-        display: flex;
-        justify-content: space-between;
-        width: 200pt;
-        position: absolute;
-    }
-    .earth {
-        bottom: -10pt;
-        width: 100%;
-        position: fixed;
-        
-    }
-
-    /* Story */
-    .story body {
-        overflow: hidden;
-    }
-    .storybg{
-        width: 1440px;
-        height: 80%;
-        margin:0;
-    }
-
-    .scriptbox{
-        height: 124pt;
-        padding: 0.5em 0.7em 0.7em 0;
-        position: relative;
-        margin: 0;
-        width: 100%;
-        align-items: center;
-    }
-    
-    .textbox{
-        justify-content: center;
-    }
-
-    .greenmanimg {
-        padding-left:0.5em;
-    
-    }
-
-
-    /* CTA */
-        .cta{
-            height: 100%;
-            overflow: hidden;
-        }
-        .cta_capt {
-            font-size: 18pt;
-        }
-        .btn_emoji{
-            width: 80%;
-        }
-        .section_cta_first{
-            padding: 2em 5em;
-        }
-        .section_clickable{
-            align-items: center;
-        }
-        .section_cta_second{
-            padding: 2em 5em 3.5em 5em;
-            overflow: hidden;
-            height: auto;
-        }
-        the-feetbtn {
-            position:absolute;
-            bottom:3em;
-        }
-        .right {
-            position:absolute;
-            bottom:3em;
-            right:5em;
-        }
-        
+@media only screen and (max-width: 1440px) {
+  /* Landing Page */
+  .landing-cont {
+    margin-top: 3em;
+  }
+  .greenmen {
+    width: 18%;
   }
 
-  @media only screen and (max-width: 1920px) and (min-width:1441px){ 
-    /* Landing Page */
-    .landing {
-        margin: 0;
-        display: flex;
-        justify-content: center;
-    }
-    .landing-cont{
-        height: 80vh;
-        display: flex;
-        flex-direction: column;
-        margin-top: 5pt;
-    }
-    .landing-clickable{
-        margin-top: -35pt;
-    }
-    .greenmen {
-        display: flex;
-        justify-content: space-between;
-        width: 200pt;
-        position: absolute;
-    }
-    .earth {
-        bottom: -10pt;
-        width: 100%;
-        position: fixed;
-        
-    }
-
-    /* Story */
-    .story body {
-        overflow:hidden;
-        margin:0;
-    }
-    .storybg{
-        width: 1950px;
-        height: 80%;
-        margin:0;
-        overflow:hidden;
-    }
-
-    .scriptbox{
-        height: 150pt;
-        padding: 0.5em 0.7em 0.7em 0;
-        position: absolute;
-        margin: 0;
-        width: 100%;
-        align-items: center;
-        overflow:hidden;
-    
-    }
-    
-    .textbox{
-        justify-content: center;
-    }
-
-    .greenmanimg {
-        padding-left:0.5em;
-    
-    }
-
-    /* CTA */
-    .cta{
-        height: 100%;
-        overflow: hidden;
-    }
-    .cta_capt {
-        font-size: 22pt;
-    }
-    .btn_emoji{
-        width: 90%;
-    }
-    .section_cta_first{
-        padding:5em 5em 3.5em 5em;
-        height: 100%;
-        width: auto;
-    }
-    .section_clickable{
-        align-items: center;
-        justify-content: space-between;
-    }
-    .section_cta_second{
-        padding: 5em 5em 0 5em;
-        overflow: hidden;
-        height: 40vh;
-    }
-    the-feetbtn {
-        position:absolute;
-        bottom:3em;
-    }
-    .right {
-        position:absolute;
-        bottom:3em;
-        right:5em;
-    }
-    
-
+  /* Story */
+  .story body {
+    overflow: hidden;
   }
+  .storybg {
+    width: 1440px;
+    height: 80%;
+    margin: 0;
+  }
+
+  .scriptbox {
+    height: 124pt;
+    padding: 0.5em 0.7em 0.7em 0;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    align-items: center;
+  }
+
+  .textbox {
+    justify-content: center;
+  }
+
+  .greenmanimg {
+    padding-left: 0.5em;
+  }
+
+  /* CTA */
+  .cta {
+    height: 100%;
+    overflow: hidden;
+  }
+  .cta_capt {
+    font-size: 18pt;
+  }
+  .btn_emoji {
+    width: 80%;
+  }
+  .section_cta_first {
+    padding: 2em 5em;
+  }
+  .section_clickable {
+    align-items: center;
+  }
+  .section_cta_second {
+    padding: 2em 5em 3.5em 5em;
+    overflow: hidden;
+    height: auto;
+  }
+  the-feetbtn {
+    position: absolute;
+    bottom: 3em;
+  }
+  .right {
+    position: absolute;
+    bottom: 3em;
+    right: 5em;
+  }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1920px) {
+  /* Landing Page */
+  .landing-cont {
+    margin-top: 2em;
+  }
+  .greenmen {
+    width: 14%;
+  }
+
+  /* Story */
+  .story body {
+    overflow: hidden;
+    margin: 0;
+  }
+  .storybg {
+    width: 1950px;
+    height: 80%;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .scriptbox {
+    height: 150pt;
+    padding: 0.5em 0.7em 0.7em 0;
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .textbox {
+    justify-content: center;
+  }
+
+  .greenmanimg {
+    padding-left: 0.5em;
+  }
+
+  /* CTA */
+  .cta {
+    height: 100%;
+    overflow: hidden;
+  }
+  .cta_capt {
+    font-size: 22pt;
+  }
+  .btn_emoji {
+    width: 90%;
+  }
+  .section_cta_first {
+    padding: 5em 5em 3.5em 5em;
+    height: 100%;
+    width: auto;
+  }
+  .section_clickable {
+    align-items: center;
+    justify-content: space-between;
+  }
+  .section_cta_second {
+    padding: 5em 5em 0 5em;
+    overflow: hidden;
+    height: 40vh;
+  }
+  the-feetbtn {
+    position: absolute;
+    bottom: 3em;
+  }
+  .right {
+    position: absolute;
+    bottom: 3em;
+    right: 5em;
+  }
+}

@@ -6,10 +6,10 @@ template_greenman.innerHTML = `
 <div class ="greenman">
     <img src="./imgs/greenman/Greenman1.svg" alt= Greenman Image>
 </div>
+
 <style>
     .greenman > img {
-        width: 40pt;
-        height: 225pt;
+        width: 3.5em;
     }
 </style>
 `;
@@ -29,19 +29,26 @@ class TheGreenman extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback() {
         this.shadowRoot.appendChild(template_greenman.content.cloneNode(true)); //use the template to make a clone
-
+        
+        this.shadowRoot.querySelector(".greenman > img").src = `./imgs/greenman/${this.getAttribute("greenman_num")}.svg`;
         if (this.getAttribute("direction")) {
             this.shadowRoot.querySelector(".greenman").style.transform = "scaleX(-1)";
         }
-        this.shadowRoot.querySelector(".greenman > img").src = `./imgs/greenman/${this.getAttribute("greenman_num")}.svg`;
-        if (this.getAttribute("size")) {
-            this.shadowRoot.querySelector(".greenman >img").style.height = "8em";
-        }
-        
+    
+        // if (this.getAttribute("size")) {
+        //     this.shadowRoot.querySelector(".greenman >img").style.height = "8em";
+        // }
+
         let mediaQuery = window.matchMedia("(max-width: 1440px)");
-        if (mediaQuery.matches){
-                this.shadowRoot.querySelector(".greenman > img").style.height = "110pt";
+        if (mediaQuery.matches) {
+            this.shadowRoot.querySelector(".greenman > img").style.width = "2em";
         }
+
+        if (window.matchMedia("(max-width: 1920px)")) {
+            this.shadowRoot.querySelector(".greenman > img").style.width = "2.2em";
+        }
+
+
         if (this.getAttribute("size2")) {
             this.shadowRoot.querySelector(".greenman >img").style.height = "200pt";
         }
