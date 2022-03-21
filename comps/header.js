@@ -34,11 +34,12 @@ template_header.innerHTML = `
 
     } 
     @media only screen and (min-width: 1440px) and (max-width: 1920px){
+        
         h1 {
-            font-size: 56pt;
+            font-size: 50pt;
         }
         p{
-            font-size: 22pt;
+            font-size: 20pt;
         }
 
     } 

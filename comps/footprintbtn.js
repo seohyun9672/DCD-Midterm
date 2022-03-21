@@ -27,14 +27,14 @@ template_footprintbtn.innerHTML = `
     }
     @media only screen and (max-width: 1440px){
          .footprint_btn{
-             width: 160pt;
-             height: 160pt;
+             width: 180pt;
+             height: 180pt;
          }
      }
-    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+    @media only screen and (max-width: 1920px) {
          .footprint_btn{
-             width: 300pt;
-             height: 300pt;
+             width: 200pt;
+             height: 200pt;
         }
     }
 </style>

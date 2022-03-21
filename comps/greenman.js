@@ -43,13 +43,19 @@ class TheGreenman extends HTMLElement {
             this.shadowRoot.querySelector(".greenman").style.transform = "scaleX(-1)";
         }
     
+        // if (this.getAttribute("size")) {
+        //     this.shadowRoot.querySelector(".greenman >img").style.height = "8em";
+        // }
+
         // let mediaQuery = window.matchMedia("(max-width: 1440px)");
         // if (mediaQuery.matches) {
+        //     this.shadowRoot.querySelector(".greenman > img").style.width = "2em";
+        // }
+
+        // if (window.matchMedia("(max-width: 1920px)")) {
         //     this.shadowRoot.querySelector(".greenman > img").style.width = "2.2em";
         // }
-        // if (window.matchMedia("(max-width: 1920px)")) {
-        //     this.shadowRoot.querySelector(".greenman > img").style.width = "3em";
-        // }
+
 
         // if (this.getAttribute("size2")) {
         //     this.shadowRoot.querySelector(".greenman >img").style.height = "200pt";
