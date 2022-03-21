@@ -174,7 +174,7 @@ class TheTextcont extends HTMLElement {
             document.querySelector("the-object").onclick = () => document.querySelector("the-infocard").changeInfoCard("switch");
         }
         if (this.textOrder === 10) {
-            window.location.href = "/cta.html";
+            window.location.href = "./cta.html";
         }
     }
     nextStory() {
