@@ -9,16 +9,8 @@ template_greenman.innerHTML = `
 
 <style>
     .greenman > img {
-        width: 3.5em;
+        width: 100%;
     }
-    @media only screen and (max-width: 1440px){
-        .greenman > img {
-            width: 2.2em;
-        }
-    @media only screen and (min-width: 1440px) and (max-width: 1920px){
-        .greenman > img {
-            width: 3em;
-        }
 </style>
 `;
 

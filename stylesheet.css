@@ -23,8 +23,13 @@
   display: flex;
   justify-content: space-between;
   position: absolute;
-  width: 12%;
+  width: 300pt;
 }
+
+.landing-greenmanimg {
+  width: 3.5em;
+}
+
 .earth {
   width: 100%;
   bottom: 0;
@@ -153,8 +158,13 @@ body {
   .landing-cont {
     margin-top: 2em;
   }
+
+  .landing-greenmanimg {
+    width: 2em;
+  }
+
   .greenmen {
-    width: 18%;
+    width: 180pt;
   }
 
   /* Story */
@@ -222,8 +232,13 @@ body {
   .landing-cont {
     margin-top: 2em;
   }
+
+  .landing-greenmanimg {
+    width: 2.5em;
+  }
+
   .greenmen {
-    width: 14%;
+    width: 200pt;
   }
 
   /* Story */

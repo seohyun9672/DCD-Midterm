@@ -31,7 +31,7 @@ template_footprintbtn.innerHTML = `
              height: 180pt;
          }
      }
-    @media only screen and (max-width: 1920px) {
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
          .footprint_btn{
              width: 200pt;
              height: 200pt;
