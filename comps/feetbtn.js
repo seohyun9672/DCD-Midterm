@@ -49,10 +49,10 @@ class TheFeetBtn extends HTMLElement {
     HandleFeetBtn(action="back") {
         this.btn_action = action;
         if(action === "back") {
-            window.location.href = "/";
+            window.location.href = "./index.html";
         }
         if(action === "rewatch") {
-            window.location.href = "/story.html";
+            window.location.href = "./story.html";
         }
     }
 }
