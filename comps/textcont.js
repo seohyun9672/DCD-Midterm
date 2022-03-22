@@ -10,7 +10,7 @@ template_textcont.innerHTML = `
     .textcont {
         background-color: white;
         width: 100%;
-        height: 140pt;
+        height: 100%;
     }
     .textcont > p {
         font-size: 24pt;
@@ -19,25 +19,11 @@ template_textcont.innerHTML = `
         margin: 0;
     }
     @media only screen and (max-width: 1440px){
-        .textcont{
-            height: 90pt;
-        }
         .textcont > p {
-            font-size: 16pt;
-        }
-    }
-    @media only screen and (max-width: 1920px)and (min-width:1441px){
-        .textcont{
-            height: 100pt;
-        }
-        .textcont > p {
-            font-size: 18pt;
+            font-size: 20pt;
         }
     }
     @media only screen and (min-width: 1441px) and (max-width: 1920px){
-        .textcont{
-            height: 130pt;
-        }
         .textcont > p {
             font-size: 22pt;
         }

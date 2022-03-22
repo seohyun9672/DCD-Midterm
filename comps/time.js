@@ -16,7 +16,7 @@ template_time.innerHTML = `
         height: fit-content;
         padding: 5px 15px;
         border-radius: 10px; 
-        top: 10px;
+        top: 8px;
         position: relative;
     }
     .time_cont > .time_text {
@@ -24,19 +24,13 @@ template_time.innerHTML = `
         font-size: 24pt;
     }
     @media only screen and (max-width: 1440px){
-        .time_cont {
-            padding: 3px 10px;
-        }
         .time_cont > .time_text{
             font-size: 16pt;
         }
     }
     @media only screen and (min-width: 1441px) and (max-width: 1920px){
-        .time_cont {
-            padding: 5px 12px;
-        }
         .time_cont > .time_text{
-            font-size: 22pt;
+            font-size: 20pt;
         }
     }
     

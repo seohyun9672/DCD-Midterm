@@ -4,23 +4,11 @@ var template_storyimg = document.createElement("template"); //<template> </templ
 //To-do - CREATE THE UI HERE!
 template_storyimg.innerHTML = `
 <style>
-  #bg > img{
-      width: 100vw;
+#bg > img{
+      width: 100%;
       height: 100%;
-  }
-  @media only screen and (max-width: 1440px){
-      #bg > img{
-          object-fit: fill;
-          margin-bottom: -4px;
-      }
-  }
-
-  @media only screen and (max-width: 1920px) and (min-width:1441px){
-    #bg > img{
-        width:100.1%;
-    }
+      display: block;
 }
-
 </style>
 <div id="bg">
     <img src="imgs/storyimg/story1.jpeg" alt="bedroom">
@@ -58,7 +46,6 @@ class TheStoryImg extends HTMLElement {
         }
     }
 }
-
 
 //MUST HAVE - define the tag for the custom elements
 customElements.define("the-storyimg", TheStoryImg)
