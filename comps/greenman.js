@@ -25,7 +25,6 @@ class TheGreenman extends HTMLElement {
         //To-do - CREATE THE STATES FOR THE UI HERE!
     }
 
-
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback() {
         this.shadowRoot.appendChild(template_greenman.content.cloneNode(true)); //use the template to make a clone
@@ -34,24 +33,6 @@ class TheGreenman extends HTMLElement {
         if (this.getAttribute("direction")) {
             this.shadowRoot.querySelector(".greenman").style.transform = "scaleX(-1)";
         }
-    
-        // if (this.getAttribute("size")) {
-        //     this.shadowRoot.querySelector(".greenman >img").style.height = "8em";
-        // }
-
-        // let mediaQuery = window.matchMedia("(max-width: 1440px)");
-        // if (mediaQuery.matches) {
-        //     this.shadowRoot.querySelector(".greenman > img").style.width = "2em";
-        // }
-
-        // if (window.matchMedia("(max-width: 1920px)")) {
-        //     this.shadowRoot.querySelector(".greenman > img").style.width = "2.2em";
-        // }
-
-
-        // if (this.getAttribute("size2")) {
-        //     this.shadowRoot.querySelector(".greenman >img").style.height = "200pt";
-        // }
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!

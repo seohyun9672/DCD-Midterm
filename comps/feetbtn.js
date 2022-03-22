@@ -9,7 +9,8 @@ template_feetbtn.innerHTML = `
 </div>
 <style>  
     .btn-text {
-        font-weight:bold;
+        font-weight: bold;
+        font-size: 20pt;
     }
     .feetbtn-cont {
         display:flex;
@@ -19,6 +20,15 @@ template_feetbtn.innerHTML = `
     .feetbtn-cont > img {
         cursor: pointer;
     }
+
+    @media only screen and (max-width: 1440px) {
+        font-size: 16pt;
+    }
+
+    @media only screen and (min-width: 1441px) and (max-width: 1920px) {
+        font-size: 18pt;
+    }
+</style> 
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
