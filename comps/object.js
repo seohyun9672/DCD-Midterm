@@ -7,6 +7,10 @@ template_object.innerHTML = `
     <img class="first" src="imgs/objects/phone.svg" alt="phone">
 </div>
 <style>
+  .obj-cont > img {
+    filter: drop-shadow(0 0 40px white);
+  }
+
   img[alt="phone"].first {
     position: absolute;
     left: 1350px;
@@ -14,9 +18,11 @@ template_object.innerHTML = `
     width: 10%; 
     height: 10%;
   }
+
   .obj-cont {
     cursor:pointer;
   }
+
   @media only screen and (max-width: 1440px){
     img[alt="phone"].first {
       position: absolute;
@@ -67,6 +73,7 @@ class TheObject extends HTMLElement {
             visibility: hidden;
             width: 10%;
             height: 10%;
+            filter: drop-shadow(0 0 40px white);
           }
           
           @keyframes fadeIn {
@@ -98,6 +105,7 @@ class TheObject extends HTMLElement {
             right: 475px;
             width: 20%;
             height: 20%;
+            filter: drop-shadow(0 0 60px white);
           }
           @media screen and (max-width:1440px) {
             .second {
@@ -146,6 +154,7 @@ class TheObject extends HTMLElement {
             left:150px;
             width: 25%;
             height: 25%;
+            filter: drop-shadow(0 0 60px white);
           }
           @media screen and (max-width:1440px){
             .first {
@@ -202,6 +211,7 @@ class TheObject extends HTMLElement {
             position:absolute;
             top:600px;
             right:1400px;
+            filter: drop-shadow(0 0 60px white);
           }
           
           @keyframes fadeIn {
@@ -267,10 +277,11 @@ class TheObject extends HTMLElement {
             animation-fill-mode: forwards;
             visibility: hidden;
             position:absolute;
-            top:300px;
-            right: 380px;
+            top:305px;
+            right: 390px;
             width: 35%;
             height: 35%;
+            filter: drop-shadow(0 0 50px white);
           }
           
           @keyframes fadeIn {
@@ -336,6 +347,7 @@ class TheObject extends HTMLElement {
             right: 500px;
             width: 25%;
             height: 25%;
+            filter: drop-shadow(0 0 50px white);
           }
           
           @keyframes fadeIn {
@@ -392,6 +404,7 @@ class TheObject extends HTMLElement {
             right: 200px;
             width: 25%;
             height: 25%;
+            filter: drop-shadow(0 0 50px white);
           }
           
           @keyframes fadeIn {
@@ -448,6 +461,7 @@ class TheObject extends HTMLElement {
             left:760px;
             width: 10%;
             height: 10%;
+            filter: drop-shadow(0 0 50px white);
           }
           
           @keyframes fadeIn {
@@ -498,6 +512,7 @@ class TheObject extends HTMLElement {
             position:absolute;
             top: 250px;
             left: 720px;
+            filter: drop-shadow(0 0 20px white);
           }
           
           @keyframes fadeIn {

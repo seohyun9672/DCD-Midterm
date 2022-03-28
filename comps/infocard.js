@@ -173,6 +173,9 @@ class TheInfoCard extends HTMLElement {
                 span{
                     text-align: left;
                 }
+                the-checkbtn{
+                    padding-right: 8px
+                }
                 
                 </style>
             `;

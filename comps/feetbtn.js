@@ -12,21 +12,39 @@ template_feetbtn.innerHTML = `
         font-weight: bold;
         font-size: 20pt;
     }
+
     .feetbtn-cont {
         display:flex;
         flex-direction:column;
         align-items:center;
-    }
-    .feetbtn-cont > img {
         cursor: pointer;
     }
 
+    img {
+        width: 40%;
+        height: 40%;
+    }
+
     @media only screen and (max-width: 1440px) {
-        font-size: 16pt;
+        .btn-text{
+            font-size: 16pt;
+        }
+
+        img {
+            width: 40%;
+            height: 40%;
+        }
     }
 
     @media only screen and (min-width: 1441px) and (max-width: 1920px) {
-        font-size: 18pt;
+        .btn-text{
+            font-size: 18pt;
+        }
+        
+        img {
+            width: 40%;
+            height: 40%;
+        }
     }
 </style> 
 `;
@@ -35,33 +53,33 @@ template_feetbtn.innerHTML = `
 class TheFeetBtn extends HTMLElement {
 
     //MUST HAVE - CREATE A CONSTRUCTOR TO DO INITAL ASSOCIATIONS
-    constructor(){
+    constructor() {
         super(); //pass on the HTMLElement super powers!
-        this.attachShadow({mode:"open"}) //Attach it to the shadowRoot
+        this.attachShadow({ mode: "open" }) //Attach it to the shadowRoot
 
         //To-do - CREATE THE STATES FOR THE UI HERE!
     }
 
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
-    connectedCallback(){
+    connectedCallback() {
         this.shadowRoot.appendChild(template_feetbtn.content.cloneNode(true)); //use the template to make a clone
-    
-        if(this.getAttribute("text_color")) {
+
+        if (this.getAttribute("text_color")) {
             this.shadowRoot.querySelector(".btn-text").style.color = this.getAttribute("text_color");
         }
-        if(this.getAttribute("btn_text")) {
+        if (this.getAttribute("btn_text")) {
             this.shadowRoot.querySelector(".btn-text").innerText = this.getAttribute("btn_text");
         }
         this.shadowRoot.querySelector(".feetbtn-cont").onclick = () => this.HandleFeetBtn(this.getAttribute("name"));
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
-    HandleFeetBtn(action="back") {
+    HandleFeetBtn(action = "back") {
         this.btn_action = action;
-        if(action === "back") {
+        if (action === "back") {
             window.location.href = "./index.html";
         }
-        if(action === "rewatch") {
+        if (action === "rewatch") {
             window.location.href = "./story.html";
         }
     }

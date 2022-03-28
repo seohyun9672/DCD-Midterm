@@ -41,7 +41,15 @@ body {
   margin: 0;
 }
 
+.storypage {
+  overflow: hidden;
+}
+
 .story {
+  height: 100%;
+}
+
+.section_story {
   height: 100%;
 }
 
@@ -53,10 +61,9 @@ body {
 .scriptbox {
   background-color: #c8d5ae;
   display: flex;
-  padding: 1em;
+  padding: 2em;
   justify-content: center;
-  align-items: center;
-  height: 100%;
+  height: 180pt;
 }
 
 .greenmanimg {
@@ -86,6 +93,10 @@ body {
 }
 
 /* CTA */
+.ctapage {
+  overflow: hidden;
+}
+
 .section_cta_first {
   background-color: #fefff6;
   padding: 5em;
@@ -177,6 +188,11 @@ body {
   .greenmanimg {
     width: 1.8em;
   }
+
+  /* cta */
+  .ctapage {
+    overflow: auto;
+  }
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
@@ -201,6 +217,11 @@ body {
   .scriptbox {
     padding: .4em;
     overflow: hidden;
+  }
+
+  /* cta */
+  .ctapage {
+    overflow: auto;
   }
 }
 

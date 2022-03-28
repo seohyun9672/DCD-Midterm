@@ -36,13 +36,13 @@ class TheStoryImg extends HTMLElement {
             this.shadowRoot.querySelector("#bg > img").src = `imgs/storyimg/story1.jpeg`;
         }
         if (type === "story2") {
-            this.shadowRoot.querySelector("#bg > img").src = `imgs/storyimg/story2.jpeg`;
+            this.shadowRoot.querySelector("#bg > img").src = `imgs/storyimg/story2.jpg`;
         }
         if (type === "story3") {
             this.shadowRoot.querySelector("#bg > img").src = `imgs/storyimg/story3.jpeg`;
         }
         if (type === "story4") {
-            this.shadowRoot.querySelector("#bg > img").src = `imgs/storyimg/story4.jpeg`;
+            this.shadowRoot.querySelector("#bg > img").src = `imgs/storyimg/story4.jpg`;
         }
     }
 }
