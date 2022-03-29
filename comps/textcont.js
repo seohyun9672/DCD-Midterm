@@ -98,6 +98,10 @@ class TheTextcont extends HTMLElement {
             Great! However, the water doesn’t seem to help. He wants to turn on his fan. <br>
             Click on his desk <span>fan</span> to help him cool down.
             `;
+            this.shadowRoot.querySelector("span").style.cssText = `
+            color: grey;
+            font-weight: bold;
+            `;
             document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle3");
             document.querySelector(".storybg").changeStory("story2");
             document.querySelector(".greenmanimg").changeGreenman("greenman3");
@@ -109,6 +113,10 @@ class TheTextcont extends HTMLElement {
             Mr. Green is feeling cool now! <br>
             Click on Mr. Green’s computer <span>screen</span> to get his work day started.
             `;
+            this.shadowRoot.querySelector("span").style.cssText = `
+            color: #92BDB4;
+            font-weight: bold;
+            `;
             document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle3");
             document.querySelector(".storybg").changeStory("story2");
             document.querySelector(".greenmanimg").changeGreenman("greenman3");
@@ -118,7 +126,11 @@ class TheTextcont extends HTMLElement {
         if (this.textOrder === 6) {
             this.shadowRoot.querySelector(".textcont > p").innerHTML = `
             Mr. Green usually does his laundry after work. <br>
-            Click on the <span>laundry</span> detergent to help Mr. Green start his laundry.
+            Click on the <span>laundry detergent</span> to help Mr. Green start his laundry.
+            `;
+            this.shadowRoot.querySelector("span").style.cssText = `
+            color: #BD484A;
+            font-weight: bold;
             `;
             document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle4");
             document.querySelector(".storybg").changeStory("story3");
@@ -131,6 +143,10 @@ class TheTextcont extends HTMLElement {
             Mr. Green finishes his laundry. <br>
             Click on the <span>laundry basket</span> to help him throw his clothes into the dryer. 
             `;
+            this.shadowRoot.querySelector("span").style.cssText = `
+            color: #F27191;
+            font-weight: bold;
+            `;
             document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle4");
             document.querySelector(".storybg").changeStory("story3");
             document.querySelector(".greenmanimg").changeGreenman("greenman4");
@@ -142,6 +158,10 @@ class TheTextcont extends HTMLElement {
             this.shadowRoot.querySelector(".textcont > p").innerHTML = `
             While folding his laundry, Mr. Green remembers the movie that his colleague recommended. <br>
             Click on the <span>tablet</span> to watch Netflix.`;
+            this.shadowRoot.querySelector("span").style.cssText = `
+            color: #1A1AA3;
+            font-weight: bold;
+            `;
             document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle5");
             document.querySelector(".storybg").changeStory("story4");
             document.querySelector(".greenmanimg").changeGreenman("greenman5");
@@ -152,6 +172,10 @@ class TheTextcont extends HTMLElement {
             this.shadowRoot.querySelector(".textcont > p").innerHTML = `
             Mr. Green fell asleep on the couch while watching TV. It seems that he forgot to turn off the light. <br>
             Click on the <span>switch</span> to turn off the light for him.
+            `;
+            this.shadowRoot.querySelector("span").style.cssText = `
+            color: #A57745;
+            font-weight: bold;
             `;
             document.querySelector(".cycleimg").changeFootprintCycle("footprintcycle6");
             document.querySelector(".storybg").changeStory("story4");
